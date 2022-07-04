@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+        "bottom": "twilightforest:block/mossy_mazestone",
+        "top": "twilightforest:block/mossy_mazestone",
+        "side": "twilightforest:block/mossy_mazestone"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/nagastone_slab_right_lower" },
+        "type=top": { "model": "tflostblocks:block/nagastone_slab_right_upper" },
+        "type=double": { "model": "twilightforest:block/etched_nagastone" }
+	}
+}

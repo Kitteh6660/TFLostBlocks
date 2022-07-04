@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:mossy_castle_brick"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:mossy_castle_brick_wall",
+    "count": 6
+  }
+}

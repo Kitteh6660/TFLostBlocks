@@ -1,0 +1,32 @@
+{
+  "parent": "tflostblocks:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tflostblocks:bold_castle_brick_wall_from_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tflostblocks:bold_castle_brick_wall_from_stonecutting"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "twilightforest:bold_castle_brick_pillar" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

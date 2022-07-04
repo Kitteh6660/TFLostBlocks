@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/cut_mazestone_slab_lower" },
+        "type=top": { "model": "tflostblocks:block/cut_mazestone_slab_upper" },
+        "type=double": { "model": "twilightforest:block/cut_mazestone" }
+	}
+}

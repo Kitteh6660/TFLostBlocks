@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:auroralized_glass"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:auroralized_glass_pane",
+    "count": 16
+  }
+}

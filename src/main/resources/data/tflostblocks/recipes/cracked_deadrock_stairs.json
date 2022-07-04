@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:cracked_deadrock"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:cracked_deadrock_stairs",
+    "count": 4
+  }
+}

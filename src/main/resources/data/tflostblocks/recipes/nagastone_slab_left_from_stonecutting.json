@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:etched_nagastone"
+  },
+  "result": "tflostblocks:nagastone_slab_left",
+  "count": 2
+}

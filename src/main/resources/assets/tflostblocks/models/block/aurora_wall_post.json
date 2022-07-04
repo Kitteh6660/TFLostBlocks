@@ -1,0 +1,6 @@
+{
+  "parent": "tflostblocks:block/util/tinted_wall_post",
+  "textures": {
+    "wall": "twilightforest:block/aurora_pillar"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:weathered_deadrock"
+  },
+  "result": "tflostblocks:weathered_deadrock_slab",
+  "count": 2
+}

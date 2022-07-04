@@ -1,0 +1,6 @@
+{
+    "parent": "tflostblocks:block/util/tinted_fence_gate_open",
+    "textures": {
+        "texture": "twilightforest:block/towerwood"
+    }
+}

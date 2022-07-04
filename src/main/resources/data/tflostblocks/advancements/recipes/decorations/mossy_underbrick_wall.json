@@ -1,0 +1,32 @@
+{
+  "parent": "tflostblocks:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tflostblocks:mossy_underbrick_wall"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tflostblocks:mossy_underbrick_wall"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "twilightforest:mossy_underbrick" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

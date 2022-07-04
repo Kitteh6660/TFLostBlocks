@@ -1,0 +1,8 @@
+{
+	"parent": "twilightforest:block/util/tinted_slab",
+	"textures": {
+        "bottom": "twilightforest:block/towerwood",
+        "top": "twilightforest:block/towerwood",
+        "side": "twilightforest:block/towerwood"
+	}
+}

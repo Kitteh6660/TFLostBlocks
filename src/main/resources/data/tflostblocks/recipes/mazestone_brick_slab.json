@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:mazestone_brick"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:mazestone_brick_slab",
+    "count": 6
+  }
+}

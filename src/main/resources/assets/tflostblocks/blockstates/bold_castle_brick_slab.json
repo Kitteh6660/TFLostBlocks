@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/bold_castle_brick_slab_lower" },
+        "type=top": { "model": "tflostblocks:block/bold_castle_brick_slab_upper" },
+        "type=double": { "model": "twilightforest:block/bold_castle_brick_tile" }
+	}
+}

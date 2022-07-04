@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/mossy_underbrick_slab_lower" },
+        "type=top": { "model": "tflostblocks:block/mossy_underbrick_slab_upper" },
+        "type=double": { "model": "twilightforest:block/mossy_underbrick" }
+	}
+}

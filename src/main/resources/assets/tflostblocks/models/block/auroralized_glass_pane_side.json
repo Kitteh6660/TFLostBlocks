@@ -1,0 +1,7 @@
+{
+    "parent": "tflostblocks:block/util/tinted_pane_side",
+    "textures": {
+        "edge": "twilightforest:block/auroralized_glass",
+        "pane": "twilightforest:block/auroralized_glass"
+    }
+}

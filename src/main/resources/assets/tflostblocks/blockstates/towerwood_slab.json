@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "tflostblocks:block/towerwood_slab",
+      "x": 180,
+      "uvlock": true
+    },
+    "type=bottom": {
+      "model": "tflostblocks:block/towerwood_slab"
+    },
+    "type=double": {
+      "model": "twilightforest:block/towerwood"
+    }
+  }
+}

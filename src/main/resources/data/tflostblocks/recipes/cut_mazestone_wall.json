@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:cut_mazestone"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:cut_mazestone_wall",
+    "count": 6
+  }
+}

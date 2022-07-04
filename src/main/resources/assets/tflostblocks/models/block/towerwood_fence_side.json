@@ -1,0 +1,6 @@
+{
+    "parent": "tflostblocks:block/util/tinted_fence_side",
+    "textures": {
+        "texture": "twilightforest:block/towerwood"
+    }
+}

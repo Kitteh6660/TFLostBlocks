@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+        "end": "twilightforest:block/castleblock_tile",
+        "side": "twilightforest:block/encased_castle_brick_pillar_h"
+	}
+}

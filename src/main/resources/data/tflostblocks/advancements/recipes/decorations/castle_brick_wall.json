@@ -1,0 +1,32 @@
+{
+  "parent": "tflostblocks:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tflostblocks:castle_brick_wall"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tflostblocks:castle_brick_wall"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "twilightforest:castle_brick" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

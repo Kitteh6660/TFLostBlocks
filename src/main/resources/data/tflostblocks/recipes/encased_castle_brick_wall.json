@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:encased_castle_brick_pillar"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:encased_castle_brick_wall",
+    "count": 6
+  }
+}

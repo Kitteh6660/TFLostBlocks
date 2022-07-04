@@ -1,0 +1,70 @@
+{
+"block.tflostblocks.aurora_stairs": "Aurora Stairs",
+"block.tflostblocks.aurora_wall": "Aurora Wall",
+"block.tflostblocks.auroralized_glass_pane": "Auroralized Glass Pane",
+
+"block.tflostblocks.castle_brick_slab": "Castle Brick Slab",
+"block.tflostblocks.castle_brick_wall": "Castle Brick Wall",
+
+"block.tflostblocks.bold_castle_brick_slab": "Bold Castle Brick Slab",
+"block.tflostblocks.bold_castle_brick_wall": "Bold Castle Brick Wall",
+
+"block.tflostblocks.encased_castle_brick_slab": "Encased Castle Brick Slab",
+"block.tflostblocks.encased_castle_brick_wall": "Encased Castle Brick Wall",
+
+"block.tflostblocks.mossy_castle_brick_slab": "Mossy Castle Brick Slab",
+"block.tflostblocks.mossy_castle_brick_wall": "Mossy Castle Brick Wall",
+
+"block.tflostblocks.deadrock_slab": "Deadrock Slab",
+"block.tflostblocks.deadrock_stairs": "Deadrock Stairs",
+
+"block.tflostblocks.cracked_deadrock_slab": "Cracked Deadrock Slab",
+"block.tflostblocks.cracked_deadrock_stairs": "Cracked Deadrock Stairs",
+
+"block.tflostblocks.weathered_deadrock_slab": "Weathered Deadrock Slab",
+"block.tflostblocks.weathered_deadrock_stairs": "Weathered Deadrock Stairs",
+
+"block.tflostblocks.nagastone_slab_left": "Nagastone Slab (Left)",
+"block.tflostblocks.nagastone_slab_right": "Nagastone Slab (Right)",
+
+"block.tflostblocks.mossy_nagastone_slab_left": "Mossy Nagastone Slab (Left)",
+"block.tflostblocks.mossy_nagastone_slab_right": "Mossy Nagastone Slab (Right)",
+
+"block.tflostblocks.mazestone_slab": "Mazestone Slab",
+"block.tflostblocks.mazestone_stairs": "Mazestone Stairs",
+"block.tflostblocks.mazestone_wall": "Mazestone Wall",
+
+"block.tflostblocks.cut_mazestone_slab": "Cut Mazestone Slab",
+"block.tflostblocks.cut_mazestone_stairs": "Cut Mazestone Stairs",
+"block.tflostblocks.cut_mazestone_wall": "Cut Mazestone Wall",
+
+"block.tflostblocks.mazestone_brick_slab": "Mazestone Brick Slab",
+"block.tflostblocks.mazestone_brick_stairs": "Mazestone Brick Stairs",
+"block.tflostblocks.mazestone_brick_wall": "Mazestone Brick Wall",
+
+"block.tflostblocks.mossy_mazestone_brick_slab": "Mossy Mazestone Brick Slab",
+"block.tflostblocks.mossy_mazestone_brick_stairs": "Mossy Mazestone Brick Stairs",
+"block.tflostblocks.mossy_mazestone_brick_wall": "Mossy Mazestone Brick Wall",
+
+"block.tflostblocks.towerwood_slab": "Towerwood Slab",
+"block.tflostblocks.towerwood_stairs": "Towerwood Stairs",
+"block.tflostblocks.towerwood_fence": "Towerwood Fence",
+"block.tflostblocks.towerwood_fence_gate": "Towerwood Fence Gate",
+"block.tflostblocks.towerwood_door": "Towerwood Door",
+"block.tflostblocks.towerwood_trapdoor": "Towerwood Trapdoor",
+"block.tflostblocks.towerwood_button": "Towerwood Button",
+"block.tflostblocks.towerwood_pressure_plate": "Towerwood Pressure Plate",
+"block.tflostblocks.towerwood_sign": "Towerwood Sign",
+"block.tflostblocks.towerwood_banister": "Towerwood Banister ",
+
+"block.tflostblocks.mossy_towerwood_slab": "Mossy Towerwood Slab",
+"block.tflostblocks.mossy_towerwood_stairs": "Mossy Towerwood Stairs",
+
+"block.tflostblocks.underbrick_slab": "Underbrick Slab",
+"block.tflostblocks.underbrick_stairs": "Underbrick Stairs",
+"block.tflostblocks.underbrick_wall": "Underbrick Wall",
+
+"block.tflostblocks.mossy_underbrick_slab": "Mossy Underbrick Slab",
+"block.tflostblocks.mossy_underbrick_stairs": "Mossy Underbrick Stairs",
+"block.tflostblocks.mossy_underbrick_wall": "Mossy Underbrick Wall"
+}

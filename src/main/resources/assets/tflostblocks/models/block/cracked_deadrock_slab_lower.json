@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+        "bottom": "twilightforest:block/cracked_deadrock",
+        "top": "twilightforest:block/cracked_deadrock",
+        "side": "twilightforest:block/cracked_deadrock"
+	}
+}

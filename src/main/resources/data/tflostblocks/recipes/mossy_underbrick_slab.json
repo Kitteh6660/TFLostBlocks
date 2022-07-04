@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:mossy_underbrick"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:mossy_underbrick_slab",
+    "count": 6
+  }
+}

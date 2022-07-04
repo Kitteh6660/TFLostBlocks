@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "twilightforest:block/underbrick",
+        "top": "twilightforest:block/underbrick",
+        "side": "twilightforest:block/underbrick"
+    }
+}

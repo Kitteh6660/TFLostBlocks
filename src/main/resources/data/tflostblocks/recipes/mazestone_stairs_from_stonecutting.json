@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:mazestone"
+  },
+  "result": "tflostblocks:mazestone_stairs",
+  "count": 1
+}

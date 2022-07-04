@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "twilightforest:block/weathered_deadrock",
+        "top": "twilightforest:block/weathered_deadrock",
+        "side": "twilightforest:block/weathered_deadrock"
+    }
+}

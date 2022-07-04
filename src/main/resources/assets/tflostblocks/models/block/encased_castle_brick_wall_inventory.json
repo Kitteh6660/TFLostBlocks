@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "twilightforest:block/encased_castle_brick_pillar_h"
+  }
+}

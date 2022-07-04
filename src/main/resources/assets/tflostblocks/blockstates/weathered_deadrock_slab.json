@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/weathered_deadrock_slab_lower" },
+        "type=top": { "model": "tflostblocks:block/weathered_deadrock_slab_upper" },
+        "type=double": { "model": "twilightforest:block/weathered_deadrock" }
+	}
+}

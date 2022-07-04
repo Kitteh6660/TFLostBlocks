@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+        "bottom": "twilightforest:block/underbrick",
+        "top": "twilightforest:block/underbrick",
+        "side": "twilightforest:block/underbrick"
+	}
+}

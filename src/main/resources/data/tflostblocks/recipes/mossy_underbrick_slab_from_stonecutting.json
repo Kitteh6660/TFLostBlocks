@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:mossy_underbrick"
+  },
+  "result": "tflostblocks:mossy_underbrick_slab",
+  "count": 2
+}

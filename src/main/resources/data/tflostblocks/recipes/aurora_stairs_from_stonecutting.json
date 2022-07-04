@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:aurora_block"
+  },
+  "result": "tflostblocks:aurora_stairs",
+  "count": 1
+}
