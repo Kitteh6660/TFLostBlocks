@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top_rh",
-    "textures": {
-        "bottom": "tflostblocks:block/towerwood_door_bottom",
-        "top": "tflostblocks:block/towerwood_door_top"
-    }
-}

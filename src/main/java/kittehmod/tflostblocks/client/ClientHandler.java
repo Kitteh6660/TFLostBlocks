@@ -3,7 +3,6 @@ package kittehmod.tflostblocks.client;
 import kittehmod.tflostblocks.blockentities.ModBlockEntities;
 import kittehmod.tflostblocks.blocks.ModBlocks;
 import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -12,11 +11,11 @@ import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import twilightforest.block.AuroraBrickBlock;
-import twilightforest.block.TFBlocks;
+import twilightforest.init.TFBlocks;
 
 import java.awt.*;
 
@@ -26,6 +25,7 @@ public class ClientHandler
 	
 	public static final ModelLayerLocation TOWERWOOD_SIGN = new ModelLayerLocation(new ResourceLocation("tflostblocks", "towerwood_sign"), "main");
 	
+	@SuppressWarnings("removal")
 	public static void setupRenderers() {
 		BlockEntityRenderers.register(ModBlockEntities.LOST_TF_SIGN.get(), SignRenderer::new);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AURORALIZED_GLASS_PANE.get(), RenderType.translucent());
@@ -34,10 +34,10 @@ public class ClientHandler
 	}
 	
 	@SubscribeEvent
-	public static void registerBlockColours(ColorHandlerEvent.Block event) {
+	public static void registerBlockColours(RegisterColorHandlersEvent.Block event) {
 		BlockColors blockColours = event.getBlockColors();
 		// Tint Towerwood
-		blockColours.register((state, worldIn, pos, tintIndex) -> {
+		event.register((state, worldIn, pos, tintIndex) -> {
 		if (tintIndex > 15) return 0xFFFFFF;
 
 		if (worldIn == null || pos == null) {
@@ -48,7 +48,7 @@ public class ClientHandler
 		}
 		}, ModBlocks.TOWERWOOD_STAIRS.get(), ModBlocks.TOWERWOOD_SLAB.get(), ModBlocks.TOWERWOOD_FENCE.get(), ModBlocks.TOWERWOOD_FENCE_GATE.get(), ModBlocks.TOWERWOOD_DOOR.get(), ModBlocks.TOWERWOOD_TRAPDOOR.get(), ModBlocks.TOWERWOOD_BUTTON.get(), ModBlocks.TOWERWOOD_PRESSURE_PLATE.get(), ModBlocks.MOSSY_TOWERWOOD_STAIRS.get(), ModBlocks.MOSSY_TOWERWOOD_SLAB.get());
 		// Tint Aurora Stairs & Slabs
-		blockColours.register((state, worldIn, pos, tintIndex) -> {
+		event.register((state, worldIn, pos, tintIndex) -> {
 			if (tintIndex > 15) return 0xFFFFFF;
 
 			int normalColor = blockColours.getColor(TFBlocks.AURORA_BLOCK.get().defaultBlockState(), worldIn, pos, tintIndex);
@@ -64,9 +64,8 @@ public class ClientHandler
 	}
 	
 	@SubscribeEvent
-	public static void registerItemColours(ColorHandlerEvent.Item event) {
+	public static void registerItemColours(RegisterColorHandlersEvent.Item event) {
 		BlockColors blockColours = event.getBlockColors();
-		ItemColors itemColours = event.getItemColors();
-		itemColours.register((stack, tintIndex) -> blockColours.getColor(((BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex), ModBlocks.AURORA_STAIRS.get(), ModBlocks.AURORA_WALL.get(), ModBlocks.AURORALIZED_GLASS_PANE.get());
+		event.register((stack, tintIndex) -> blockColours.getColor(((BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex), ModBlocks.AURORA_STAIRS.get(), ModBlocks.AURORA_WALL.get(), ModBlocks.AURORALIZED_GLASS_PANE.get());
 	}
 }

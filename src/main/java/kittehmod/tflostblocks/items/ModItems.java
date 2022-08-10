@@ -2,7 +2,7 @@ package kittehmod.tflostblocks.items;
 
 import kittehmod.tflostblocks.TFLostBlocksMod;
 import kittehmod.tflostblocks.blocks.ModBlocks;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -96,15 +96,15 @@ public class ModItems
 	public static final RegistryObject<Item> MOSSY_UNDERBRICK_WALL = ITEMS.register("mossy_underbrick_wall", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 
 	
-	private static CreativeModeTab getTabWithMatchingName(String tabName) {
+    private static CreativeModeTab getTabWithMatchingName(String tabName) {
     	CreativeModeTab tab = null;
     	if (FMLEnvironment.dist == Dist.DEDICATED_SERVER) { // Check to make sure the code doesn't advance on server to prevent crashes.
     		return null;
     	}
     	for (CreativeModeTab tempTab : CreativeModeTab.TABS) {
-    		if (tempTab.getDisplayName() instanceof TranslatableComponent) { // Check if it's the correct class to avoid crashes.
-	    		TranslatableComponent tabComp = (TranslatableComponent) tempTab.getDisplayName();
-	    		if (tabComp.getKey().equalsIgnoreCase("itemGroup." + tabName)) {
+    		if (tempTab.getDisplayName().getContents() instanceof TranslatableContents) { // Check if it's the correct class to avoid crashes.
+	    		TranslatableContents tabContents = (TranslatableContents) tempTab.getDisplayName().getContents();
+	    		if (tabContents.getKey().equalsIgnoreCase("itemGroup." + tabName)) {
 	    			tab = tempTab;
 	    			break;
 	    		}

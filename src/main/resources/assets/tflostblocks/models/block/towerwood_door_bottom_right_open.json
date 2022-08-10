@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "tflostblocks:block/towerwood_door_bottom",
+    "top": "tflostblocks:block/towerwood_door_top"
+  }
+}

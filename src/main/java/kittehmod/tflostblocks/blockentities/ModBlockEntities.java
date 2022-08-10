@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlockEntities
 {
-	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TFLostBlocksMod.MOD_ID);
+	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, TFLostBlocksMod.MOD_ID);
 	
 	public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> LOST_TF_SIGN = BLOCK_ENTITIES.register("lost_tf_sign", () -> BlockEntityType.Builder.of(ModSignBlockEntity::new, ModBlocks.TOWERWOOD_SIGN.get(), ModBlocks.TOWERWOOD_WALL_SIGN.get()).build(null));
 }
