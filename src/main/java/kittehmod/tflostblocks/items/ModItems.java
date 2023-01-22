@@ -8,6 +8,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
@@ -31,6 +32,12 @@ public class ModItems
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_SLAB = ITEMS.register("bold_castle_brick_slab", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_WALL = ITEMS.register("bold_castle_brick_wall", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 
+	public static final RegistryObject<Item> WORN_CASTLE_BRICK_SLAB = ITEMS.register("worn_castle_brick_slab", () -> new BlockItem(ModBlocks.WORN_CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	public static final RegistryObject<Item> WORN_CASTLE_BRICK_WALL = ITEMS.register("worn_castle_brick_wall", () -> new BlockItem(ModBlocks.WORN_CASTLE_BRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+
+	public static final RegistryObject<Item> CRACKED_CASTLE_BRICK_SLAB = ITEMS.register("cracked_castle_brick_slab", () -> new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	public static final RegistryObject<Item> CRACKED_CASTLE_BRICK_WALL = ITEMS.register("cracked_castle_brick_wall", () -> new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	
 	public static final RegistryObject<Item> ENCASED_CASTLE_BRICK_SLAB = ITEMS.register("encased_castle_brick_slab", () -> new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> ENCASED_CASTLE_BRICK_WALL = ITEMS.register("encased_castle_brick_wall", () -> new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	
@@ -68,6 +75,9 @@ public class ModItems
 	public static final RegistryObject<Item> NAGASTONE_SLAB_LEFT = ITEMS.register("nagastone_slab_left", () -> new BlockItem(ModBlocks.NAGASTONE_SLAB_LEFT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> NAGASTONE_SLAB_RIGHT = ITEMS.register("nagastone_slab_right", () -> new BlockItem(ModBlocks.NAGASTONE_SLAB_RIGHT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	
+	public static final RegistryObject<Item> CRACKED_NAGASTONE_SLAB_LEFT = ITEMS.register("cracked_nagastone_slab_left", () -> new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_LEFT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	public static final RegistryObject<Item> CRACKED_NAGASTONE_SLAB_RIGHT = ITEMS.register("cracked_nagastone_slab_right", () -> new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_RIGHT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	
 	public static final RegistryObject<Item> MOSSY_NAGASTONE_SLAB_LEFT = ITEMS.register("mossy_nagastone_slab_left", () -> new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_LEFT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> MOSSY_NAGASTONE_SLAB_RIGHT = ITEMS.register("mossy_nagastone_slab_right", () -> new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_RIGHT.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	
@@ -91,6 +101,10 @@ public class ModItems
 	public static final RegistryObject<Item> UNDERBRICK_SLAB = ITEMS.register("underbrick_slab", () -> new BlockItem(ModBlocks.UNDERBRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> UNDERBRICK_WALL = ITEMS.register("underbrick_wall", () -> new BlockItem(ModBlocks.UNDERBRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 
+	public static final RegistryObject<Item> CRACKED_UNDERBRICK_STAIRS = ITEMS.register("cracked_underbrick_stairs", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_STAIRS.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	public static final RegistryObject<Item> CRACKED_UNDERBRICK_SLAB = ITEMS.register("cracked_underbrick_slab", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	public static final RegistryObject<Item> CRACKED_UNDERBRICK_WALL = ITEMS.register("cracked_underbrick_wall", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
+	
 	public static final RegistryObject<Item> MOSSY_UNDERBRICK_STAIRS = ITEMS.register("mossy_underbrick_stairs", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_STAIRS.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> MOSSY_UNDERBRICK_SLAB = ITEMS.register("mossy_underbrick_slab", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_SLAB.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));
 	public static final RegistryObject<Item> MOSSY_UNDERBRICK_WALL = ITEMS.register("mossy_underbrick_wall", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_WALL.get(), new Item.Properties().tab(getTabWithMatchingName("twilightforest"))));

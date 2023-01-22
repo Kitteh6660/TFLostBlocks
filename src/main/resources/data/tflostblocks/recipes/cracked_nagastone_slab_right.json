@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:cracked_etched_nagastone"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:cracked_nagastone_slab_right",
+    "count": 6
+  }
+}
