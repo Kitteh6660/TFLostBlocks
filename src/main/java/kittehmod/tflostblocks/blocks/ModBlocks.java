@@ -1,6 +1,7 @@
 package kittehmod.tflostblocks.blocks;
 
 import kittehmod.tflostblocks.TFLostBlocksMod;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
@@ -12,7 +13,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.block.WoodButtonBlock;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
@@ -46,9 +47,9 @@ public class ModBlocks
 
 	public static final RegistryObject<Block> CRACKED_CASTLE_BRICK_SLAB = BLOCKS.register("cracked_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
 	public static final RegistryObject<Block> CRACKED_CASTLE_BRICK_WALL = BLOCKS.register("cracked_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
-	
-	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_SLAB = BLOCKS.register("mossy_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_CASTLE_BRICK.get())));
-	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_WALL = BLOCKS.register("mossy_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.MOSSY_CASTLE_BRICK.get())));
+
+	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_SLAB = BLOCKS.register("mossy_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_WALL = BLOCKS.register("mossy_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
 
 	public static final RegistryObject<Block> DEADROCK_STAIRS = BLOCKS.register("deadrock_stairs", () -> new StairBlock(() -> TFBlocks.DEADROCK.get().defaultBlockState() , Properties.copy(TFBlocks.DEADROCK.get())));
 	public static final RegistryObject<Block> DEADROCK_SLAB = BLOCKS.register("deadrock_slab", () -> new SlabBlock(Properties.copy(TFBlocks.DEADROCK.get())));
@@ -64,7 +65,7 @@ public class ModBlocks
 
 	public static final RegistryObject<Block> CRACKED_NAGASTONE_SLAB_LEFT = BLOCKS.register("cracked_nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_ETCHED_NAGASTONE.get())));
 	public static final RegistryObject<Block> CRACKED_NAGASTONE_SLAB_RIGHT = BLOCKS.register("cracked_nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_ETCHED_NAGASTONE.get())));
-	
+
 	public static final RegistryObject<Block> MOSSY_NAGASTONE_SLAB_LEFT = BLOCKS.register("mossy_nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_ETCHED_NAGASTONE.get())));
 	public static final RegistryObject<Block> MOSSY_NAGASTONE_SLAB_RIGHT = BLOCKS.register("mossy_nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_ETCHED_NAGASTONE.get())));
 
@@ -87,11 +88,11 @@ public class ModBlocks
 	public static final RegistryObject<Block> TOWERWOOD_STAIRS = BLOCKS.register("towerwood_stairs", () -> new StairBlock(() -> TFBlocks.TOWERWOOD.get().defaultBlockState() , Properties.copy(TFBlocks.TOWERWOOD.get())));
 	public static final RegistryObject<Block> TOWERWOOD_SLAB = BLOCKS.register("towerwood_slab", () -> new SlabBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
 	public static final RegistryObject<Block> TOWERWOOD_FENCE = BLOCKS.register("towerwood_fence", () -> new FenceBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
-	public static final RegistryObject<Block> TOWERWOOD_FENCE_GATE = BLOCKS.register("towerwood_fence_gate", () -> new FenceGateBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
-	public static final RegistryObject<Block> TOWERWOOD_DOOR = BLOCKS.register("towerwood_door", () -> new DoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
-	public static final RegistryObject<Block> TOWERWOOD_TRAPDOOR = BLOCKS.register("towerwood_trapdoor", () -> new TrapDoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
-	public static final RegistryObject<Block> TOWERWOOD_BUTTON = BLOCKS.register("towerwood_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD)));
-	public static final RegistryObject<Block> TOWERWOOD_PRESSURE_PLATE = BLOCKS.register("towerwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> TOWERWOOD_FENCE_GATE = BLOCKS.register("towerwood_fence_gate", () -> new FenceGateBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
+	public static final RegistryObject<Block> TOWERWOOD_DOOR = BLOCKS.register("towerwood_door", () -> new DoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN));
+	public static final RegistryObject<Block> TOWERWOOD_TRAPDOOR = BLOCKS.register("towerwood_trapdoor", () -> new TrapDoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN));
+	public static final RegistryObject<Block> TOWERWOOD_BUTTON = BLOCKS.register("towerwood_button", () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD), 30, true, SoundEvents.WOODEN_BUTTON_CLICK_OFF, SoundEvents.WOODEN_BUTTON_CLICK_ON));
+	public static final RegistryObject<Block> TOWERWOOD_PRESSURE_PLATE = BLOCKS.register("towerwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD), SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON));
 	public static final RegistryObject<Block> TOWERWOOD_SIGN = BLOCKS.register("towerwood_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD));
 	public static final RegistryObject<Block> TOWERWOOD_WALL_SIGN = BLOCKS.register("towerwood_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD));
 	public static final RegistryObject<Block> TOWERWOOD_BANISTER = BLOCKS.register("towerwood_banister", () -> new BanisterBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
@@ -106,8 +107,9 @@ public class ModBlocks
 	public static final RegistryObject<Block> CRACKED_UNDERBRICK_STAIRS = BLOCKS.register("cracked_underbrick_stairs", () -> new StairBlock(() -> TFBlocks.CRACKED_UNDERBRICK.get().defaultBlockState() , Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
 	public static final RegistryObject<Block> CRACKED_UNDERBRICK_SLAB = BLOCKS.register("cracked_underbrick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_UNDERBRICK.get())));
 	public static final RegistryObject<Block> CRACKED_UNDERBRICK_WALL = BLOCKS.register("cracked_underbrick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CRACKED_UNDERBRICK.get())));
-	
+
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_STAIRS = BLOCKS.register("mossy_underbrick_stairs", () -> new StairBlock(() -> TFBlocks.MOSSY_UNDERBRICK.get().defaultBlockState() , Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_SLAB = BLOCKS.register("mossy_underbrick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_WALL = BLOCKS.register("mossy_underbrick_wall", () -> new WallBlock(Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
+
 }
