@@ -12,6 +12,12 @@
 "block.tflostblocks.encased_castle_brick_slab": "Encased Castle Brick Slab",
 "block.tflostblocks.encased_castle_brick_wall": "Encased Castle Brick Wall",
 
+"block.tflostblocks.cracked_castle_brick_slab": "Cracked Castle Brick Slab",
+"block.tflostblocks.cracked_castle_brick_wall": "Cracked Castle Brick Wall",
+
+"block.tflostblocks.worn_castle_brick_slab": "Worn Castle Brick Slab",
+"block.tflostblocks.worn_castle_brick_wall": "Worn Castle Brick Wall",
+
 "block.tflostblocks.mossy_castle_brick_slab": "Mossy Castle Brick Slab",
 "block.tflostblocks.mossy_castle_brick_wall": "Mossy Castle Brick Wall",
 
@@ -26,6 +32,9 @@
 
 "block.tflostblocks.nagastone_slab_left": "Nagastone Slab (Left)",
 "block.tflostblocks.nagastone_slab_right": "Nagastone Slab (Right)",
+
+"block.tflostblocks.cracked_nagastone_slab_left": "Weathered Nagastone Slab (Left)",
+"block.tflostblocks.cracked_nagastone_slab_right": "Weathered Nagastone Slab (Right)",
 
 "block.tflostblocks.mossy_nagastone_slab_left": "Mossy Nagastone Slab (Left)",
 "block.tflostblocks.mossy_nagastone_slab_right": "Mossy Nagastone Slab (Right)",
@@ -63,6 +72,10 @@
 "block.tflostblocks.underbrick_slab": "Underbrick Slab",
 "block.tflostblocks.underbrick_stairs": "Underbrick Stairs",
 "block.tflostblocks.underbrick_wall": "Underbrick Wall",
+
+"block.tflostblocks.cracked_underbrick_slab": "Cracked Underbrick Slab",
+"block.tflostblocks.cracked_underbrick_stairs": "Cracked Underbrick Stairs",
+"block.tflostblocks.cracked_underbrick_wall": "Cracked Underbrick Wall",
 
 "block.tflostblocks.mossy_underbrick_slab": "Mossy Underbrick Slab",
 "block.tflostblocks.mossy_underbrick_stairs": "Mossy Underbrick Stairs",

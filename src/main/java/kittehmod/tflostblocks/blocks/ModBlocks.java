@@ -41,6 +41,12 @@ public class ModBlocks
 	public static final RegistryObject<Block> ENCASED_CASTLE_BRICK_SLAB = BLOCKS.register("encased_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.ENCASED_CASTLE_BRICK_TILE.get())));
 	public static final RegistryObject<Block> ENCASED_CASTLE_BRICK_WALL = BLOCKS.register("encased_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.ENCASED_CASTLE_BRICK_TILE.get())));
 
+	public static final RegistryObject<Block> WORN_CASTLE_BRICK_SLAB = BLOCKS.register("worn_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> WORN_CASTLE_BRICK_WALL = BLOCKS.register("worn_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+
+	public static final RegistryObject<Block> CRACKED_CASTLE_BRICK_SLAB = BLOCKS.register("cracked_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> CRACKED_CASTLE_BRICK_WALL = BLOCKS.register("cracked_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	
 	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_SLAB = BLOCKS.register("mossy_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_CASTLE_BRICK.get())));
 	public static final RegistryObject<Block> MOSSY_CASTLE_BRICK_WALL = BLOCKS.register("mossy_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.MOSSY_CASTLE_BRICK.get())));
 
@@ -56,6 +62,9 @@ public class ModBlocks
 	public static final RegistryObject<Block> NAGASTONE_SLAB_LEFT = BLOCKS.register("nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.ETCHED_NAGASTONE.get())));
 	public static final RegistryObject<Block> NAGASTONE_SLAB_RIGHT = BLOCKS.register("nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.ETCHED_NAGASTONE.get())));
 
+	public static final RegistryObject<Block> CRACKED_NAGASTONE_SLAB_LEFT = BLOCKS.register("cracked_nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_ETCHED_NAGASTONE.get())));
+	public static final RegistryObject<Block> CRACKED_NAGASTONE_SLAB_RIGHT = BLOCKS.register("cracked_nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_ETCHED_NAGASTONE.get())));
+	
 	public static final RegistryObject<Block> MOSSY_NAGASTONE_SLAB_LEFT = BLOCKS.register("mossy_nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_ETCHED_NAGASTONE.get())));
 	public static final RegistryObject<Block> MOSSY_NAGASTONE_SLAB_RIGHT = BLOCKS.register("mossy_nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_ETCHED_NAGASTONE.get())));
 
@@ -94,11 +103,11 @@ public class ModBlocks
 	public static final RegistryObject<Block> UNDERBRICK_SLAB = BLOCKS.register("underbrick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.UNDERBRICK.get())));
 	public static final RegistryObject<Block> UNDERBRICK_WALL = BLOCKS.register("underbrick_wall", () -> new WallBlock(Properties.copy(TFBlocks.UNDERBRICK.get())));
 
+	public static final RegistryObject<Block> CRACKED_UNDERBRICK_STAIRS = BLOCKS.register("cracked_underbrick_stairs", () -> new StairBlock(() -> TFBlocks.CRACKED_UNDERBRICK.get().defaultBlockState() , Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
+	public static final RegistryObject<Block> CRACKED_UNDERBRICK_SLAB = BLOCKS.register("cracked_underbrick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CRACKED_UNDERBRICK.get())));
+	public static final RegistryObject<Block> CRACKED_UNDERBRICK_WALL = BLOCKS.register("cracked_underbrick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CRACKED_UNDERBRICK.get())));
+	
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_STAIRS = BLOCKS.register("mossy_underbrick_stairs", () -> new StairBlock(() -> TFBlocks.MOSSY_UNDERBRICK.get().defaultBlockState() , Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_SLAB = BLOCKS.register("mossy_underbrick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
 	public static final RegistryObject<Block> MOSSY_UNDERBRICK_WALL = BLOCKS.register("mossy_underbrick_wall", () -> new WallBlock(Properties.copy(TFBlocks.MOSSY_UNDERBRICK.get())));
-	
-	
-
-
 }
