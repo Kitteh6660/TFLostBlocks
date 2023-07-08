@@ -36,13 +36,13 @@ public class TFLostBlocksMod
     private void setupCommon(final FMLCommonSetupEvent event)
     {
     	MinecraftForge.EVENT_BUS.register(new CommonEvents());
-        event.enqueueWork(() -> WoodType.register(ModWoodType.TOWERWOOD));
+        event.enqueueWork(() -> WoodType.register(ModWoodType.TOWERWOOD_WOOD_TYPE));
     }
     
     private void setupClient(final FMLClientSetupEvent event)
     {
     	ClientHandler.setupRenderers();
-    	event.enqueueWork(() -> { Sheets.addWoodType(ModWoodType.TOWERWOOD);} );	
+    	event.enqueueWork(() -> { Sheets.addWoodType(ModWoodType.TOWERWOOD_WOOD_TYPE);} );	
     	
     	MinecraftForge.EVENT_BUS.register(ClientHandler.class);
     }
