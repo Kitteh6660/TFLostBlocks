@@ -7,6 +7,7 @@ import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -24,10 +25,12 @@ public class ClientHandler
 {
 	
 	public static final ModelLayerLocation TOWERWOOD_SIGN = new ModelLayerLocation(new ResourceLocation("tflostblocks", "towerwood_sign"), "main");
+	public static final ModelLayerLocation TOWERWOOD_HANGING_SIGN = new ModelLayerLocation(new ResourceLocation("tflostblocks", "hanging/towerwood_sign"), "main");
 	
-	@SuppressWarnings("removal")
+	@SuppressWarnings("deprecation")
 	public static void setupRenderers() {
 		BlockEntityRenderers.register(ModBlockEntities.LOST_TF_SIGN.get(), SignRenderer::new);
+		BlockEntityRenderers.register(ModBlockEntities.LOST_TF_HANGING_SIGN.get(), HangingSignRenderer::new);
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AURORALIZED_GLASS_PANE.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOWERWOOD_DOOR.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOWERWOOD_TRAPDOOR.get(), RenderType.cutout());

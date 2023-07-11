@@ -11,6 +11,8 @@
     "tflostblocks:towerwood_pressure_plate",
     "tflostblocks:towerwood_sign",
     "tflostblocks:towerwood_wall_sign",
+    "tflostblocks:towerwood_hanging_sign",
+    "tflostblocks:towerwood_wall_hanging_sign",
     "tflostblocks:towerwood_banister"
   ]
 }

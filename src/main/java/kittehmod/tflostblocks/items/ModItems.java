@@ -9,10 +9,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.CreativeModeTabRegistry;
 import net.minecraftforge.common.util.MutableHashedLinkedMap;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.loading.FMLEnvironment;
@@ -97,6 +98,7 @@ public class ModItems
 	public static final RegistryObject<Item> TOWERWOOD_BUTTON = ITEMS.register("towerwood_button", () -> new BlockItem(ModBlocks.TOWERWOOD_BUTTON.get(), new Item.Properties()));
 	public static final RegistryObject<Item> TOWERWOOD_PRESSURE_PLATE = ITEMS.register("towerwood_pressure_plate", () -> new BlockItem(ModBlocks.TOWERWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> TOWERWOOD_SIGN = ITEMS.register("towerwood_sign", () -> new SignItem(new Item.Properties(), ModBlocks.TOWERWOOD_SIGN.get(), ModBlocks.TOWERWOOD_WALL_SIGN.get()));
+	public static final RegistryObject<Item> TOWERWOOD_HANGING_SIGN = ITEMS.register("towerwood_hanging_sign", () -> new HangingSignItem(ModBlocks.TOWERWOOD_HANGING_SIGN.get(), ModBlocks.TOWERWOOD_WALL_HANGING_SIGN.get(), new Item.Properties()));
 	public static final RegistryObject<Item> TOWERWOOD_BANISTER = ITEMS.register("towerwood_banister", () -> new BlockItem(ModBlocks.TOWERWOOD_BANISTER.get(), new Item.Properties()));
 
 	public static final RegistryObject<Item> MOSSY_TOWERWOOD_SLAB = ITEMS.register("mossy_towerwood_slab", () -> new BlockItem(ModBlocks.MOSSY_TOWERWOOD_SLAB.get(), new Item.Properties()));
@@ -134,7 +136,7 @@ public class ModItems
     }
     
     @SubscribeEvent
-    public static void assignItemsToTabs(CreativeModeTabEvent.BuildContents event) {
+    public static void assignItemsToTabs(BuildCreativeModeTabContentsEvent event) {
     	MutableHashedLinkedMap<ItemStack, TabVisibility> map = event.getEntries();
     	if (event.getTab() == getTabWithMatchingName("twilightforest.blocks")) {
     		// Insert Aurora blocks.
@@ -217,7 +219,8 @@ public class ModItems
     		map.putAfter(TOWERWOOD_TRAPDOOR.get().asItem().getDefaultInstance(), TOWERWOOD_PRESSURE_PLATE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TOWERWOOD_PRESSURE_PLATE.get().asItem().getDefaultInstance(), TOWERWOOD_BUTTON.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TOWERWOOD_BUTTON.get().asItem().getDefaultInstance(), TOWERWOOD_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_SIGN.get().asItem().getDefaultInstance(), TOWERWOOD_BANISTER.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(TOWERWOOD_SIGN.get().asItem().getDefaultInstance(), TOWERWOOD_HANGING_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(TOWERWOOD_HANGING_SIGN.get().asItem().getDefaultInstance(), TOWERWOOD_BANISTER.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TFBlocks.MOSSY_TOWERWOOD.get().asItem().getDefaultInstance(), MOSSY_TOWERWOOD_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(MOSSY_TOWERWOOD_STAIRS.get().asItem().getDefaultInstance(), MOSSY_TOWERWOOD_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
 

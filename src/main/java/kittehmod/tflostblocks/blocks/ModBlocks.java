@@ -16,7 +16,6 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -91,10 +90,12 @@ public class ModBlocks
 	public static final RegistryObject<Block> TOWERWOOD_FENCE_GATE = BLOCKS.register("towerwood_fence_gate", () -> new FenceGateBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
 	public static final RegistryObject<Block> TOWERWOOD_DOOR = BLOCKS.register("towerwood_door", () -> new DoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), ModWoodType.TOWERWOOD_SET));
 	public static final RegistryObject<Block> TOWERWOOD_TRAPDOOR = BLOCKS.register("towerwood_trapdoor", () -> new TrapDoorBlock(Properties.copy(TFBlocks.TOWERWOOD.get()), ModWoodType.TOWERWOOD_SET));
-	public static final RegistryObject<Block> TOWERWOOD_BUTTON = BLOCKS.register("towerwood_button", () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_SET, 30, true));
-	public static final RegistryObject<Block> TOWERWOOD_PRESSURE_PLATE = BLOCKS.register("towerwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_SET));
-	public static final RegistryObject<Block> TOWERWOOD_SIGN = BLOCKS.register("towerwood_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
-	public static final RegistryObject<Block> TOWERWOOD_WALL_SIGN = BLOCKS.register("towerwood_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
+	public static final RegistryObject<Block> TOWERWOOD_BUTTON = BLOCKS.register("towerwood_button", () -> new ButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_SET, 30, true));
+	public static final RegistryObject<Block> TOWERWOOD_PRESSURE_PLATE = BLOCKS.register("towerwood_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_SET));
+	public static final RegistryObject<Block> TOWERWOOD_SIGN = BLOCKS.register("towerwood_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
+	public static final RegistryObject<Block> TOWERWOOD_WALL_SIGN = BLOCKS.register("towerwood_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
+	public static final RegistryObject<Block> TOWERWOOD_HANGING_SIGN = BLOCKS.register("towerwood_hanging_sign", () -> new ModCeilingHangingSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
+	public static final RegistryObject<Block> TOWERWOOD_WALL_HANGING_SIGN = BLOCKS.register("towerwood_wall_hanging_sign", () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE));
 	public static final RegistryObject<Block> TOWERWOOD_BANISTER = BLOCKS.register("towerwood_banister", () -> new BanisterBlock(Properties.copy(TFBlocks.TOWERWOOD.get())));
 
 	public static final RegistryObject<Block> MOSSY_TOWERWOOD_STAIRS = BLOCKS.register("mossy_towerwood_stairs", () -> new StairBlock(() -> TFBlocks.MOSSY_TOWERWOOD.get().defaultBlockState() , Properties.copy(TFBlocks.MOSSY_TOWERWOOD.get())));
