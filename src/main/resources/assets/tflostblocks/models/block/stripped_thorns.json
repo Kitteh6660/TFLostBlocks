@@ -1,0 +1,8 @@
+{
+  "parent": "twilightforest:block/thorns_main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "end": "tflostblocks:block/stripped_thorns_top",
+    "side": "tflostblocks:block/stripped_thorns_side"
+  }
+}

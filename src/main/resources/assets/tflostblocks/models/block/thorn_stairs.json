@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+	    "bottom": "tflostblocks:block/thorn_planks",
+	    "top": "tflostblocks:block/thorn_planks",
+	    "side": "tflostblocks:block/thorn_planks"
+	}
+}

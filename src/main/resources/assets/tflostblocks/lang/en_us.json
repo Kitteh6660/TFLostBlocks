@@ -55,6 +55,21 @@
 "block.tflostblocks.mossy_mazestone_brick_stairs": "Mossy Mazestone Brick Stairs",
 "block.tflostblocks.mossy_mazestone_brick_wall": "Mossy Mazestone Brick Wall",
 
+"block.tflostblocks.stripped_thorns": "Stripped Thorns",
+"block.tflostblocks.stripped_thorn_block": "Stripped Thorn Block",
+"block.tflostblocks.thorn_planks": "Thorn Planks",
+"block.tflostblocks.thorn_slab": "Thorn Slab",
+"block.tflostblocks.thorn_stairs": "Thorn Stairs",
+"block.tflostblocks.thorn_fence": "Thorn Fence",
+"block.tflostblocks.thorn_fence_gate": "Thorn Fence Gate",
+"block.tflostblocks.thorn_door": "Thorn Door",
+"block.tflostblocks.thorn_trapdoor": "Thorn Trapdoor",
+"block.tflostblocks.thorn_button": "Thorn Button",
+"block.tflostblocks.thorn_pressure_plate": "Thorn Pressure Plate",
+"block.tflostblocks.thorn_sign": "Thorn Sign",
+"block.tflostblocks.thorn_hanging_sign": "Thorn Hanging Sign",
+"block.tflostblocks.thorn_banister": "Thorn Banister",
+
 "block.tflostblocks.towerwood_slab": "Towerwood Slab",
 "block.tflostblocks.towerwood_stairs": "Towerwood Stairs",
 "block.tflostblocks.towerwood_fence": "Towerwood Fence",
@@ -65,7 +80,7 @@
 "block.tflostblocks.towerwood_pressure_plate": "Towerwood Pressure Plate",
 "block.tflostblocks.towerwood_sign": "Towerwood Sign",
 "block.tflostblocks.towerwood_hanging_sign": "Towerwood Hanging Sign",
-"block.tflostblocks.towerwood_banister": "Towerwood Banister ",
+"block.tflostblocks.towerwood_banister": "Towerwood Banister",
 
 "block.tflostblocks.mossy_towerwood_slab": "Mossy Towerwood Slab",
 "block.tflostblocks.mossy_towerwood_stairs": "Mossy Towerwood Stairs",
@@ -80,5 +95,30 @@
 
 "block.tflostblocks.mossy_underbrick_slab": "Mossy Underbrick Slab",
 "block.tflostblocks.mossy_underbrick_stairs": "Mossy Underbrick Stairs",
-"block.tflostblocks.mossy_underbrick_wall": "Mossy Underbrick Wall"
+"block.tflostblocks.mossy_underbrick_wall": "Mossy Underbrick Wall",
+
+"block.tflostblocks.trollsteinn_slab": "Trollsteinn Slab",
+"block.tflostblocks.trollsteinn_stairs": "Trollsteinn Stairs",
+"block.tflostblocks.trollsteinn_wall": "Trollsteinn Wall",
+
+"block.tflostblocks.polished_trollsteinn": "Polished Trollsteinn",
+"block.tflostblocks.polished_trollsteinn_slab": "Polished Trollsteinn Slab",
+"block.tflostblocks.polished_trollsteinn_stairs": "Polished Trollsteinn Stairs",
+"block.tflostblocks.polished_trollsteinn_wall": "Polished Trollsteinn Wall",
+
+"block.tflostblocks.trollsteinn_bricks": "Trollsteinn Bricks",
+"block.tflostblocks.trollsteinn_brick_slab": "Trollsteinn Brick Slab",
+"block.tflostblocks.trollsteinn_brick_stairs": "Trollsteinn Brick Stairs",
+"block.tflostblocks.trollsteinn_brick_wall": "Trollsteinn Brick Wall",
+
+"block.tflostblocks.chiseled_trollsteinn": "Chiseled Trollsteinn",
+
+"item.tflostblocks.incomplete_thorncutter_axe": "Inactive Thorncutter",
+"item.tflostblocks.thorncutter_axe": "Thorncutter",
+
+"advancement.tflostblocks.find_thorncutter_axe": "Bane of Thorns... not?",
+"advancement.tflostblocks.find_thorncutter_axe.desc": "Find a strange axe on the top of the Final Castle. It looks incomplete. Maybe try completing it with Lamp of Cinders and Fiery Ingot on a Smithing Table?",
+
+"advancement.tflostblocks.smith_thorncutter_axe": "Bane of Thorns",
+"advancement.tflostblocks.smith_thorncutter_axe.desc": "Using the smithing technique, make the complete Thorncutter. Now you can harvest the thorns surrounding the Final Plateau using this special axe."
 }

@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "tflostblocks:castle_brick_slab",
+    "tflostblocks:bold_castle_brick_slab",
+    "tflostblocks:encased_castle_brick_slab",
+    "tflostblocks:cracked_castle_brick_slab",
+    "tflostblocks:worn_castle_brick_slab",
+    "tflostblocks:mossy_castle_brick_slab",
+    "tflostblocks:deadrock_slab",
+    "tflostblocks:cracked_deadrock_slab",
+    "tflostblocks:weathered_deadrock_slab",
+    "tflostblocks:nagastone_slab_left",
+    "tflostblocks:nagastone_slab_right",
+    "tflostblocks:cracked_nagastone_slab_left",
+    "tflostblocks:cracked_nagastone_slab_right",
+    "tflostblocks:mossy_nagastone_slab_left",
+    "tflostblocks:mossy_nagastone_slab_right",
+    "tflostblocks:mazestone_slab",
+    "tflostblocks:cut_mazestone_slab",
+    "tflostblocks:mazestone_brick_slab",
+    "tflostblocks:mossy_mazestone_brick_slab",
+    "tflostblocks:underbrick_slab",
+    "tflostblocks:cracked_underbrick_slab",
+    "tflostblocks:mossy_underbrick_slab",
+    "tflostblocks:trollsteinn_slab",
+    "tflostblocks:polished_trollsteinn_slab",
+    "tflostblocks:trollsteinn_brick_slab"
+  ]
+}

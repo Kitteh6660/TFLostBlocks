@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "tflostblocks:incomplete_thorncutter_axe"
+  },
+  "addition": {
+    "item": "twilightforest:fiery_ingot"
+  },
+  "result": {
+    "item": "tflostblocks:thorncutter_axe"
+  },
+  "template": {
+    "item": "twilightforest:lamp_of_cinders"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:thorn_sign",
     "tflostblocks:towerwood_sign"
   ]
 }

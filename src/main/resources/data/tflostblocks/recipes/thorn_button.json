@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "tflostblocks:thorn_planks"
+    }
+  ],
+  "result": {
+    "item": "tflostblocks:thorn_button",
+    "count": 1
+  }
+}

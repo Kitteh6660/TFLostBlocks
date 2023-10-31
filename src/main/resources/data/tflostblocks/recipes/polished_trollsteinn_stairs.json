@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:polished_trollsteinn"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:polished_trollsteinn_stairs",
+    "count": 4
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:thorn_wall_hanging_sign",
     "tflostblocks:towerwood_wall_hanging_sign"
   ]
 }

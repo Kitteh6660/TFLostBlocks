@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_banister",
+  "pattern": [
+    "###",
+    "$ $"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:thorn_slab"
+    },
+    "$": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:thorn_banister",
+    "count": 3
+  }
+}

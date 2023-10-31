@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:trollsteinn_slab"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:chiseled_trollsteinn",
+    "count": 1
+  }
+}

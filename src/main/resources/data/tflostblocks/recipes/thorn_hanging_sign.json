@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hanging_sign",
+  "pattern": [
+    "$ $",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:stripped_thorn_block"
+    },
+    "$": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:thorn_hanging_sign",
+    "count": 6
+  }
+}

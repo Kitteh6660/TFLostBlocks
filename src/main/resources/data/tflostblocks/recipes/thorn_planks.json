@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "wooden_planks",
+  "ingredients": [
+    {
+      "item": "tflostblocks:stripped_thorn_block"
+    }
+  ],
+  "result": {
+    "item": "tflostblocks:thorn_planks",
+    "count": 2
+  }
+}
