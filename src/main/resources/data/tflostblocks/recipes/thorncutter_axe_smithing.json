@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "tflostblocks:incomplete_thorncutter_axe"
+  },
+  "addition": {
+    "item": "twilightforest:lamp_of_cinders"
+  },
+  "result": {
+    "item": "tflostblocks:thorncutter_axe"
+  }
+}

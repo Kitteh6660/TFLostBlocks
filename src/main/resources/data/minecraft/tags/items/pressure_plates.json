@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:thorn_pressure_plate",
     "tflostblocks:towerwood_pressure_plate"
   ]
 }

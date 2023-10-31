@@ -47,6 +47,18 @@
     "tflostblocks:cracked_underbrick_wall",
     "tflostblocks:mossy_underbrick_slab",
     "tflostblocks:mossy_underbrick_stairs",
-    "tflostblocks:mossy_underbrick_wall"
+    "tflostblocks:mossy_underbrick_wall",
+    "tflostblocks:trollsteinn_slab",
+    "tflostblocks:trollsteinn_stairs",
+    "tflostblocks:trollsteinn_wall",
+    "tflostblocks:polished_trollsteinn",
+    "tflostblocks:polished_trollsteinn_slab",
+    "tflostblocks:polished_trollsteinn_stairs",
+    "tflostblocks:polished_trollsteinn_wall",
+    "tflostblocks:trollsteinn_bricks",
+    "tflostblocks:trollsteinn_brick_slab",
+    "tflostblocks:trollsteinn_brick_stairs",
+    "tflostblocks:trollsteinn_brick_wall",
+    "tflostblocks:chiseled_trollsteinn"
   ]
 }

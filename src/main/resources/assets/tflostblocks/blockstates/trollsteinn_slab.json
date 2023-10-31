@@ -1,0 +1,10 @@
+{
+	"variants": {
+        "type=bottom,lit=false": { "model": "tflostblocks:block/trollsteinn_slab_lower" },
+        "type=top,lit=false": { "model": "tflostblocks:block/trollsteinn_slab_upper" },
+        "type=double,lit=false": { "model": "tflostblocks:block/trollsteinn_slab_double" },
+        "type=bottom,lit=true": { "model": "tflostblocks:block/trollsteinn_slab_lower_lit" },
+        "type=top,lit=true": { "model": "tflostblocks:block/trollsteinn_slab_upper_lit" },
+        "type=double,lit=true": { "model": "tflostblocks:block/trollsteinn_slab_double_lit" }
+	}
+}

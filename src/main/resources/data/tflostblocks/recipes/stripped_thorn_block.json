@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:stripped_thorns"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:stripped_thorn_block",
+    "count": 1
+  }
+}

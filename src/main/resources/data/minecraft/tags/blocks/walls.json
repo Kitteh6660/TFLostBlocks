@@ -14,6 +14,9 @@
     "tflostblocks:mossy_mazestone_brick_wall",
     "tflostblocks:underbrick_wall",
     "tflostblocks:cracked_underbrick_wall",
-    "tflostblocks:mossy_underbrick_wall"
+    "tflostblocks:mossy_underbrick_wall",
+    "tflostblocks:trollsteinn_wall",
+    "tflostblocks:polished_trollsteinn_wall",
+    "tflostblocks:trollsteinn_brick_wall"
   ]
 }

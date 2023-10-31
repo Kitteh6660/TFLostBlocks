@@ -1,0 +1,66 @@
+{
+  "parent": "twilightforest:progress_castle",
+  "criteria": {
+    "axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tflostblocks:incomplete_thorncutter_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "previous_progression": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "twilightforest:progress_castle": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.tflostblocks.find_thorncutter_axe.desc",
+      "with": [
+        {
+          "translate": "item.tflostblocks.incomplete_thorncutter_axe"
+        }
+      ]
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "tflostblocks:incomplete_thorncutter_axe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.tflostblocks.find_thorncutter_axe"
+    }
+  },
+  "requirements": [
+    [
+      "axe"
+    ],
+    [
+      "previous_progression"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

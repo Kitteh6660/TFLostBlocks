@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wooden_sign",
+  "pattern": [
+    "###",
+    "###",
+    " $ "
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:thorn_planks"
+    },
+    "$": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:thorn_sign",
+    "count": 3
+  }
+}
