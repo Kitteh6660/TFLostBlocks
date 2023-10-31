@@ -23,7 +23,7 @@ mixin {
     add sourceSets.main, "tflostblocks.refmap.json"
 }
 
-version = '1.20.1-1.3'
+version = '1.20.1-1.3.1'
 group = 'kittehmod.tflostblocks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'TF_Lost_Blocks'
 
