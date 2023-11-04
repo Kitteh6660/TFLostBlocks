@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:thorn_button",
     "tflostblocks:towerwood_button"
   ]
 }

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "tflostblocks:block/stripped_thorn_block" },
+        "axis=z": { "model": "tflostblocks:block/stripped_thorn_block", "x": 90 },
+        "axis=x": { "model": "tflostblocks:block/stripped_thorn_block", "x": 90, "y": 90 }
+    }
+}

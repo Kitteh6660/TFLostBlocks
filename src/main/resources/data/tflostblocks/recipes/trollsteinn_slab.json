@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twilightforest:trollsteinn"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:trollsteinn_slab",
+    "count": 6
+  }
+}

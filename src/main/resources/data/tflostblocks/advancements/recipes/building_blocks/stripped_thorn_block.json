@@ -1,0 +1,32 @@
+{
+  "parent": "tflostblocks:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tflostblocks:stripped_thorn_block"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tflostblocks:stripped_thorn_block"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [ "tflostblocks:stripped_thorns" ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

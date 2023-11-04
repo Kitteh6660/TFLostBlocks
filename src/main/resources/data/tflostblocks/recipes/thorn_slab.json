@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:thorn_planks"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:thorn_slab",
+    "count": 6
+  }
+}

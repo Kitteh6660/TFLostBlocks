@@ -20,10 +20,11 @@
     "tflostblocks:cut_mazestone_slab",
     "tflostblocks:mazestone_brick_slab",
     "tflostblocks:mossy_mazestone_brick_slab",
-    "tflostblocks:towerwood_slab",
-    "tflostblocks:mossy_towerwood_slab",
     "tflostblocks:underbrick_slab",
     "tflostblocks:cracked_underbrick_slab",
-    "tflostblocks:mossy_underbrick_slab"
+    "tflostblocks:mossy_underbrick_slab",
+    "tflostblocks:trollsteinn_slab",
+    "tflostblocks:polished_trollsteinn_slab",
+    "tflostblocks:trollsteinn_brick_slab"
   ]
 }

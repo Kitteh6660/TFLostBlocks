@@ -1,14 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
   "group": "wooden_button",
-  "pattern": [
-    "#"
-  ],
-  "key": {
-    "#": {
+  "ingredients": [
+    {
       "item": "twilightforest:towerwood"
     }
-  },
+  ],
   "result": {
     "item": "tflostblocks:towerwood_button",
     "count": 1

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:trollsteinn_bricks"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:trollsteinn_brick_wall",
+    "count": 6
+  }
+}

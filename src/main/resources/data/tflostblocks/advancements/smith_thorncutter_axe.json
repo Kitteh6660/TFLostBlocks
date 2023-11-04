@@ -1,0 +1,66 @@
+{
+  "parent": "tflostblocks:find_thorncutter_axe",
+  "criteria": {
+    "axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tflostblocks:thorncutter_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "previous_progression": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "tflostblocks:find_thorncutter_axe": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.tflostblocks.smith_thorncutter_axe.desc",
+      "with": [
+        {
+          "translate": "item.tflostblocks.complete_thorncutter_axe"
+        }
+      ]
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "tflostblocks:thorncutter_axe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.tflostblocks.smith_thorncutter_axe"
+    }
+  },
+  "requirements": [
+    [
+      "axe"
+    ],
+    [
+      "previous_progression"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

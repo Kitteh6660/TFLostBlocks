@@ -9,10 +9,11 @@
     "tflostblocks:cut_mazestone_stairs",
     "tflostblocks:mazestone_brick_stairs",
     "tflostblocks:mossy_mazestone_brick_stairs",
-    "tflostblocks:towerwood_stairs",
-    "tflostblocks:mossy_towerwood_stairs",
     "tflostblocks:underbrick_stairs",
     "tflostblocks:cracked_underbrick_stairs",
-    "tflostblocks:mossy_underbrick_stairs"
+    "tflostblocks:mossy_underbrick_stairs",
+    "tflostblocks:trollsteinn_stairs",
+    "tflostblocks:polished_trollsteinn_stairs",
+    "tflostblocks:trollsteinn_brick_stairs"
   ]
 }

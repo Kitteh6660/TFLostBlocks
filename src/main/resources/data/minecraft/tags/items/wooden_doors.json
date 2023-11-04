@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:thorn_door",
     "tflostblocks:towerwood_door"
   ]
 }
