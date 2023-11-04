@@ -9,13 +9,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.event.entity.player.PlayerEvent.BreakSpeed;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.level.BlockEvent.BreakEvent;
 import net.minecraftforge.eventbus.api.Event.Result;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import twilightforest.block.BurntThornsBlock;
 import twilightforest.block.ThornsBlock;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,10 +39,15 @@ public class CommonEvents
 	public void modifyDestroyBlocks(BreakEvent event) {
 		Player player = event.getPlayer();
 		if (player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof AxeItem && (event.getState().getBlock() instanceof ThornsBlock || event.getState().is(TFLostBlocksTags.THORN_WOOD)) && !event.getPlayer().getAbilities().instabuild && !event.getLevel().isClientSide()) {
+			BlockState state = event.getState();
 			// Handle breaking thorns.
-			if (player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ThorncutterAxeItem && event.getState().getBlock() instanceof ThornsBlock && !(event.getState().getBlock() instanceof StrippedThornsBlock)) {
+			if (player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ThorncutterAxeItem && state.getBlock() instanceof ThornsBlock && !(state.getBlock() instanceof StrippedThornsBlock)) {
 				event.getLevel().destroyBlock(event.getPos(), true);
-				Block.popResource((Level)event.getLevel(), event.getPos(), new ItemStack(event.getState().getBlock().asItem()));
+				if ((state.getBlock() instanceof BurntThornsBlock && EnchantmentHelper.hasSilkTouch(player.getItemInHand(InteractionHand.MAIN_HAND))) || !(state.getBlock() instanceof BurntThornsBlock)) {
+					if (player.getServer().getGameRules().getRule(GameRules.RULE_DOBLOCKDROPS).get()) {
+						Block.popResource((Level)event.getLevel(), event.getPos(), new ItemStack(state.getBlock().asItem()));
+					}
+				}
 				event.setResult(Result.ALLOW);
 			}
 			else if (!(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ThorncutterAxeItem) && event.getState().is(TFLostBlocksTags.THORN_WOOD)) {

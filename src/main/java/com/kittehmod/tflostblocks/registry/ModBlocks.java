@@ -118,7 +118,7 @@ public class ModBlocks
 	public static final RegistryObject<Block> MOSSY_TOWERWOOD_STAIRS = BLOCKS.register("mossy_towerwood_stairs", () -> new StairBlock(() -> TFBlocks.MOSSY_TOWERWOOD.get().defaultBlockState(), Properties.copy(TFBlocks.MOSSY_TOWERWOOD.get())));
 	public static final RegistryObject<Block> MOSSY_TOWERWOOD_SLAB = BLOCKS.register("mossy_towerwood_slab", () -> new SlabBlock(Properties.copy(TFBlocks.MOSSY_TOWERWOOD.get())));
 	
-	public static final RegistryObject<Block> STRIPPED_THORNS = BLOCKS.register("stripped_thorns", () -> new StrippedThornsBlock(Properties.of().mapColor(MapColor.PODZOL).pushReaction(PushReaction.BLOCK).sound(SoundType.WOOD).strength(50.0F, 2000.0F)));
+	public static final RegistryObject<Block> STRIPPED_THORNS = BLOCKS.register("stripped_thorns", () -> new StrippedThornsBlock(Properties.of().mapColor(MapColor.TERRACOTTA_YELLOW).pushReaction(PushReaction.BLOCK).sound(SoundType.WOOD).strength(50.0F, 2000.0F)));
 	public static final RegistryObject<Block> STRIPPED_THORN_BLOCK = BLOCKS.register("stripped_thorn_block", () -> new RotatedPillarBlock(Properties.copy(STRIPPED_THORNS.get()).pushReaction(PushReaction.NORMAL)));
 	public static final RegistryObject<Block> THORN_PLANKS = BLOCKS.register("thorn_planks", () -> new Block(Properties.copy(STRIPPED_THORN_BLOCK.get())));
 	public static final RegistryObject<Block> THORN_STAIRS = BLOCKS.register("thorn_stairs", () -> new StairBlock(() -> STRIPPED_THORN_BLOCK.get().defaultBlockState(), Properties.copy(TFBlocks.BROWN_THORNS.get())));
