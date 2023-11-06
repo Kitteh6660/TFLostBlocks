@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tflostblocks:thorn_slab",
+    "tflostblocks:towerwood_slab",
+    "tflostblocks:mossy_towerwood_slab"
+  ]
+}

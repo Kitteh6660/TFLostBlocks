@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "twilightforest:block/trollsteinn_light",
+        "top": "twilightforest:block/trollsteinn_light",
+        "side": "twilightforest:block/trollsteinn_light"
+    }
+}

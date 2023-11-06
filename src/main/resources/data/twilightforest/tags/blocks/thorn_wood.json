@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "tflostblocks:stripped_thorns",
+    "tflostblocks:stripped_thorn_block",
+    "tflostblocks:thorn_planks",
+    "tflostblocks:thorn_stairs",
+    "tflostblocks:thorn_slab",
+    "tflostblocks:thorn_fence",
+    "tflostblocks:thorn_fence_gate",
+    "tflostblocks:thorn_door",
+    "tflostblocks:thorn_trapdoor",
+    "tflostblocks:thorn_button",
+    "tflostblocks:thorn_pressure_plate",
+    "tflostblocks:thorn_sign",
+    "tflostblocks:thorn_banister"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab_top",
+	"textures": {
+        "bottom": "twilightforest:block/nagastone_bare_weathered",
+        "top": "twilightforest:block/stone_tiles_weathered",
+        "side": "twilightforest:block/etched_nagastone_left_weathered"
+	}
+}
