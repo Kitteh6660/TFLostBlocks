@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+	  "model": "tflostblocks:block/castle_brick_tiles"
+	}
+  }
+}

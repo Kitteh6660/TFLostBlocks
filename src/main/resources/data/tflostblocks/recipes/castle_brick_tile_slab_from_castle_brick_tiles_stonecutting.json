@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tflostblocks:castle_brick_tiles"
+  },
+  "result": "tflostblocks:castle_brick_tile_slab",
+  "count": 2
+}

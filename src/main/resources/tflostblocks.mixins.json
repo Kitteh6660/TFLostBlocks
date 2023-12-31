@@ -5,6 +5,7 @@
 	"refmap": "tflostblocks.refmap.json",
 	"mixins": [
         "FinalCastleMixin",
+        "HedgeBlockMixin",
         "ThornsBlockMixin"
 	],
 	"minVersion": "0.8"

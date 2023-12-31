@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tflostblocks:large_mazestone_bricks"
+  },
+  "result": "tflostblocks:large_mazestone_brick_slab",
+  "count": 2
+}
