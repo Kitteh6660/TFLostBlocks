@@ -3,23 +3,21 @@ package com.kittehmod.tflostblocks.blocks;
 import java.util.Random;
 import java.util.function.Supplier;
 
-import com.mojang.math.Vector3f;
-
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.DustParticleOptions;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.particles.RedstoneParticleData;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class TrollsteinnStairBlock extends StairBlock
+public class TrollsteinnStairBlock extends StairsBlock
 {
 	private static final BooleanProperty LIT = TFLostBlocksProperties.LIT;
 
@@ -31,13 +29,13 @@ public class TrollsteinnStairBlock extends StairBlock
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(LIT);
 	}
 	
 	@Override
-	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
+	public void randomTick(BlockState state, ServerWorld level, BlockPos pos, Random random) {
 		BlockState newState = state;
 		newState = newState.setValue(LIT, level.getMaxLocalRawBrightness(pos) > LIGHT_THRESHOLD);
 		if (!newState.equals(state)) level.setBlockAndUpdate(pos, newState);
@@ -49,7 +47,7 @@ public class TrollsteinnStairBlock extends StairBlock
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState state, World level, BlockPos pos) {
 		int peak = 0;
 		for (Direction direction : Direction.values())
 			peak = Math.max(level.getMaxLocalRawBrightness(pos.relative(direction)), peak);
@@ -57,7 +55,7 @@ public class TrollsteinnStairBlock extends StairBlock
 	}
 
 	@Override
-	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+	public BlockState getStateForPlacement(BlockItemUseContext ctx) {
 		BlockState ret = super.getStateForPlacement(ctx);
 		int light = ctx.getLevel().getMaxLocalRawBrightness(ctx.getClickedPos());
 		ret = ret.setValue(LIT, light > LIGHT_THRESHOLD);
@@ -66,11 +64,11 @@ public class TrollsteinnStairBlock extends StairBlock
 	
 	@OnlyIn(Dist.CLIENT)
 	@Override
-	public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState state, World level, BlockPos pos, Random rand) {
 		if (rand.nextInt(2) == 0) this.sparkle(level, pos);
 	}
 	
-	private void sparkle(Level level, BlockPos pos) {
+	private void sparkle(World level, BlockPos pos) {
 		Random random = level.getRandom();
 		int threshold = LIGHT_THRESHOLD;
 
@@ -104,7 +102,7 @@ public class TrollsteinnStairBlock extends StairBlock
 			}
 
 			if (rx < pos.getX() || rx > pos.getX() + 1 || ry < 0.0D || ry > pos.getY() + 1 || rz < pos.getZ() || rz > pos.getZ() + 1) {
-				level.addParticle(new DustParticleOptions(new Vector3f(0.5F, 0.0F, 0.5F), 1.0F), rx, ry, rz, 0.25D, -1.0D, 0.5D);
+				level.addParticle(new RedstoneParticleData(0.0F, random.nextFloat(), 1.0F, 1.0F), rx, ry, rz, 0.25D, -1.0D, 0.5D);
 			}
 		}
 	}

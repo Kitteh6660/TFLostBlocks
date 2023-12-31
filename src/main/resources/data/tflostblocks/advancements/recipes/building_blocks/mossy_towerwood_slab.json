@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:mossy_towerwood" ]
+            "item": "twilightforest:tower_wood_mossy"
           }
         ]
       }

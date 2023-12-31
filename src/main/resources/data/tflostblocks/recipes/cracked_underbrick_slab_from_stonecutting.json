@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "twilightforest:cracked_underbrick"
+    "item": "twilightforest:underbrick_cracked"
   },
   "result": "tflostblocks:cracked_underbrick_slab",
   "count": 2

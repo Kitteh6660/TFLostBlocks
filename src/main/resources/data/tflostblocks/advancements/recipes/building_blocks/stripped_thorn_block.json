@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "tflostblocks:stripped_thorns" ]
+            "item": "tflostblocks:stripped_thorns"
           }
         ]
       }

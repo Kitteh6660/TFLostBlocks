@@ -2,6 +2,6 @@
 	"parent": "block/cube_column",
 	"textures": {
         "end": "twilightforest:block/castleblock_tile",
-        "side": "twilightforest:block/encased_castle_brick_pillar_h"
+        "side": "twilightforest:block/castle_pillar_encased_h"
 	}
 }

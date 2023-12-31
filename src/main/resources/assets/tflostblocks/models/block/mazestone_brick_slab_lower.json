@@ -1,8 +1,8 @@
 {
 	"parent": "block/slab",
 	"textures": {
-        "bottom": "twilightforest:block/mazestone_brick",
-        "top": "twilightforest:block/mazestone_brick",
-        "side": "twilightforest:block/mazestone_brick"
+        "bottom": "twilightforest:block/maze_stone_brick",
+        "top": "twilightforest:block/maze_stone_brick",
+        "side": "twilightforest:block/maze_stone_brick"
 	}
 }

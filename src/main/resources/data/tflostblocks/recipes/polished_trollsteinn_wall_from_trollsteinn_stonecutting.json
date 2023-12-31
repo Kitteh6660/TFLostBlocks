@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "twilightforest:trollsteinn"
-  },
-  "result": "tflostblocks:polished_trollsteinn_wall",
-  "count": 1
-}

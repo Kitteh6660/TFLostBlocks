@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "twilightforest:cracked_deadrock"
+    "item": "twilightforest:deadrock_cracked"
   },
   "result": "tflostblocks:cracked_deadrock_stairs",
   "count": 1

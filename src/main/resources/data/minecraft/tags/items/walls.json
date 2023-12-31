@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:stone_tile_wall",
+    "tflostblocks:mossy_stone_tile_wall",
     "tflostblocks:aurora_wall",
     "tflostblocks:castle_brick_wall",
+    "tflostblocks:castle_brick_tile_wall",
     "tflostblocks:bold_castle_brick_wall",
     "tflostblocks:encased_castle_brick_wall",
     "tflostblocks:cracked_castle_brick_wall",
@@ -10,13 +13,12 @@
     "tflostblocks:mossy_castle_brick_wall",
     "tflostblocks:mazestone_wall",
     "tflostblocks:cut_mazestone_wall",
+    "tflostblocks:large_mazestone_brick_wall",
     "tflostblocks:mazestone_brick_wall",
     "tflostblocks:mossy_mazestone_brick_wall",
     "tflostblocks:underbrick_wall",
     "tflostblocks:cracked_underbrick_wall",
     "tflostblocks:mossy_underbrick_wall",
-    "tflostblocks:trollsteinn_wall",
-    "tflostblocks:polished_trollsteinn_wall",
-    "tflostblocks:trollsteinn_brick_wall"
+    "tflostblocks:trollsteinn_wall"
   ]
 }

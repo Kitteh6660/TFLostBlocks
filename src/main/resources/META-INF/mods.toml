@@ -1,13 +1,11 @@
 modLoader="javafml" #mandatory
-loaderVersion="[40,)"
+loaderVersion="[36,)"
 license="MIT" # License Schmicense
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 
 [[mods]]
     modId="tflostblocks"
     version="${file.jarVersion}"
     displayName="Twilight Forest: The Lost Blocks"
-    # updateJSONURL="https://change.me.example.invalid/updates.json"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/twilight-forest-the-lost-blocks"
     logoFile="icon.png"
     credits="Thanks to the original developers of Twilight Forest."
@@ -18,18 +16,18 @@ license="MIT" # License Schmicense
 [[dependencies.tflostblocks]]
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[40.2.0,)" #mandatory
+    versionRange="[36.2.0,)" #mandatory
     ordering="NONE"
     side="BOTH"
 [[dependencies.tflostblocks]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2,1.19)"
+    versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.tflostblocks]]
     modId="twilightforest"
     mandatory=true
-    versionRange="[4.1.1494,)"
+    versionRange="[4.0.870,)"
     ordering="AFTER"
     side="BOTH"

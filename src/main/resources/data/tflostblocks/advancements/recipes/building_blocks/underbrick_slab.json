@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:underbrick" ]
+            "item": "twilightforest:underbrick"
           }
         ]
       }

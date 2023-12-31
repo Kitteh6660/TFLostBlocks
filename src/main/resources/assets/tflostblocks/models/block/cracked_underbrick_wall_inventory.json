@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "twilightforest:block/cracked_underbrick"
+    "wall": "twilightforest:block/underbrick_cracked"
   }
 }

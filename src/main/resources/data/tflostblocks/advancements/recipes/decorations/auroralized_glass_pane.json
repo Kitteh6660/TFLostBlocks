@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:auroralized_glass" ]
+            "item": "twilightforest:auroralized_glass"
           }
         ]
       }

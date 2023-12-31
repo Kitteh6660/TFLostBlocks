@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:trollsteinn" ]
+            "item": "twilightforest:trollsteinn"
           }
         ]
       }

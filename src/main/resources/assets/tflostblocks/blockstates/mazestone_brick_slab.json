@@ -2,6 +2,6 @@
 	"variants": {
         "type=bottom": { "model": "tflostblocks:block/mazestone_brick_slab_lower" },
         "type=top": { "model": "tflostblocks:block/mazestone_brick_slab_upper" },
-        "type=double": { "model": "twilightforest:block/mazestone_brick" }
+        "type=double": { "model": "twilightforest:block/maze_stone_brick" }
 	}
 }

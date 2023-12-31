@@ -6,8 +6,8 @@ import com.kittehmod.tflostblocks.client.ClientHandler;
 import com.kittehmod.tflostblocks.registry.ModBlocks;
 import com.kittehmod.tflostblocks.registry.ModItems;
 
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.block.WoodType;
+import net.minecraft.client.renderer.Atlases;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +16,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(TFLostBlocksMod.MOD_ID)
 public class TFLostBlocksMod
 {
@@ -44,8 +43,8 @@ public class TFLostBlocksMod
     private void setupClient(final FMLClientSetupEvent event)
     {
     	ClientHandler.setupRenderers();
-    	event.enqueueWork(() -> { Sheets.addWoodType(ModWoodType.THORN);} );
-    	event.enqueueWork(() -> { Sheets.addWoodType(ModWoodType.TOWERWOOD);} );
+    	event.enqueueWork(() -> { Atlases.addWoodType(ModWoodType.THORN);} );
+    	event.enqueueWork(() -> { Atlases.addWoodType(ModWoodType.TOWERWOOD);} );
     	
     	MinecraftForge.EVENT_BUS.register(ClientHandler.class);
     }

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "twilightforest:mossy_etched_nagastone"
+    "item": "twilightforest:etched_nagastone_mossy"
   },
   "result": "tflostblocks:mossy_nagastone_slab_left",
   "count": 2

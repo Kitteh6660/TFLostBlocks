@@ -12,7 +12,6 @@
     "tflostblocks:thorn_trapdoor",
     "tflostblocks:thorn_button",
     "tflostblocks:thorn_pressure_plate",
-    "tflostblocks:thorn_sign",
-    "tflostblocks:thorn_banister"
+    "tflostblocks:thorn_sign"
   ]
 }

@@ -2,7 +2,7 @@ package com.kittehmod.tflostblocks.blocks;
 
 import com.kittehmod.tflostblocks.TFLostBlocksMod;
 
-import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.block.WoodType;
 
 public class ModWoodType
 {

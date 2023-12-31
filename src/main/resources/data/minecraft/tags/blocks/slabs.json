@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:stone_tile_slab",
+    "tflostblocks:mossy_stone_tile_slab",
     "tflostblocks:castle_brick_slab",
+    "tflostblocks:castle_brick_tile_slab",
     "tflostblocks:bold_castle_brick_slab",
     "tflostblocks:encased_castle_brick_slab",
     "tflostblocks:cracked_castle_brick_slab",
@@ -18,13 +21,12 @@
     "tflostblocks:mossy_nagastone_slab_right",
     "tflostblocks:mazestone_slab",
     "tflostblocks:cut_mazestone_slab",
+    "tflostblocks:large_mazestone_brick_slab",
     "tflostblocks:mazestone_brick_slab",
     "tflostblocks:mossy_mazestone_brick_slab",
     "tflostblocks:underbrick_slab",
     "tflostblocks:cracked_underbrick_slab",
     "tflostblocks:mossy_underbrick_slab",
-    "tflostblocks:trollsteinn_slab",
-    "tflostblocks:polished_trollsteinn_slab",
-    "tflostblocks:trollsteinn_brick_slab"
+    "tflostblocks:trollsteinn_slab"
   ]
 }

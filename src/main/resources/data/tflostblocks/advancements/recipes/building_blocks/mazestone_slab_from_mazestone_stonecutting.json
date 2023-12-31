@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:mazestone" ]
+            "item": "twilightforest:maze_stone"
           }
         ]
       }

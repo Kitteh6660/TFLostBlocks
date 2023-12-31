@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "twilightforest:trollsteinn"
-  },
-  "result": "tflostblocks:trollsteinn_bricks",
-  "count": 1
-}

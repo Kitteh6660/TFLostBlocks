@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tflostblocks:castle_brick_tiles"
+    }
+  },
+  "result": {
+    "item": "tflostblocks:castle_brick_tile_stairs",
+    "count": 4
+  }
+}

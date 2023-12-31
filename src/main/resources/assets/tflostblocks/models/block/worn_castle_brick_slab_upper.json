@@ -1,8 +1,8 @@
 {
 	"parent": "block/slab_top",
 	"textures": {
-        "bottom": "twilightforest:block/worn_castle_brick",
-        "top": "twilightforest:block/worn_castle_brick",
-        "side": "twilightforest:block/worn_castle_brick"
+        "bottom": "twilightforest:block/castle_brick_worn",
+        "top": "twilightforest:block/castle_brick_worn",
+        "side": "twilightforest:block/castle_brick_worn"
 	}
 }

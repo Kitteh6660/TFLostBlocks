@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:towerwood" ]
+            "item": "twilightforest:tower_wood"
           }
         ]
       }

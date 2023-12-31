@@ -1,6 +1,6 @@
 package com.kittehmod.tflostblocks.blocks;
 
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.state.BooleanProperty;
 
 public class TFLostBlocksProperties
 {

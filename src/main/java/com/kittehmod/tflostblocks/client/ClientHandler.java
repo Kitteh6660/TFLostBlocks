@@ -1,20 +1,20 @@
 package com.kittehmod.tflostblocks.client;
 
-import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import java.awt.*;
+
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
+import net.minecraft.item.BlockItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import twilightforest.block.AuroraBrickBlock;
 import twilightforest.block.TFBlocks;
-
-import java.awt.*;
 
 import com.kittehmod.tflostblocks.blockentities.ModBlockEntities;
 import com.kittehmod.tflostblocks.registry.ModBlocks;
@@ -23,13 +23,13 @@ import com.kittehmod.tflostblocks.registry.ModBlocks;
 public class ClientHandler
 {
 	public static void setupRenderers() {
-		BlockEntityRenderers.register(ModBlockEntities.LOST_TF_SIGN.get(), SignRenderer::new);
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.AURORALIZED_GLASS_PANE.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRIPPED_THORNS.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.THORN_DOOR.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.THORN_TRAPDOOR.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOWERWOOD_DOOR.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOWERWOOD_TRAPDOOR.get(), RenderType.cutout());
+		ClientRegistry.bindTileEntityRenderer(ModBlockEntities.LOST_TF_SIGN.get(), SignTileEntityRenderer::new);
+		RenderTypeLookup.setRenderLayer(ModBlocks.AURORALIZED_GLASS_PANE.get(), RenderType.translucent());
+		RenderTypeLookup.setRenderLayer(ModBlocks.STRIPPED_THORNS.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.THORN_DOOR.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.THORN_TRAPDOOR.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.TOWERWOOD_DOOR.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.TOWERWOOD_TRAPDOOR.get(), RenderType.cutout());
 	}
 	
 	@SubscribeEvent
@@ -50,7 +50,7 @@ public class ClientHandler
 		blockColours.register((state, worldIn, pos, tintIndex) -> {
 			if (tintIndex > 15) return 0xFFFFFF;
 
-			int normalColor = blockColours.getColor(TFBlocks.AURORA_BLOCK.get().defaultBlockState(), worldIn, pos, tintIndex);
+			int normalColor = blockColours.getColor(TFBlocks.aurora_block.get().defaultBlockState(), worldIn, pos, tintIndex);
 
 			int red = (normalColor >> 16) & 255;
 			int blue = normalColor & 255;

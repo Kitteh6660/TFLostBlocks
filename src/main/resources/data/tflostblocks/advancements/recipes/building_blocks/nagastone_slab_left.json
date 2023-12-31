@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:etched_nagastone" ]
+            "item": "twilightforest:etched_nagastone"
           }
         ]
       }

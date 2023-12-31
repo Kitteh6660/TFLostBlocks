@@ -46,9 +46,9 @@
     }
   ],
   "textures": {
-    "bottom": "twilightforest:block/mossy_towerwood",
+    "bottom": "twilightforest:block/tower_wood_mossy",
     "particle": "#side",
-    "top": "twilightforest:block/mossy_towerwood",
-    "side": "twilightforest:block/mossy_towerwood"
+    "top": "twilightforest:block/tower_wood_mossy",
+    "side": "twilightforest:block/tower_wood_mossy"
   }
 }

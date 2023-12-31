@@ -2,6 +2,6 @@
 	"variants": {
         "type=bottom": { "model": "tflostblocks:block/cracked_deadrock_slab_lower" },
         "type=top": { "model": "tflostblocks:block/cracked_deadrock_slab_upper" },
-        "type=double": { "model": "twilightforest:block/cracked_deadrock" }
+        "type=double": { "model": "twilightforest:block/deadrock_cracked" }
 	}
 }

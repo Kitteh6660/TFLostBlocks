@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:mossy_mazestone" ]
+            "item": "twilightforest:maze_stone_mossy"
           }
         ]
       }

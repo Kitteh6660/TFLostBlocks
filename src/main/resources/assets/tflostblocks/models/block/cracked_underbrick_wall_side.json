@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side",
   "textures": {
-    "wall": "twilightforest:block/cracked_underbrick"
+    "wall": "twilightforest:block/underbrick_cracked"
   }
 }

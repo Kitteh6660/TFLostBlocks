@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:aurora_block" ]
+            "item": "twilightforest:aurora_block"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "twilightforest:mazestone"
+    "item": "twilightforest:maze_stone"
   },
   "result": "tflostblocks:mazestone_wall",
   "count": 1

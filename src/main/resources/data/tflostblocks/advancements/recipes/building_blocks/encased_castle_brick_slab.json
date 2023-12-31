@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:encased_castle_brick_pillar" ]
+            "item": "twilightforest:castle_pillar_encased"
           }
         ]
       }

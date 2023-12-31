@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:mossy_underbrick" ]
+            "item": "twilightforest:underbrick_mossy"
           }
         ]
       }

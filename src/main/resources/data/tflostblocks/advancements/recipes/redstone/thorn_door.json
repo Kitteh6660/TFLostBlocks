@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "tflostblocks:thorn_planks" ]
+            "item": "tflostblocks:thorn_planks"
           }
         ]
       }

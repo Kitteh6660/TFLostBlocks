@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "items": [ "twilightforest:weathered_deadrock" ]
+            "item": "twilightforest:deadrock_weathered"
           }
         ]
       }

@@ -9,7 +9,7 @@
       "model": "tflostblocks:block/mossy_towerwood_slab"
     },
     "type=double": {
-      "model": "twilightforest:block/mossy_towerwood"
+      "model": "twilightforest:block/tower_wood_mossy"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
 	"parent": "block/stairs",
 	"textures": {
-		"bottom": "twilightforest:block/mazestone",
-        "top": "twilightforest:block/mazestone",
-        "side": "twilightforest:block/cut_mazestone"
+		"bottom": "twilightforest:block/maze_stone",
+        "top": "twilightforest:block/maze_stone",
+        "side": "twilightforest:block/maze_stone_chiseled"
 	}
 }

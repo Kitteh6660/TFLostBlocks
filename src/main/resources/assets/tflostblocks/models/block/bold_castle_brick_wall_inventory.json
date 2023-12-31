@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "twilightforest:block/bold_castle_brick_tile"
+    "wall": "twilightforest:block/castle_pillar_bold_tile"
   }
 }

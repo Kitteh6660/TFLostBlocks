@@ -2,6 +2,6 @@
 	"variants": {
         "type=bottom": { "model": "tflostblocks:block/cracked_nagastone_slab_left_lower" },
         "type=top": { "model": "tflostblocks:block/cracked_nagastone_slab_left_upper" },
-        "type=double": { "model": "twilightforest:block/cracked_etched_nagastone" }
+        "type=double": { "model": "twilightforest:block/etched_nagastone_weathered" }
 	}
 }

@@ -3,16 +3,16 @@ package com.kittehmod.tflostblocks.registry;
 import com.kittehmod.tflostblocks.TFLostBlocksMod;
 import com.kittehmod.tflostblocks.items.ThorncutterAxeItem;
 
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.SignItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemTier;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.SignItem;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import twilightforest.item.TFItems;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -20,8 +20,19 @@ public class ModItems
 {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TFLostBlocksMod.MOD_ID);
 
-	public static final RegistryObject<Item> INCOMPLETE_THORNCUTTER_AXE = ITEMS.register("incomplete_thorncutter_axe", () -> new AxeItem(Tiers.IRON, 6.0F, -3.1F, new Item.Properties().rarity(Rarity.RARE).tab(TFItems.creativeTab)));
-	public static final RegistryObject<Item> THORNCUTTER_AXE = ITEMS.register("thorncutter_axe", () -> new ThorncutterAxeItem(Tiers.DIAMOND, 5.0F, -3.0F, new Item.Properties().rarity(Rarity.EPIC).tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> INCOMPLETE_THORNCUTTER_AXE = ITEMS.register("incomplete_thorncutter_axe", () -> new AxeItem(ItemTier.IRON, 6.0F, -3.1F, new Item.Properties().rarity(Rarity.RARE).tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> THORNCUTTER_AXE = ITEMS.register("thorncutter_axe", () -> new ThorncutterAxeItem(ItemTier.DIAMOND, 5.0F, -3.0F, new Item.Properties().rarity(Rarity.EPIC).tab(TFItems.creativeTab)));
+
+	// Stone Tiles
+	public static final RegistryObject<Item> STONE_TILES = ITEMS.register("stone_tiles", () -> new BlockItem(ModBlocks.STONE_TILES.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> STONE_TILE_STAIRS = ITEMS.register("stone_tile_stairs", () -> new BlockItem(ModBlocks.STONE_TILE_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> STONE_TILE_SLAB = ITEMS.register("stone_tile_slab", () -> new BlockItem(ModBlocks.STONE_TILE_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> STONE_TILE_WALL = ITEMS.register("stone_tile_wall", () -> new BlockItem(ModBlocks.STONE_TILE_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
+
+	public static final RegistryObject<Item> MOSSY_STONE_TILES = ITEMS.register("mossy_stone_tiles", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILES.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_STAIRS = ITEMS.register("mossy_stone_tile_stairs", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_SLAB = ITEMS.register("mossy_stone_tile_slab", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_WALL = ITEMS.register("mossy_stone_tile_wall", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
 
 	// Aurora Palace
 	public static final RegistryObject<Item> AURORA_STAIRS = ITEMS.register("aurora_stairs", () -> new BlockItem(ModBlocks.AURORA_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -31,6 +42,11 @@ public class ModItems
 	// Final Castle
 	public static final RegistryObject<Item> CASTLE_BRICK_SLAB = ITEMS.register("castle_brick_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> CASTLE_BRICK_WALL = ITEMS.register("castle_brick_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
+
+	public static final RegistryObject<Item> CASTLE_BRICK_TILES = ITEMS.register("castle_brick_tiles", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILES.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_STAIRS = ITEMS.register("castle_brick_tile_stairs", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_SLAB = ITEMS.register("castle_brick_tile_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_WALL = ITEMS.register("castle_brick_tile_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
 
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_SLAB = ITEMS.register("bold_castle_brick_slab", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_WALL = ITEMS.register("bold_castle_brick_wall", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -65,7 +81,12 @@ public class ModItems
 	public static final RegistryObject<Item> CUT_MAZESTONE_STAIRS = ITEMS.register("cut_mazestone_stairs", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> CUT_MAZESTONE_SLAB = ITEMS.register("cut_mazestone_slab", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> CUT_MAZESTONE_WALL = ITEMS.register("cut_mazestone_wall", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
-	
+
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICKS = ITEMS.register("large_mazestone_bricks", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICKS.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_STAIRS = ITEMS.register("large_mazestone_brick_stairs", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_SLAB = ITEMS.register("large_mazestone_brick_slab", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_WALL = ITEMS.register("large_mazestone_brick_wall", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
+
 	public static final RegistryObject<Item> MAZESTONE_BRICK_STAIRS = ITEMS.register("mazestone_brick_stairs", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> MAZESTONE_BRICK_SLAB = ITEMS.register("mazestone_brick_slab", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> MAZESTONE_BRICK_WALL = ITEMS.register("mazestone_brick_wall", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -94,7 +115,7 @@ public class ModItems
 	public static final RegistryObject<Item> TOWERWOOD_BUTTON = ITEMS.register("towerwood_button", () -> new BlockItem(ModBlocks.TOWERWOOD_BUTTON.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> TOWERWOOD_PRESSURE_PLATE = ITEMS.register("towerwood_pressure_plate", () -> new BlockItem(ModBlocks.TOWERWOOD_PRESSURE_PLATE.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> TOWERWOOD_SIGN = ITEMS.register("towerwood_sign", () -> new SignItem(new Item.Properties().tab(TFItems.creativeTab), ModBlocks.TOWERWOOD_SIGN.get(), ModBlocks.TOWERWOOD_WALL_SIGN.get()));
-	public static final RegistryObject<Item> TOWERWOOD_BANISTER = ITEMS.register("towerwood_banister", () -> new BlockItem(ModBlocks.TOWERWOOD_BANISTER.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	//public static final RegistryObject<Item> TOWERWOOD_BANISTER = ITEMS.register("towerwood_banister", () -> new BlockItem(ModBlocks.TOWERWOOD_BANISTER.get(), new Item.Properties().tab(TFItems.creativeTab)));
 
 	public static final RegistryObject<Item> MOSSY_TOWERWOOD_SLAB = ITEMS.register("mossy_towerwood_slab", () -> new BlockItem(ModBlocks.MOSSY_TOWERWOOD_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> MOSSY_TOWERWOOD_STAIRS = ITEMS.register("mossy_towerwood_stairs", () -> new BlockItem(ModBlocks.MOSSY_TOWERWOOD_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -113,7 +134,7 @@ public class ModItems
 	public static final RegistryObject<Item> THORN_BUTTON = ITEMS.register("thorn_button", () -> new BlockItem(ModBlocks.THORN_BUTTON.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> THORN_PRESSURE_PLATE = ITEMS.register("thorn_pressure_plate", () -> new BlockItem(ModBlocks.THORN_PRESSURE_PLATE.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> THORN_SIGN = ITEMS.register("thorn_sign", () -> new SignItem(new Item.Properties().tab(TFItems.creativeTab), ModBlocks.THORN_SIGN.get(), ModBlocks.THORN_WALL_SIGN.get()));
-	public static final RegistryObject<Item> THORN_BANISTER = ITEMS.register("thorn_banister", () -> new BlockItem(ModBlocks.THORN_BANISTER.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	//public static final RegistryObject<Item> THORN_BANISTER = ITEMS.register("thorn_banister", () -> new BlockItem(ModBlocks.THORN_BANISTER.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	
 	// Goblin Knight Stronghold
 	public static final RegistryObject<Item> UNDERBRICK_STAIRS = ITEMS.register("underbrick_stairs", () -> new BlockItem(ModBlocks.UNDERBRICK_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -133,7 +154,7 @@ public class ModItems
 	public static final RegistryObject<Item> TROLLSTEINN_SLAB = ITEMS.register("trollsteinn_slab", () -> new BlockItem(ModBlocks.TROLLSTEINN_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> TROLLSTEINN_WALL = ITEMS.register("trollsteinn_wall", () -> new BlockItem(ModBlocks.TROLLSTEINN_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
 
-	public static final RegistryObject<Item> POLISHED_TROLLSTEINN = ITEMS.register("polished_trollsteinn", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	/*public static final RegistryObject<Item> POLISHED_TROLLSTEINN = ITEMS.register("polished_trollsteinn", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_STAIRS = ITEMS.register("polished_trollsteinn_stairs", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_STAIRS.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_SLAB = ITEMS.register("polished_trollsteinn_slab", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_WALL = ITEMS.register("polished_trollsteinn_wall", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
@@ -143,5 +164,5 @@ public class ModItems
 	public static final RegistryObject<Item> TROLLSTEINN_BRICK_SLAB = ITEMS.register("trollsteinn_brick_slab", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICK_SLAB.get(), new Item.Properties().tab(TFItems.creativeTab)));
 	public static final RegistryObject<Item> TROLLSTEINN_BRICK_WALL = ITEMS.register("trollsteinn_brick_wall", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICK_WALL.get(), new Item.Properties().tab(TFItems.creativeTab)));
 
-	public static final RegistryObject<Item> CHISELED_TROLLSTEINN = ITEMS.register("chiseled_trollsteinn", () -> new BlockItem(ModBlocks.CHISELED_TROLLSTEINN.get(), new Item.Properties().tab(TFItems.creativeTab)));
+	public static final RegistryObject<Item> CHISELED_TROLLSTEINN = ITEMS.register("chiseled_trollsteinn", () -> new BlockItem(ModBlocks.CHISELED_TROLLSTEINN.get(), new Item.Properties().tab(TFItems.creativeTab)));*/
 }

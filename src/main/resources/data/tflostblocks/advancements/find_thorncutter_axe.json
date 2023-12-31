@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "tflostblocks:incomplete_thorncutter_axe"
-            ]
+            "item": "tflostblocks:incomplete_thorncutter_axe"
           }
         ]
       },

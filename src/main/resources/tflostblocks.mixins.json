@@ -1,11 +1,10 @@
 {
 	"required": true,
 	"package": "com.kittehmod.tflostblocks.mixin",
-	"compatibilityLevel": "JAVA_17",
 	"refmap": "tflostblocks.refmap.json",
+	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-        "FinalCastleMixin",
-        "ThornsBlockMixin"
+        "FinalCastleMixin"
 	],
 	"minVersion": "0.8"
 }

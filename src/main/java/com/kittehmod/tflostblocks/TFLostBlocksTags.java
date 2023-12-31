@@ -1,12 +1,12 @@
 package com.kittehmod.tflostblocks;
 
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.block.Block;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ITag;
 
 public class TFLostBlocksTags
 {
-	public static final TagKey<Block> MAZESTONE = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("twilightforest", "mazestone"));
-	public static final TagKey<Block> THORN_WOOD = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("twilightforest", "thorn_wood"));
+	public static final ITag.INamedTag<Block> MAZESTONE = BlockTags.createOptional(new ResourceLocation("twilightforest", "mazestone"));
+	public static final ITag.INamedTag<Block> THORN_WOOD = BlockTags.createOptional(new ResourceLocation("twilightforest", "thorn_wood"));
 }

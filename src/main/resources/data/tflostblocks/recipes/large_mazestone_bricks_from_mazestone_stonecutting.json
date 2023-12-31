@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:maze_stone"
+  },
+  "result": "tflostblocks:large_mazestone_bricks",
+  "count": 1
+}

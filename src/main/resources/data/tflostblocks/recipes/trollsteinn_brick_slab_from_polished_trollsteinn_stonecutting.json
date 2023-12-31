@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tflostblocks:polished_trollsteinn"
-  },
-  "result": "tflostblocks:trollsteinn_brick_slab",
-  "count": 2
-}

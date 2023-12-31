@@ -16,7 +16,6 @@
     "tflostblocks:thorn_pressure_plate",
     "tflostblocks:thorn_sign",
     "tflostblocks:thorn_wall_sign",
-    "tflostblocks:thorn_banister",
     "tflostblocks:towerwood_slab",
     "tflostblocks:towerwood_stairs",
     "tflostblocks:towerwood_fence",
@@ -26,7 +25,6 @@
     "tflostblocks:towerwood_button",
     "tflostblocks:towerwood_pressure_plate",
     "tflostblocks:towerwood_sign",
-    "tflostblocks:towerwood_wall_sign",
-    "tflostblocks:towerwood_banister"
+    "tflostblocks:towerwood_wall_sign"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "twilightforest:mazestone_brick"
+    "item": "twilightforest:maze_stone_brick"
   },
   "result": "tflostblocks:mazestone_brick_slab",
   "count": 2
