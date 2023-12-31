@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tflostblocks:stone_tiles"
+  },
+  "result": "tflostblocks:stone_tile_stairs",
+  "count": 1
+}

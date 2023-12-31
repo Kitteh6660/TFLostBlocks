@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "tflostblocks:mossy_stone_tiles"
+  },
+  "result": "tflostblocks:mossy_stone_tile_wall",
+  "count": 1
+}

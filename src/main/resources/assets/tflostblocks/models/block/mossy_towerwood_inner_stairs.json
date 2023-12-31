@@ -1,5 +1,5 @@
 {
-    "parent": "block/inner_stairs",
+    "parent": "tflostblocks:block/util/tinted_inner_stairs",
     "textures": {
         "bottom": "twilightforest:block/mossy_towerwood",
         "top": "twilightforest:block/mossy_towerwood",

@@ -1,10 +1,25 @@
 {
+"block.tflostblocks.stone_tiles": "Stone Tiles",
+"block.tflostblocks.stone_tile_stairs": "Stone Tile Stairs",
+"block.tflostblocks.stone_tile_slab": "Stone Tile Slab",
+"block.tflostblocks.stone_tile_wall": "Stone Tile Wall",
+
+"block.tflostblocks.mossy_stone_tiles": "Mossy Stone Tiles",
+"block.tflostblocks.mossy_stone_tile_stairs": "Mossy Stone Tile Stairs",
+"block.tflostblocks.mossy_stone_tile_slab": "Mossy Stone Tile Slab",
+"block.tflostblocks.mossy_stone_tile_wall": "Mossy Stone Tile Wall",
+
 "block.tflostblocks.aurora_stairs": "Aurora Stairs",
 "block.tflostblocks.aurora_wall": "Aurora Wall",
 "block.tflostblocks.auroralized_glass_pane": "Auroralized Glass Pane",
 
 "block.tflostblocks.castle_brick_slab": "Castle Brick Slab",
 "block.tflostblocks.castle_brick_wall": "Castle Brick Wall",
+
+"block.tflostblocks.castle_brick_tiles": "Castle Brick Tiles",
+"block.tflostblocks.castle_brick_tile_stairs": "Castle Brick Tile Stairs",
+"block.tflostblocks.castle_brick_tile_slab": "Castle Brick Tile Slab",
+"block.tflostblocks.castle_brick_tile_wall": "Castle Brick Tile Wall",
 
 "block.tflostblocks.bold_castle_brick_slab": "Bold Castle Brick Slab",
 "block.tflostblocks.bold_castle_brick_wall": "Bold Castle Brick Wall",
@@ -46,6 +61,11 @@
 "block.tflostblocks.cut_mazestone_slab": "Cut Mazestone Slab",
 "block.tflostblocks.cut_mazestone_stairs": "Cut Mazestone Stairs",
 "block.tflostblocks.cut_mazestone_wall": "Cut Mazestone Wall",
+
+"block.tflostblocks.large_mazestone_bricks": "Large Mazestone Bricks",
+"block.tflostblocks.large_mazestone_brick_slab": "Large Mazestone Brick Slab",
+"block.tflostblocks.large_mazestone_brick_stairs": "Large Mazestone Brick Stairs",
+"block.tflostblocks.large_mazestone_brick_wall": "Large Mazestone Brick Wall",
 
 "block.tflostblocks.mazestone_brick_slab": "Mazestone Brick Slab",
 "block.tflostblocks.mazestone_brick_stairs": "Mazestone Brick Stairs",
