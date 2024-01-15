@@ -1,12 +1,17 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:stone_tile_stairs",
+    "tflostblocks:mossy_stone_tile_stairs",
     "tflostblocks:aurora_stairs",
+    "tflostblocks:castle_brick_tile_stairs",
     "tflostblocks:deadrock_stairs",
     "tflostblocks:cracked_deadrock_stairs",
     "tflostblocks:weathered_deadrock_stairs",
+    "tflostblocks:deadrock_brick_stairs",
     "tflostblocks:mazestone_stairs",
     "tflostblocks:cut_mazestone_stairs",
+    "tflostblocks:large_mazestone_brick_stairs",
     "tflostblocks:mazestone_brick_stairs",
     "tflostblocks:mossy_mazestone_brick_stairs",
     "tflostblocks:underbrick_stairs",

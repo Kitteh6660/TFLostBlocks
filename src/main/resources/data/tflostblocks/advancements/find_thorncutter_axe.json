@@ -1,5 +1,5 @@
 {
-  "parent": "twilightforest:progression_end",
+  "parent": "twilightforest:progress_castle",
   "criteria": {
     "axe": {
       "conditions": {
@@ -23,7 +23,7 @@
               "type_specific": {
                 "type": "player",
                 "advancements": {
-                  "twilightforest:progression_end": true
+                  "twilightforest:progress_castle": true
                 }
               }
             }

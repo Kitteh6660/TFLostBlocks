@@ -1,0 +1,7 @@
+{
+	"variants": {
+        "type=bottom": { "model": "tflostblocks:block/stone_tile_slab_lower" },
+        "type=top": { "model": "tflostblocks:block/stone_tile_slab_upper" },
+        "type=double": { "model": "tflostblocks:block/stone_tiles" }
+	}
+}

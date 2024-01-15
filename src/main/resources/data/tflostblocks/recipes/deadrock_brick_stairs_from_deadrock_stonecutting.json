@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twilightforest:deadrock"
+  },
+  "result": "tflostblocks:deadrock_brick_stairs",
+  "count": 1
+}

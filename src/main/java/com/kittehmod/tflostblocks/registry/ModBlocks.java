@@ -16,6 +16,7 @@ import com.kittehmod.tflostblocks.blocks.TrollsteinnWallBlock;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -45,6 +46,16 @@ public class ModBlocks
 {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TFLostBlocksMod.MOD_ID);
 	
+	public static final RegistryObject<Block> STONE_TILES = BLOCKS.register("stone_tiles", () -> new Block(Properties.copy(Blocks.STONE_BRICKS)));
+	public static final RegistryObject<Block> STONE_TILE_STAIRS = BLOCKS.register("stone_tile_stairs", () -> new StairBlock(() -> Blocks.STONE_BRICKS.defaultBlockState(), Properties.copy(Blocks.STONE_BRICKS)));
+	public static final RegistryObject<Block> STONE_TILE_SLAB = BLOCKS.register("stone_tile_slab", () -> new SlabBlock(Properties.copy(Blocks.STONE_BRICKS)));
+	public static final RegistryObject<Block> STONE_TILE_WALL = BLOCKS.register("stone_tile_wall", () -> new WallBlock(Properties.copy(Blocks.STONE_BRICKS)));
+
+	public static final RegistryObject<Block> MOSSY_STONE_TILES = BLOCKS.register("mossy_stone_tiles", () -> new Block(Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
+	public static final RegistryObject<Block> MOSSY_STONE_TILE_STAIRS = BLOCKS.register("mossy_stone_tile_stairs", () -> new StairBlock(() -> Blocks.MOSSY_STONE_BRICKS.defaultBlockState(), Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
+	public static final RegistryObject<Block> MOSSY_STONE_TILE_SLAB = BLOCKS.register("mossy_stone_tile_slab", () -> new SlabBlock(Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
+	public static final RegistryObject<Block> MOSSY_STONE_TILE_WALL = BLOCKS.register("mossy_stone_tile_wall", () -> new WallBlock(Properties.copy(Blocks.MOSSY_STONE_BRICKS)));
+	
 	public static final RegistryObject<Block> AURORA_STAIRS = BLOCKS.register("aurora_stairs", () -> new StairBlock(() -> TFBlocks.AURORA_BLOCK.get().defaultBlockState(), Properties.copy(TFBlocks.AURORA_BLOCK.get())));
 	public static final RegistryObject<Block> AURORA_WALL = BLOCKS.register("aurora_wall", () -> new WallBlock(Properties.copy(TFBlocks.AURORA_BLOCK.get())));
 	public static final RegistryObject<Block> AURORALIZED_GLASS_PANE = BLOCKS.register("auroralized_glass_pane", () -> new IronBarsBlock(Properties.copy(TFBlocks.AURORALIZED_GLASS.get())));
@@ -52,6 +63,11 @@ public class ModBlocks
 	public static final RegistryObject<Block> CASTLE_BRICK_SLAB = BLOCKS.register("castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
 	public static final RegistryObject<Block> CASTLE_BRICK_WALL = BLOCKS.register("castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
 
+	public static final RegistryObject<Block> CASTLE_BRICK_TILES = BLOCKS.register("castle_brick_tiles", () -> new Block(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> CASTLE_BRICK_TILE_STAIRS = BLOCKS.register("castle_brick_tile_stairs", () -> new StairBlock(() -> TFBlocks.CASTLE_BRICK.get().defaultBlockState(), Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> CASTLE_BRICK_TILE_SLAB = BLOCKS.register("castle_brick_tile_slab", () -> new SlabBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	public static final RegistryObject<Block> CASTLE_BRICK_TILE_WALL = BLOCKS.register("castle_brick_tile_wall", () -> new WallBlock(Properties.copy(TFBlocks.CASTLE_BRICK.get())));
+	
 	public static final RegistryObject<Block> BOLD_CASTLE_BRICK_SLAB = BLOCKS.register("bold_castle_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.BOLD_CASTLE_BRICK_TILE.get())));
 	public static final RegistryObject<Block> BOLD_CASTLE_BRICK_WALL = BLOCKS.register("bold_castle_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.BOLD_CASTLE_BRICK_TILE.get())));
 
@@ -76,6 +92,11 @@ public class ModBlocks
 	public static final RegistryObject<Block> WEATHERED_DEADROCK_STAIRS = BLOCKS.register("weathered_deadrock_stairs", () -> new StairBlock(() -> TFBlocks.WEATHERED_DEADROCK.get().defaultBlockState(), Properties.copy(TFBlocks.WEATHERED_DEADROCK.get())));
 	public static final RegistryObject<Block> WEATHERED_DEADROCK_SLAB = BLOCKS.register("weathered_deadrock_slab", () -> new SlabBlock(Properties.copy(TFBlocks.WEATHERED_DEADROCK.get())));
 
+	public static final RegistryObject<Block> DEADROCK_BRICKS = BLOCKS.register("deadrock_bricks", () -> new Block(Properties.copy(TFBlocks.DEADROCK.get())));
+	public static final RegistryObject<Block> DEADROCK_BRICK_STAIRS = BLOCKS.register("deadrock_brick_stairs", () -> new StairBlock(() -> TFBlocks.DEADROCK.get().defaultBlockState(), Properties.copy(TFBlocks.DEADROCK.get())));
+	public static final RegistryObject<Block> DEADROCK_BRICK_SLAB = BLOCKS.register("deadrock_brick_slab", () -> new SlabBlock(Properties.copy(TFBlocks.DEADROCK.get())));
+	public static final RegistryObject<Block> DEADROCK_BRICK_WALL = BLOCKS.register("deadrock_brick_wall", () -> new WallBlock(Properties.copy(TFBlocks.DEADROCK.get())));
+
 	public static final RegistryObject<Block> NAGASTONE_SLAB_LEFT = BLOCKS.register("nagastone_slab_left", () -> new SlabBlock(Properties.copy(TFBlocks.ETCHED_NAGASTONE.get())));
 	public static final RegistryObject<Block> NAGASTONE_SLAB_RIGHT = BLOCKS.register("nagastone_slab_right", () -> new SlabBlock(Properties.copy(TFBlocks.ETCHED_NAGASTONE.get())));
 
@@ -92,6 +113,11 @@ public class ModBlocks
 	public static final RegistryObject<Block> CUT_MAZESTONE_STAIRS = BLOCKS.register("cut_mazestone_stairs", () -> new MazestoneStairBlock(() -> TFBlocks.CUT_MAZESTONE.get().defaultBlockState(), Properties.copy(TFBlocks.CUT_MAZESTONE.get())));
 	public static final RegistryObject<Block> CUT_MAZESTONE_SLAB = BLOCKS.register("cut_mazestone_slab", () -> new MazestoneSlabBlock(Properties.copy(TFBlocks.CUT_MAZESTONE.get())));
 	public static final RegistryObject<Block> CUT_MAZESTONE_WALL = BLOCKS.register("cut_mazestone_wall", () -> new MazestoneWallBlock(Properties.copy(TFBlocks.CUT_MAZESTONE.get())));
+
+	public static final RegistryObject<Block> LARGE_MAZESTONE_BRICKS = BLOCKS.register("large_mazestone_bricks", () -> new Block(Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));
+	public static final RegistryObject<Block> LARGE_MAZESTONE_BRICK_STAIRS = BLOCKS.register("large_mazestone_brick_stairs", () -> new MazestoneStairBlock(() -> TFBlocks.MAZESTONE_BRICK.get().defaultBlockState(), Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));
+	public static final RegistryObject<Block> LARGE_MAZESTONE_BRICK_SLAB = BLOCKS.register("large_mazestone_brick_slab", () -> new MazestoneSlabBlock(Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));
+	public static final RegistryObject<Block> LARGE_MAZESTONE_BRICK_WALL = BLOCKS.register("large_mazestone_brick_wall", () -> new MazestoneWallBlock(Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));
 	
 	public static final RegistryObject<Block> MAZESTONE_BRICK_STAIRS = BLOCKS.register("mazestone_brick_stairs", () -> new MazestoneStairBlock(() -> TFBlocks.MAZESTONE_BRICK.get().defaultBlockState(), Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));
 	public static final RegistryObject<Block> MAZESTONE_BRICK_SLAB = BLOCKS.register("mazestone_brick_slab", () -> new MazestoneSlabBlock(Properties.copy(TFBlocks.MAZESTONE_BRICK.get())));

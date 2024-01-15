@@ -1,13 +1,17 @@
 {
   "replace": false,
   "values": [
+    "tflostblocks:castle_brick_tiles",
+    "tflostblocks:castle_brick_tile_stairs",
     "tflostblocks:castle_brick_slab",
+    "tflostblocks:castle_brick_tile_slab",
     "tflostblocks:worn_castle_brick_slab",
     "tflostblocks:cracked_castle_brick_slab",
     "tflostblocks:mossy_castle_brick_slab",
     "tflostblocks:encased_castle_brick_slab",
     "tflostblocks:bold_castle_brick_slab",
     "tflostblocks:castle_brick_wall",
+    "tflostblocks:castle_brick_tile_wall",
     "tflostblocks:worn_castle_brick_wall",
     "tflostblocks:cracked_castle_brick_wall",
     "tflostblocks:mossy_castle_brick_wall",

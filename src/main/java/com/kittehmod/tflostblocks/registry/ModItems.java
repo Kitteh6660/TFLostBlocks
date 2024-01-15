@@ -8,6 +8,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
@@ -36,6 +37,17 @@ public class ModItems
 	public static final RegistryObject<Item> INCOMPLETE_THORNCUTTER_AXE = ITEMS.register("incomplete_thorncutter_axe", () -> new AxeItem(Tiers.IRON, 6.0F, -3.1F, new Item.Properties().rarity(Rarity.RARE)));
 	public static final RegistryObject<Item> THORNCUTTER_AXE = ITEMS.register("thorncutter_axe", () -> new ThorncutterAxeItem(Tiers.DIAMOND, 5.0F, -3.0F, new Item.Properties().rarity(Rarity.EPIC)));
 	
+	// Stone Tiles
+	public static final RegistryObject<Item> STONE_TILES = ITEMS.register("stone_tiles", () -> new BlockItem(ModBlocks.STONE_TILES.get(), new Item.Properties()));
+	public static final RegistryObject<Item> STONE_TILE_STAIRS = ITEMS.register("stone_tile_stairs", () -> new BlockItem(ModBlocks.STONE_TILE_STAIRS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> STONE_TILE_SLAB = ITEMS.register("stone_tile_slab", () -> new BlockItem(ModBlocks.STONE_TILE_SLAB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> STONE_TILE_WALL = ITEMS.register("stone_tile_wall", () -> new BlockItem(ModBlocks.STONE_TILE_WALL.get(), new Item.Properties()));
+
+	public static final RegistryObject<Item> MOSSY_STONE_TILES = ITEMS.register("mossy_stone_tiles", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILES.get(), new Item.Properties()));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_STAIRS = ITEMS.register("mossy_stone_tile_stairs", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_STAIRS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_SLAB = ITEMS.register("mossy_stone_tile_slab", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_SLAB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> MOSSY_STONE_TILE_WALL = ITEMS.register("mossy_stone_tile_wall", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_WALL.get(), new Item.Properties()));
+	
 	// Aurora Palace
 	public static final RegistryObject<Item> AURORA_STAIRS = ITEMS.register("aurora_stairs", () -> new BlockItem(ModBlocks.AURORA_STAIRS.get(), new Item.Properties()));
 	public static final RegistryObject<Item> AURORA_WALL = ITEMS.register("aurora_wall", () -> new BlockItem(ModBlocks.AURORA_WALL.get(), new Item.Properties()));
@@ -45,6 +57,11 @@ public class ModItems
 	public static final RegistryObject<Item> CASTLE_BRICK_SLAB = ITEMS.register("castle_brick_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_SLAB.get(), new Item.Properties()));
 	public static final RegistryObject<Item> CASTLE_BRICK_WALL = ITEMS.register("castle_brick_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_WALL.get(), new Item.Properties()));
 
+	public static final RegistryObject<Item> CASTLE_BRICK_TILES = ITEMS.register("castle_brick_tiles", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILES.get(), new Item.Properties()));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_STAIRS = ITEMS.register("castle_brick_tile_stairs", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_STAIRS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_SLAB = ITEMS.register("castle_brick_tile_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_SLAB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> CASTLE_BRICK_TILE_WALL = ITEMS.register("castle_brick_tile_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_WALL.get(), new Item.Properties()));
+	
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_SLAB = ITEMS.register("bold_castle_brick_slab", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
 	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_WALL = ITEMS.register("bold_castle_brick_wall", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_WALL.get(), new Item.Properties()));
 
@@ -70,6 +87,11 @@ public class ModItems
 	public static final RegistryObject<Item> WEATHERED_DEADROCK_STAIRS = ITEMS.register("weathered_deadrock_stairs", () -> new BlockItem(ModBlocks.WEATHERED_DEADROCK_STAIRS.get(), new Item.Properties()));
 	public static final RegistryObject<Item> WEATHERED_DEADROCK_SLAB = ITEMS.register("weathered_deadrock_slab", () -> new BlockItem(ModBlocks.WEATHERED_DEADROCK_SLAB.get(), new Item.Properties()));
 
+	public static final RegistryObject<Item> DEADROCK_BRICKS = ITEMS.register("deadrock_bricks", () -> new BlockItem(ModBlocks.DEADROCK_BRICKS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> DEADROCK_BRICK_STAIRS = ITEMS.register("deadrock_brick_stairs", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_STAIRS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> DEADROCK_BRICK_SLAB = ITEMS.register("deadrock_brick_slab", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_SLAB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> DEADROCK_BRICK_WALL = ITEMS.register("deadrock_brick_wall", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_WALL.get(), new Item.Properties()));
+
 	// Minotaur Labyrinth
 	public static final RegistryObject<Item> MAZESTONE_STAIRS = ITEMS.register("mazestone_stairs", () -> new BlockItem(ModBlocks.MAZESTONE_STAIRS.get(), new Item.Properties()));
 	public static final RegistryObject<Item> MAZESTONE_SLAB = ITEMS.register("mazestone_slab", () -> new BlockItem(ModBlocks.MAZESTONE_SLAB.get(), new Item.Properties()));
@@ -79,6 +101,11 @@ public class ModItems
 	public static final RegistryObject<Item> CUT_MAZESTONE_SLAB = ITEMS.register("cut_mazestone_slab", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_SLAB.get(), new Item.Properties()));
 	public static final RegistryObject<Item> CUT_MAZESTONE_WALL = ITEMS.register("cut_mazestone_wall", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_WALL.get(), new Item.Properties()));
 	
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICKS = ITEMS.register("large_mazestone_bricks", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICKS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_STAIRS = ITEMS.register("large_mazestone_brick_stairs", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_STAIRS.get(), new Item.Properties()));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_SLAB = ITEMS.register("large_mazestone_brick_slab", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_SLAB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_WALL = ITEMS.register("large_mazestone_brick_wall", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_WALL.get(), new Item.Properties()));
+
 	public static final RegistryObject<Item> MAZESTONE_BRICK_STAIRS = ITEMS.register("mazestone_brick_stairs", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_STAIRS.get(), new Item.Properties()));
 	public static final RegistryObject<Item> MAZESTONE_BRICK_SLAB = ITEMS.register("mazestone_brick_slab", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_SLAB.get(), new Item.Properties()));
 	public static final RegistryObject<Item> MAZESTONE_BRICK_WALL = ITEMS.register("mazestone_brick_wall", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_WALL.get(), new Item.Properties()));
@@ -180,22 +207,40 @@ public class ModItems
     @SubscribeEvent
     public static void assignItemsToTabs(CreativeModeTabEvent.BuildContents event) {
     	MutableHashedLinkedMap<ItemStack, TabVisibility> map = event.getEntries();
+    	if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+    		
+    	}
     	if (event.getTab() == getTabWithMatchingName("twilightforest.blocks")) {
+    		// Insert Stone Tile blocks.
+    		map.putAfter(TFBlocks.TWISTED_STONE_PILLAR.get().asItem().getDefaultInstance(), STONE_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(STONE_TILES.get().asItem().getDefaultInstance(), STONE_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(STONE_TILE_STAIRS.get().asItem().getDefaultInstance(), STONE_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(STONE_TILE_SLAB.get().asItem().getDefaultInstance(), STONE_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+
+    		map.putAfter(STONE_TILE_WALL.get().asItem().getDefaultInstance(), MOSSY_STONE_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(MOSSY_STONE_TILES.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(MOSSY_STONE_TILE_STAIRS.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(MOSSY_STONE_TILE_SLAB.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		
     		// Insert Aurora blocks.
     		map.putBefore(TFBlocks.AURORA_SLAB.get().asItem().getDefaultInstance(), AURORA_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TFBlocks.AURORA_SLAB.get().asItem().getDefaultInstance(), AURORA_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TFBlocks.AURORALIZED_GLASS.get().asItem().getDefaultInstance(), AURORALIZED_GLASS_PANE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
 
     		// Insert Castle brick blocks.
+    		map.putAfter(TFBlocks.CASTLE_BRICK.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(TFBlocks.CASTLE_BRICK_STAIRS.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(TFBlocks.BOLD_CASTLE_BRICK_STAIRS.get().asItem().getDefaultInstance(), CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(CASTLE_BRICK_TILE_SLAB.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(WORN_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CRACKED_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(CRACKED_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), MOSSY_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(MOSSY_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), ENCASED_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(ENCASED_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), BOLD_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		
     		map.putAfter(BOLD_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(CASTLE_BRICK_TILE_WALL.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(WORN_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), CRACKED_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(CRACKED_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), MOSSY_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(MOSSY_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), ENCASED_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -211,6 +256,11 @@ public class ModItems
     		map.putAfter(TFBlocks.WEATHERED_DEADROCK.get().asItem().getDefaultInstance(), WEATHERED_DEADROCK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(WEATHERED_DEADROCK_STAIRS.get().asItem().getDefaultInstance(), WEATHERED_DEADROCK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		
+    		map.putAfter(WEATHERED_DEADROCK_SLAB.get().asItem().getDefaultInstance(), DEADROCK_BRICKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(DEADROCK_BRICKS.get().asItem().getDefaultInstance(), DEADROCK_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(DEADROCK_BRICK_STAIRS.get().asItem().getDefaultInstance(), DEADROCK_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(DEADROCK_BRICK_SLAB.get().asItem().getDefaultInstance(), DEADROCK_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+
     		// Insert Mazestone blocks.
     		map.putAfter(TFBlocks.MAZESTONE.get().asItem().getDefaultInstance(), MAZESTONE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(MAZESTONE_STAIRS.get().asItem().getDefaultInstance(), MAZESTONE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -219,6 +269,11 @@ public class ModItems
     		map.putAfter(TFBlocks.CUT_MAZESTONE.get().asItem().getDefaultInstance(), CUT_MAZESTONE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(CUT_MAZESTONE_STAIRS.get().asItem().getDefaultInstance(), CUT_MAZESTONE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(CUT_MAZESTONE_SLAB.get().asItem().getDefaultInstance(), CUT_MAZESTONE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+
+    		map.putBefore(TFBlocks.MAZESTONE_BRICK.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(LARGE_MAZESTONE_BRICKS.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(LARGE_MAZESTONE_BRICK_STAIRS.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		map.putAfter(LARGE_MAZESTONE_BRICK_SLAB.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
 
     		map.putAfter(TFBlocks.MAZESTONE_BRICK.get().asItem().getDefaultInstance(), MAZESTONE_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		map.putAfter(MAZESTONE_BRICK_STAIRS.get().asItem().getDefaultInstance(), MAZESTONE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
