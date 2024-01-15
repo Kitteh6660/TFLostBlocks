@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building_blocks",
+  "group": "mossy_stone_tiles",
+  "ingredients": [
+    {
+      "item": "tflostblocks:stone_tiles"
+    },
+    {
+      "item": "minecraft:moss_block"
+    }
+  ],
+  "result": {
+    "item": "tflostblocks:mossy_stone_tiles",
+    "count": 1
+  }
+}

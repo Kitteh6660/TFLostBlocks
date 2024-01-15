@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import twilightforest.block.AuroraBrickBlock;
 import twilightforest.init.TFBlocks;
+import twilightforest.util.ColorUtil;
 
 import java.awt.*;
 
@@ -57,9 +58,9 @@ public class ClientHandler
 			int blue = normalColor & 255;
 			int green = (normalColor >> 8) & 255;
 
-			float[] hsb = Color.RGBtoHSB(red, blue, green, null);
+			float[] hsb = ColorUtil.rgbToHSV(red, green, blue);
 
-			return Color.HSBtoRGB(hsb[0], hsb[1] * 0.5F, Math.min(hsb[2] + 0.4F, 0.9F));
+			return ColorUtil.hsvToRGB(hsb[0], hsb[1] * 0.5F, Math.min(hsb[2] + 0.4F, 0.9F));
 		}, ModBlocks.AURORA_STAIRS.get(), ModBlocks.AURORA_WALL.get(), ModBlocks.AURORALIZED_GLASS_PANE.get());
 	}
 	

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+	  "model": "tflostblocks:block/large_mazestone_bricks"
+	}
+  }
+}
