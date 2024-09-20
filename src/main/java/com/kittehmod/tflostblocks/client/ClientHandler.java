@@ -2,6 +2,7 @@ package com.kittehmod.tflostblocks.client;
 
 import java.awt.Color;
 
+import com.kittehmod.tflostblocks.TFLostBlocksMod;
 import com.kittehmod.tflostblocks.blocks.ModWoodType;
 import com.kittehmod.tflostblocks.registry.ModBlockEntities;
 import com.kittehmod.tflostblocks.registry.ModBlocks;
@@ -14,13 +15,16 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.item.BlockItem;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import twilightforest.init.TFBlocks;
 import twilightforest.util.ColorUtil;
 import twilightforest.util.SimplexNoiseHelper;
 
+@EventBusSubscriber(modid = TFLostBlocksMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientHandler
 {
 	@SubscribeEvent
@@ -67,13 +71,13 @@ public class ClientHandler
 
 			float[] hsb = ColorUtil.rgbToHSV(red, green, blue);
 
-			return ColorUtil.hsvToRGB(hsb[0], hsb[1] * 0.5F, Math.min(hsb[2] + 0.4F, 0.9F));
+			return 0xFF000000 | ColorUtil.hsvToRGB(hsb[0], hsb[1] * 0.5F, Math.min(hsb[2] + 0.4F, 0.9F));
 		}, ModBlocks.AURORA_STAIRS, ModBlocks.AURORA_WALL, ModBlocks.AURORALIZED_GLASS_PANE);
 	}
 	
 	@SubscribeEvent
 	public static void registerItemColours(RegisterColorHandlersEvent.Item event) {
 		BlockColors blockColours = event.getBlockColors();
-		event.register((stack, tintIndex) -> blockColours.getColor(((BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex), ModBlocks.AURORA_STAIRS, ModBlocks.AURORA_WALL, ModBlocks.AURORALIZED_GLASS_PANE);
+		event.register((stack, tintIndex) -> stack.getItem() instanceof BlockItem ? blockColours.getColor(((BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex) : 0xFFFFFFFF, ModBlocks.AURORA_STAIRS, ModBlocks.AURORA_WALL, ModBlocks.AURORALIZED_GLASS_PANE);
 	}
 }

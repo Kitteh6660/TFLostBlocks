@@ -1,4 +1,4 @@
-package com.kittehmod.tflostblocks;
+package com.kittehmod.tflostblocks.util;
 
 import com.kittehmod.tflostblocks.blocks.StrippedThornsBlock;
 import com.kittehmod.tflostblocks.blocks.TFLostBlocksProperties;
@@ -6,6 +6,7 @@ import com.kittehmod.tflostblocks.items.ThorncutterAxeItem;
 import com.kittehmod.tflostblocks.tags.TFLostBlocksTags;
 
 import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -33,9 +34,10 @@ public class CommonEvents
 	@SubscribeEvent
 	public void modifyDestroySpeed(BreakSpeed event) {
 		if (event.getEntity() instanceof Player && event.getEntity().getMainHandItem().getItem() instanceof ThorncutterAxeItem && (event.getState().getBlock() instanceof ThornsBlock || event.getState().is(TFLostBlocksTags.THORN_WOOD))) {
-			DiggerItem item = (DiggerItem) event.getEntity().getMainHandItem().getItem();
-			float spd = item.getDestroySpeed(event.getEntity().getMainHandItem(), event.getState()) * (1 + (item.getEnchantmentLevel(event.getEntity().getMainHandItem(), (Holder<Enchantment>) Enchantments.EFFICIENCY) * 0.5F));
-			event.setNewSpeed(spd * 4F);
+			// DiggerItem item = (DiggerItem) event.getEntity().getMainHandItem().getItem();
+			// float spd = item.getDestroySpeed(event.getEntity().getMainHandItem(), event.getState()) * (1 + (item.getEnchantmentLevel(event.getEntity().getMainHandItem(), Enchantments.EFFICIENCY) * 0.5F));
+			// event.getOriginalSpeed();
+			event.setNewSpeed(event.getOriginalSpeed() * 4F);
 		}
 	}
 	
@@ -47,11 +49,12 @@ public class CommonEvents
 			// Handle breaking thorns.
 			if (player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ThorncutterAxeItem && state.getBlock() instanceof ThornsBlock && !(state.getBlock() instanceof StrippedThornsBlock)) {
 				event.getLevel().destroyBlock(event.getPos(), true);
-				if ((state.getBlock() instanceof BurntThornsBlock && player.getItemInHand(InteractionHand.MAIN_HAND).getEnchantmentLevel((Holder<Enchantment>) Enchantments.SILK_TOUCH) > 0 || !(state.getBlock() instanceof BurntThornsBlock))) {
+				Block.popResource((Level)event.getLevel(), event.getPos(), new ItemStack(state.getBlock().asItem()));
+				/*if ((state.getBlock() instanceof BurntThornsBlock && EnchantmentHelper.getEnchantmentLevel(Holder.direct(Enchantments.SILK_TOUCH), player) > 0 || !(state.getBlock() instanceof BurntThornsBlock))) {
 					if (player.getServer().getGameRules().getRule(GameRules.RULE_DOBLOCKDROPS).get()) {
 						Block.popResource((Level)event.getLevel(), event.getPos(), new ItemStack(state.getBlock().asItem()));
 					}
-				}
+				}*/
 			}
 			else if (!(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ThorncutterAxeItem) && event.getState().is(TFLostBlocksTags.THORN_WOOD)) {
 				player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(15, player, EquipmentSlot.MAINHAND);

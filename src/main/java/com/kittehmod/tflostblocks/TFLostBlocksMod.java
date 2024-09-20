@@ -1,9 +1,14 @@
 package com.kittehmod.tflostblocks;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.kittehmod.tflostblocks.blocks.ModWoodType;
 import com.kittehmod.tflostblocks.registry.ModBlockEntities;
 import com.kittehmod.tflostblocks.registry.ModBlocks;
 import com.kittehmod.tflostblocks.registry.ModItems;
+import com.kittehmod.tflostblocks.util.CommonEvents;
+import com.kittehmod.tflostblocks.util.CreativeTabHelper;
 
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.api.distmarker.Dist;
@@ -19,6 +24,8 @@ public class TFLostBlocksMod
 {
     public static final String MOD_ID = "tflostblocks";
 
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    
     public TFLostBlocksMod(IEventBus bus, ModContainer container)
     {
     	bus.register(TFLostBlocksRegistry.class);

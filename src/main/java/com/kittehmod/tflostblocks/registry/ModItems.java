@@ -3,6 +3,7 @@ package com.kittehmod.tflostblocks.registry;
 import com.kittehmod.tflostblocks.TFLostBlocksMod;
 import com.kittehmod.tflostblocks.items.ThorncutterAxeItem;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.resources.ResourceKey;
@@ -29,11 +30,8 @@ import twilightforest.init.TFBlocks;
 import twilightforest.init.TFCreativeTabs;
 import twilightforest.init.TFItems;
 
-// @EventBusSubscriber(modid = TFLostBlocksMod.MOD_ID)
 public class ModItems
 {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, TFLostBlocksMod.MOD_ID);
-
 	public static final Item INCOMPLETE_THORNCUTTER_AXE = new AxeItem(Tiers.IRON, new Item.Properties().rarity(Rarity.RARE));
 	public static final Item THORNCUTTER_AXE = new ThorncutterAxeItem(Tiers.DIAMOND, new Item.Properties().rarity(Rarity.EPIC));
 	
@@ -187,4 +185,6 @@ public class ModItems
 
 	public static final Item CHISELED_TROLLSTEINN = new BlockItem(ModBlocks.CHISELED_TROLLSTEINN, new Item.Properties());
     
+	public static void loadClass() {}
+
 }

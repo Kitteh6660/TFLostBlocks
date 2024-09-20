@@ -26,29 +26,29 @@ import net.neoforged.fml.util.ObfuscationReflectionHelper;
 
 public class TrollsteinnWallBlock extends WallBlock
 {
-	// private static final BooleanProperty LIT = TFLostBlocksProperties.LIT;
+	private static final BooleanProperty LIT = TFLostBlocksProperties.LIT;
 
 	private static final int LIGHT_THRESHOLD = 7;
 
 	public TrollsteinnWallBlock(Properties properties) {
 		super(properties);
-		// this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
+		this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
 		// Fix crashes. WallBlock is janky as hell.
-		// fixShapeMaps();
+		fixShapeMaps();
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		// builder.add(LIT);
+		builder.add(LIT);
 	}
 	
-	/*@Override
+	@Override
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		BlockState newState = state;
 		newState = newState.setValue(LIT, level.getMaxLocalRawBrightness(pos) > LIGHT_THRESHOLD);
 		if (!newState.equals(state)) level.setBlockAndUpdate(pos, newState);
-	}*/
+	}
 
 	@Override
 	public boolean hasAnalogOutputSignal(BlockState state) {
@@ -63,13 +63,13 @@ public class TrollsteinnWallBlock extends WallBlock
 		return peak;
 	}
 
-	/*@Override
+	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
 		BlockState ret = super.getStateForPlacement(ctx);
 		int light = ctx.getLevel().getMaxLocalRawBrightness(ctx.getClickedPos());
 		ret = ret.setValue(LIT, light > LIGHT_THRESHOLD);
 		return ret;
-	}*/
+	}
 	
     private void fixShapeMaps()
     {

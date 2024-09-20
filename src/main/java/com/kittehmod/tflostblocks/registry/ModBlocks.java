@@ -36,7 +36,6 @@ import twilightforest.block.BanisterBlock;
 import twilightforest.block.TrollsteinnBlock;
 import twilightforest.init.TFBlocks;
 
-// @EventBusSubscriber(modid = TFLostBlocksMod.MOD_ID)
 public class ModBlocks
 {
 	public static final Block STONE_TILES = new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS));
@@ -124,8 +123,8 @@ public class ModBlocks
 	public static final Block TOWERWOOD_SLAB = new SlabBlock(Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()));
 	public static final Block TOWERWOOD_FENCE = new FenceBlock(Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()));
 	public static final Block TOWERWOOD_FENCE_GATE = new FenceGateBlock(Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN);
-	public static final Block TOWERWOOD_DOOR = new DoorBlock(ModWoodType.TOWERWOOD_SET, Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()));
-	public static final Block TOWERWOOD_TRAPDOOR = new TrapDoorBlock(ModWoodType.TOWERWOOD_SET, Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()));
+	public static final Block TOWERWOOD_DOOR = new DoorBlock(ModWoodType.TOWERWOOD_SET, Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()).noOcclusion());
+	public static final Block TOWERWOOD_TRAPDOOR = new TrapDoorBlock(ModWoodType.TOWERWOOD_SET, Properties.ofFullCopy(TFBlocks.TOWERWOOD.get()).noOcclusion());
 	public static final Block TOWERWOOD_BUTTON = new ButtonBlock(ModWoodType.TOWERWOOD_SET, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD));
 	public static final Block TOWERWOOD_PRESSURE_PLATE = new PressurePlateBlock(ModWoodType.TOWERWOOD_SET, BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD));
 	public static final Block TOWERWOOD_SIGN = new ModStandingSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodType.TOWERWOOD_WOOD_TYPE);
@@ -144,8 +143,8 @@ public class ModBlocks
 	public static final Block THORN_SLAB = new SlabBlock(Properties.ofFullCopy(STRIPPED_THORN_BLOCK));
 	public static final Block THORN_FENCE = new FenceBlock(Properties.ofFullCopy(STRIPPED_THORN_BLOCK));
 	public static final Block THORN_FENCE_GATE = new FenceGateBlock(Properties.ofFullCopy(STRIPPED_THORN_BLOCK), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN);
-	public static final Block THORN_DOOR = new DoorBlock(ModWoodType.THORN_SET, Properties.ofFullCopy(STRIPPED_THORN_BLOCK));
-	public static final Block THORN_TRAPDOOR = new TrapDoorBlock(ModWoodType.THORN_SET, Properties.ofFullCopy(STRIPPED_THORN_BLOCK));
+	public static final Block THORN_DOOR = new DoorBlock(ModWoodType.THORN_SET, Properties.ofFullCopy(STRIPPED_THORN_BLOCK).noOcclusion());
+	public static final Block THORN_TRAPDOOR = new TrapDoorBlock(ModWoodType.THORN_SET, Properties.ofFullCopy(STRIPPED_THORN_BLOCK).noOcclusion());
 	public static final Block THORN_BUTTON = new ButtonBlock(ModWoodType.THORN_SET, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD));
 	public static final Block THORN_PRESSURE_PLATE = new PressurePlateBlock(ModWoodType.THORN_SET, BlockBehaviour.Properties.of().noCollission().strength(0.5F).sound(SoundType.WOOD));
 	public static final Block THORN_SIGN = new ModStandingSignBlock(BlockBehaviour.Properties.of().noCollission().strength(1.0F, 2000.0F).sound(SoundType.WOOD), ModWoodType.THORN_WOOD_TYPE);
@@ -178,4 +177,7 @@ public class ModBlocks
 	public static final Block TROLLSTEINN_BRICK_SLAB = new TrollsteinnSlabBlock(Properties.ofFullCopy(TFBlocks.TROLLSTEINN.get()));
 	public static final Block TROLLSTEINN_BRICK_WALL = new TrollsteinnWallBlock(Properties.ofFullCopy(TFBlocks.TROLLSTEINN.get()));
 	public static final Block CHISELED_TROLLSTEINN = new TrollsteinnBlock(Properties.ofFullCopy(TFBlocks.TROLLSTEINN.get()));
+	
+	public static void loadClass() {}
+
 }

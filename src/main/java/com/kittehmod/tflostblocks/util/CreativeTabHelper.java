@@ -1,10 +1,11 @@
-package com.kittehmod.tflostblocks;
+package com.kittehmod.tflostblocks.util;
 
 import com.kittehmod.tflostblocks.registry.ModItems;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import twilightforest.init.TFBlocks;
@@ -16,7 +17,7 @@ public class CreativeTabHelper
     @SubscribeEvent
     public static void assignItemsToTabs(BuildCreativeModeTabContentsEvent event) {
     	ResourceKey<CreativeModeTab> map = event.getTabKey();
-    	if (event.getTabKey() == TFCreativeTabs.BLOCKS.getKey()) {
+    	if (event.getTab() == TFCreativeTabs.BLOCKS.get()) {
     		// Insert Stone Tile blocks.
     		event.insertAfter(TFBlocks.TWISTED_STONE_PILLAR.asItem().getDefaultInstance(), ModItems.STONE_TILES.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		event.insertAfter(ModItems.STONE_TILES.asItem().getDefaultInstance(), ModItems.STONE_TILE_STAIRS.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -31,7 +32,8 @@ public class CreativeTabHelper
     		// Insert Aurora blocks.
     		event.insertBefore(TFBlocks.AURORA_SLAB.asItem().getDefaultInstance(), ModItems.AURORA_STAIRS.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		event.insertAfter(TFBlocks.AURORA_SLAB.asItem().getDefaultInstance(), ModItems.AURORA_WALL.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		event.insertAfter(TFBlocks.AURORALIZED_GLASS.asItem().getDefaultInstance(), ModItems.AURORALIZED_GLASS_PANE.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		event.insertAfter(ModItems.AURORA_WALL.asItem().getDefaultInstance(),TFBlocks.AURORALIZED_GLASS.get().asItem().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
+    		event.insertAfter(TFBlocks.AURORALIZED_GLASS.get().asItem().getDefaultInstance(), ModItems.AURORALIZED_GLASS_PANE.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
 
     		// Insert Castle brick blocks.
     		event.insertAfter(TFBlocks.CASTLE_BRICK.asItem().getDefaultInstance(), ModItems.CASTLE_BRICK_TILES.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -160,9 +162,21 @@ public class CreativeTabHelper
     		event.insertAfter(ModItems.THORN_SIGN.asItem().getDefaultInstance(), ModItems.THORN_HANGING_SIGN.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		event.insertAfter(ModItems.THORN_HANGING_SIGN.asItem().getDefaultInstance(), ModItems.THORN_BANISTER.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     	}
-    	if (event.getTabKey() == TFCreativeTabs.ITEMS.getKey()) {
+    	if (event.getTab() == TFCreativeTabs.EQUIPMENT.get()) {
     		event.insertBefore(TFItems.GOLDEN_MINOTAUR_AXE.get().getDefaultInstance(), ModItems.INCOMPLETE_THORNCUTTER_AXE.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     		event.insertAfter(ModItems.INCOMPLETE_THORNCUTTER_AXE.getDefaultInstance(), ModItems.THORNCUTTER_AXE.getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
     	}
     }
+    
+    private static void safeInsert(BuildCreativeModeTabContentsEvent event, CreativeModeTab tab, ItemStack stackToCheck, ItemStack stackToInsert, TabVisibility visibility, boolean isAfter) {
+    	if (tab.contains(stackToCheck)) {
+    		if (!isAfter) {
+    			event.insertBefore(stackToCheck, stackToInsert, visibility);
+    		}
+    		else {
+    			event.insertAfter(stackToCheck, stackToInsert, visibility);
+    		}
+    	}
+    }
+    
 }
