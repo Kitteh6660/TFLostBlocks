@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:deadrock"
   },
-  "result": "tflostblocks:deadrock_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:deadrock_brick_wall",
+    "count": 1
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:cracked_castle_brick"
   },
-  "result": "tflostblocks:cracked_castle_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:cracked_castle_brick_wall",
+    "count": 1
+  }
 }

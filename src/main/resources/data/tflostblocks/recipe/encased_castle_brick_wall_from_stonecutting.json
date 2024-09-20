@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:encased_castle_brick_pillar"
   },
-  "result": "tflostblocks:encased_castle_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:encased_castle_brick_wall",
+    "count": 1
+  }
 }

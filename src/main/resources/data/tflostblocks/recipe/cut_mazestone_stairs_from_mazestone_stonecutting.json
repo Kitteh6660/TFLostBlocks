@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:mazestone"
   },
-  "result": "tflostblocks:cut_mazestone_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:cut_mazestone_stairs",
+    "count": 1
+  }
 }

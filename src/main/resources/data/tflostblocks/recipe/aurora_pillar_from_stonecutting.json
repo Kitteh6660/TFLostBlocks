@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:aurora_block"
   },
-  "result": "twilightforest:aurora_pillar",
-  "count": 1
+  "result": {
+    "id": "twilightforest:aurora_pillar",
+    "count": 1
+  }
 }

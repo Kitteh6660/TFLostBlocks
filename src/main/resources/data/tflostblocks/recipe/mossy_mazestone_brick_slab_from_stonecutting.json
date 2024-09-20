@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:mossy_mazestone"
   },
-  "result": "tflostblocks:mossy_mazestone_brick_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:mossy_mazestone_brick_slab",
+    "count": 2
+  }
 }

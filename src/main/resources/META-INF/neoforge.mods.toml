@@ -17,6 +17,9 @@ license="MIT" # License Schmicense
     authors="Kitteh6660"
     description='''Adds certain missing blocks to Twilight Forest.'''
 
+[[mixins]]
+config = "tflostblocks.mixins.json"
+
 [[dependencies.tflostblocks]] #optional
     modId="neoforge" #mandatory
     type="required"

@@ -46,7 +46,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "tflostblocks:incomplete_thorncutter_axe",
+      "id": "tflostblocks:incomplete_thorncutter_axe",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:mazestone"
   },
-  "result": "tflostblocks:mazestone_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:mazestone_slab",
+    "count": 2
+  }
 }

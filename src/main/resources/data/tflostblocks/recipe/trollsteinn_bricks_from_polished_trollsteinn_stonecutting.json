@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "tflostblocks:polished_trollsteinn"
   },
-  "result": "tflostblocks:trollsteinn_bricks",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:trollsteinn_bricks",
+    "count": 1
+  }
 }

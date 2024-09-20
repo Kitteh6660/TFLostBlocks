@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "tflostblocks:stone_tile_wall",
+    "id": "tflostblocks:stone_tile_wall",
     "count": 6
   }
 }

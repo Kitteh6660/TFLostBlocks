@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:aurora_block"
   },
-  "result": "tflostblocks:aurora_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:aurora_stairs",
+    "count": 1
+  }
 }

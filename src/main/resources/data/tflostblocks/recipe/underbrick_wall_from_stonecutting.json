@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:underbrick"
   },
-  "result": "tflostblocks:underbrick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:underbrick_wall",
+    "count": 1
+  }
 }

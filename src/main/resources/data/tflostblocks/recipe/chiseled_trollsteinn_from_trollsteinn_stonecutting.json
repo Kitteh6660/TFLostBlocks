@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:trollsteinn"
   },
-  "result": "tflostblocks:chiseled_trollsteinn",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:chiseled_trollsteinn",
+    "count": 1
+  }
 }

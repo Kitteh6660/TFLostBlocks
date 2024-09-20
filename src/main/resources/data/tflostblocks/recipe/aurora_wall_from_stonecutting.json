@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:aurora_block"
   },
-  "result": "tflostblocks:aurora_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:aurora_wall",
+    "count": 1
+  }
 }

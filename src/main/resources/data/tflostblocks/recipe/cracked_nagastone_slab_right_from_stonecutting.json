@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:cracked_etched_nagastone"
   },
-  "result": "tflostblocks:cracked_nagastone_slab_right",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:cracked_nagastone_slab_right",
+    "count": 2
+  }
 }

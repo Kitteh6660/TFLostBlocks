@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:worn_castle_brick"
   },
-  "result": "tflostblocks:worn_castle_brick_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:worn_castle_brick_slab",
+    "count": 2
+  }
 }

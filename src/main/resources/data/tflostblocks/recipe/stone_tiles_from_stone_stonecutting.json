@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:stone"
   },
-  "result": "tflostblocks:stone_tiles",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:stone_tiles",
+    "count": 1
+  }
 }

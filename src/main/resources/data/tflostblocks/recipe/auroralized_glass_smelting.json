@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "twilightforest:aurora_block"
   },
-  "result": "twilightforest:auroralized_glass"
+  "result": {
+    "id": "twilightforest:auroralized_glass"
+  }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:castle_brick"
   },
-  "result": "tflostblocks:castle_brick_tile_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:castle_brick_tile_stairs",
+    "count": 1
+  }
 }

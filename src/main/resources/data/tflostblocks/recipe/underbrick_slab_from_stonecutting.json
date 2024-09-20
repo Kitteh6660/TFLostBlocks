@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:underbrick"
   },
-  "result": "tflostblocks:underbrick_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:underbrick_slab",
+    "count": 2
+  }
 }

@@ -7,7 +7,7 @@
     "item": "twilightforest:fiery_ingot"
   },
   "result": {
-    "item": "tflostblocks:thorncutter_axe"
+    "id": "tflostblocks:thorncutter_axe"
   },
   "template": {
     "item": "twilightforest:lamp_of_cinders"

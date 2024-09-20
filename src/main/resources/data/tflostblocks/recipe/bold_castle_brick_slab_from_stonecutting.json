@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:bold_castle_brick_pillar"
   },
-  "result": "tflostblocks:bold_castle_brick_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:bold_castle_brick_slab",
+    "count": 2
+  }
 }

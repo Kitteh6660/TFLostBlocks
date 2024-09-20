@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:trollsteinn"
   },
-  "result": "tflostblocks:polished_trollsteinn",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:polished_trollsteinn",
+    "count": 1
+  }
 }

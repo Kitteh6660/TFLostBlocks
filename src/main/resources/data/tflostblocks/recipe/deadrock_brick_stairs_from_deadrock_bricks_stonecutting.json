@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "tflostblocks:deadrock_bricks"
   },
-  "result": "tflostblocks:deadrock_brick_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:deadrock_brick_stairs",
+    "count": 1
+  }
 }

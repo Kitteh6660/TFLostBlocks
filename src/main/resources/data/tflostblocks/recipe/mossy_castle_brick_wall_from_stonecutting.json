@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:mossy_castle_brick"
   },
-  "result": "tflostblocks:mossy_castle_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:mossy_castle_brick_wall",
+    "count": 1
+  }
 }

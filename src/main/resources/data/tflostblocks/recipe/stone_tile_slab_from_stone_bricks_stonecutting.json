@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "minecraft:stone_bricks"
   },
-  "result": "tflostblocks:stone_tile_slab",
-  "count": 2
+  "result": {
+    "id": "tflostblocks:stone_tile_slab",
+    "count": 2
+  }
 }

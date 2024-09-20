@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:trollsteinn"
   },
-  "result": "tflostblocks:trollsteinn_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:trollsteinn_stairs",
+    "count": 1
+  }
 }

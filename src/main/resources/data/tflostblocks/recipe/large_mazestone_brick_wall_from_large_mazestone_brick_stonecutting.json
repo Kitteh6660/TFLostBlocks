@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "tflostblocks:large_mazestone_bricks"
   },
-  "result": "tflostblocks:large_mazestone_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:large_mazestone_brick_wall",
+    "count": 1
+  }
 }

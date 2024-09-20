@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "twilightforest:mazestone"
   },
-  "result": "tflostblocks:large_mazestone_brick_wall",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:large_mazestone_brick_wall",
+    "count": 1
+  }
 }

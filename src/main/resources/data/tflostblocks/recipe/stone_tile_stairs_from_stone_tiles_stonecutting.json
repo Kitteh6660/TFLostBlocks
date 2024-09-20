@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "tflostblocks:stone_tiles"
   },
-  "result": "tflostblocks:stone_tile_stairs",
-  "count": 1
+  "result": {
+    "id": "tflostblocks:stone_tile_stairs",
+    "count": 1
+  }
 }
