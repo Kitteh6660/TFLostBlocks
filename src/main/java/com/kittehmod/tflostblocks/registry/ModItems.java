@@ -3,355 +3,188 @@ package com.kittehmod.tflostblocks.registry;
 import com.kittehmod.tflostblocks.TFLostBlocksMod;
 import com.kittehmod.tflostblocks.items.ThorncutterAxeItem;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.contents.TranslatableContents;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTab.TabVisibility;
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.Tiers;
-import net.minecraft.world.item.CreativeModeTab.TabVisibility;
-import net.minecraft.world.item.HangingSignItem;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.CreativeModeTabRegistry;
-import net.minecraftforge.common.util.MutableHashedLinkedMap;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.common.CreativeModeTabRegistry;
+import net.neoforged.neoforge.common.util.MutableHashedLinkedMap;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import twilightforest.TwilightForestMod;
 import twilightforest.init.TFBlocks;
+import twilightforest.init.TFCreativeTabs;
 import twilightforest.init.TFItems;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+// @EventBusSubscriber(modid = TFLostBlocksMod.MOD_ID)
 public class ModItems
 {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TFLostBlocksMod.MOD_ID);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, TFLostBlocksMod.MOD_ID);
 
-	public static final RegistryObject<Item> INCOMPLETE_THORNCUTTER_AXE = ITEMS.register("incomplete_thorncutter_axe", () -> new AxeItem(Tiers.IRON, 6.0F, -3.1F, new Item.Properties().rarity(Rarity.RARE)));
-	public static final RegistryObject<Item> THORNCUTTER_AXE = ITEMS.register("thorncutter_axe", () -> new ThorncutterAxeItem(Tiers.DIAMOND, 5.0F, -3.0F, new Item.Properties().rarity(Rarity.EPIC)));
+	public static final Item INCOMPLETE_THORNCUTTER_AXE = new AxeItem(Tiers.IRON, new Item.Properties().rarity(Rarity.RARE));
+	public static final Item THORNCUTTER_AXE = new ThorncutterAxeItem(Tiers.DIAMOND, new Item.Properties().rarity(Rarity.EPIC));
 	
 	// Stone Tiles
-	public static final RegistryObject<Item> STONE_TILES = ITEMS.register("stone_tiles", () -> new BlockItem(ModBlocks.STONE_TILES.get(), new Item.Properties()));
-	public static final RegistryObject<Item> STONE_TILE_STAIRS = ITEMS.register("stone_tile_stairs", () -> new BlockItem(ModBlocks.STONE_TILE_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> STONE_TILE_SLAB = ITEMS.register("stone_tile_slab", () -> new BlockItem(ModBlocks.STONE_TILE_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> STONE_TILE_WALL = ITEMS.register("stone_tile_wall", () -> new BlockItem(ModBlocks.STONE_TILE_WALL.get(), new Item.Properties()));
+	public static final Item STONE_TILES = new BlockItem(ModBlocks.STONE_TILES, new Item.Properties());
+	public static final Item STONE_TILE_STAIRS = new BlockItem(ModBlocks.STONE_TILE_STAIRS, new Item.Properties());
+	public static final Item STONE_TILE_SLAB = new BlockItem(ModBlocks.STONE_TILE_SLAB, new Item.Properties());
+	public static final Item STONE_TILE_WALL = new BlockItem(ModBlocks.STONE_TILE_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> MOSSY_STONE_TILES = ITEMS.register("mossy_stone_tiles", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILES.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_STONE_TILE_STAIRS = ITEMS.register("mossy_stone_tile_stairs", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_STONE_TILE_SLAB = ITEMS.register("mossy_stone_tile_slab", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_STONE_TILE_WALL = ITEMS.register("mossy_stone_tile_wall", () -> new BlockItem(ModBlocks.MOSSY_STONE_TILE_WALL.get(), new Item.Properties()));
+	public static final Item MOSSY_STONE_TILES = new BlockItem(ModBlocks.MOSSY_STONE_TILES, new Item.Properties());
+	public static final Item MOSSY_STONE_TILE_STAIRS = new BlockItem(ModBlocks.MOSSY_STONE_TILE_STAIRS, new Item.Properties());
+	public static final Item MOSSY_STONE_TILE_SLAB = new BlockItem(ModBlocks.MOSSY_STONE_TILE_SLAB, new Item.Properties());
+	public static final Item MOSSY_STONE_TILE_WALL = new BlockItem(ModBlocks.MOSSY_STONE_TILE_WALL, new Item.Properties());
 
 	// Aurora Palace
-	public static final RegistryObject<Item> AURORA_STAIRS = ITEMS.register("aurora_stairs", () -> new BlockItem(ModBlocks.AURORA_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> AURORA_WALL = ITEMS.register("aurora_wall", () -> new BlockItem(ModBlocks.AURORA_WALL.get(), new Item.Properties()));
-	public static final RegistryObject<Item> AURORALIZED_GLASS_PANE = ITEMS.register("auroralized_glass_pane", () -> new BlockItem(ModBlocks.AURORALIZED_GLASS_PANE.get(), new Item.Properties()));
+	public static final Item AURORA_STAIRS = new BlockItem(ModBlocks.AURORA_STAIRS, new Item.Properties());
+	public static final Item AURORA_WALL = new BlockItem(ModBlocks.AURORA_WALL, new Item.Properties());
+	public static final Item AURORALIZED_GLASS_PANE = new BlockItem(ModBlocks.AURORALIZED_GLASS_PANE, new Item.Properties());
 
 	// Final Castle
-	public static final RegistryObject<Item> CASTLE_BRICK_SLAB = ITEMS.register("castle_brick_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CASTLE_BRICK_WALL = ITEMS.register("castle_brick_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item CASTLE_BRICK_WALL = new BlockItem(ModBlocks.CASTLE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> CASTLE_BRICK_TILES = ITEMS.register("castle_brick_tiles", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILES.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CASTLE_BRICK_TILE_STAIRS = ITEMS.register("castle_brick_tile_stairs", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CASTLE_BRICK_TILE_SLAB = ITEMS.register("castle_brick_tile_slab", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CASTLE_BRICK_TILE_WALL = ITEMS.register("castle_brick_tile_wall", () -> new BlockItem(ModBlocks.CASTLE_BRICK_TILE_WALL.get(), new Item.Properties()));
+	public static final Item CASTLE_BRICK_TILES = new BlockItem(ModBlocks.CASTLE_BRICK_TILES, new Item.Properties());
+	public static final Item CASTLE_BRICK_TILE_STAIRS = new BlockItem(ModBlocks.CASTLE_BRICK_TILE_STAIRS, new Item.Properties());
+	public static final Item CASTLE_BRICK_TILE_SLAB = new BlockItem(ModBlocks.CASTLE_BRICK_TILE_SLAB, new Item.Properties());
+	public static final Item CASTLE_BRICK_TILE_WALL = new BlockItem(ModBlocks.CASTLE_BRICK_TILE_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_SLAB = ITEMS.register("bold_castle_brick_slab", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> BOLD_CASTLE_BRICK_WALL = ITEMS.register("bold_castle_brick_wall", () -> new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item BOLD_CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item BOLD_CASTLE_BRICK_WALL = new BlockItem(ModBlocks.BOLD_CASTLE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> WORN_CASTLE_BRICK_SLAB = ITEMS.register("worn_castle_brick_slab", () -> new BlockItem(ModBlocks.WORN_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> WORN_CASTLE_BRICK_WALL = ITEMS.register("worn_castle_brick_wall", () -> new BlockItem(ModBlocks.WORN_CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item WORN_CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.WORN_CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item WORN_CASTLE_BRICK_WALL = new BlockItem(ModBlocks.WORN_CASTLE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> CRACKED_CASTLE_BRICK_SLAB = ITEMS.register("cracked_castle_brick_slab", () -> new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CRACKED_CASTLE_BRICK_WALL = ITEMS.register("cracked_castle_brick_wall", () -> new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item CRACKED_CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item CRACKED_CASTLE_BRICK_WALL = new BlockItem(ModBlocks.CRACKED_CASTLE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> ENCASED_CASTLE_BRICK_SLAB = ITEMS.register("encased_castle_brick_slab", () -> new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> ENCASED_CASTLE_BRICK_WALL = ITEMS.register("encased_castle_brick_wall", () -> new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item ENCASED_CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item ENCASED_CASTLE_BRICK_WALL = new BlockItem(ModBlocks.ENCASED_CASTLE_BRICK_WALL, new Item.Properties());
 	
-	public static final RegistryObject<Item> MOSSY_CASTLE_BRICK_SLAB = ITEMS.register("mossy_castle_brick_slab", () -> new BlockItem(ModBlocks.MOSSY_CASTLE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_CASTLE_BRICK_WALL = ITEMS.register("mossy_castle_brick_wall", () -> new BlockItem(ModBlocks.MOSSY_CASTLE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item MOSSY_CASTLE_BRICK_SLAB = new BlockItem(ModBlocks.MOSSY_CASTLE_BRICK_SLAB, new Item.Properties());
+	public static final Item MOSSY_CASTLE_BRICK_WALL = new BlockItem(ModBlocks.MOSSY_CASTLE_BRICK_WALL, new Item.Properties());
 
 	// Deadrock
-	public static final RegistryObject<Item> DEADROCK_STAIRS = ITEMS.register("deadrock_stairs", () -> new BlockItem(ModBlocks.DEADROCK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DEADROCK_SLAB = ITEMS.register("deadrock_slab", () -> new BlockItem(ModBlocks.DEADROCK_SLAB.get(), new Item.Properties()));
+	public static final Item DEADROCK_STAIRS = new BlockItem(ModBlocks.DEADROCK_STAIRS, new Item.Properties());
+	public static final Item DEADROCK_SLAB = new BlockItem(ModBlocks.DEADROCK_SLAB, new Item.Properties());
 
-	public static final RegistryObject<Item> CRACKED_DEADROCK_STAIRS = ITEMS.register("cracked_deadrock_stairs", () -> new BlockItem(ModBlocks.CRACKED_DEADROCK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CRACKED_DEADROCK_SLAB = ITEMS.register("cracked_deadrock_slab", () -> new BlockItem(ModBlocks.CRACKED_DEADROCK_SLAB.get(), new Item.Properties()));
+	public static final Item CRACKED_DEADROCK_STAIRS = new BlockItem(ModBlocks.CRACKED_DEADROCK_STAIRS, new Item.Properties());
+	public static final Item CRACKED_DEADROCK_SLAB = new BlockItem(ModBlocks.CRACKED_DEADROCK_SLAB, new Item.Properties());
 	
-	public static final RegistryObject<Item> WEATHERED_DEADROCK_STAIRS = ITEMS.register("weathered_deadrock_stairs", () -> new BlockItem(ModBlocks.WEATHERED_DEADROCK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> WEATHERED_DEADROCK_SLAB = ITEMS.register("weathered_deadrock_slab", () -> new BlockItem(ModBlocks.WEATHERED_DEADROCK_SLAB.get(), new Item.Properties()));
+	public static final Item WEATHERED_DEADROCK_STAIRS = new BlockItem(ModBlocks.WEATHERED_DEADROCK_STAIRS, new Item.Properties());
+	public static final Item WEATHERED_DEADROCK_SLAB = new BlockItem(ModBlocks.WEATHERED_DEADROCK_SLAB, new Item.Properties());
 
-	public static final RegistryObject<Item> DEADROCK_BRICKS = ITEMS.register("deadrock_bricks", () -> new BlockItem(ModBlocks.DEADROCK_BRICKS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DEADROCK_BRICK_STAIRS = ITEMS.register("deadrock_brick_stairs", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DEADROCK_BRICK_SLAB = ITEMS.register("deadrock_brick_slab", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DEADROCK_BRICK_WALL = ITEMS.register("deadrock_brick_wall", () -> new BlockItem(ModBlocks.DEADROCK_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item DEADROCK_BRICKS = new BlockItem(ModBlocks.DEADROCK_BRICKS, new Item.Properties());
+	public static final Item DEADROCK_BRICK_STAIRS = new BlockItem(ModBlocks.DEADROCK_BRICK_STAIRS, new Item.Properties());
+	public static final Item DEADROCK_BRICK_SLAB = new BlockItem(ModBlocks.DEADROCK_BRICK_SLAB, new Item.Properties());
+	public static final Item DEADROCK_BRICK_WALL = new BlockItem(ModBlocks.DEADROCK_BRICK_WALL, new Item.Properties());
 	
 	// Minotaur Labyrinth
-	public static final RegistryObject<Item> MAZESTONE_STAIRS = ITEMS.register("mazestone_stairs", () -> new BlockItem(ModBlocks.MAZESTONE_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MAZESTONE_SLAB = ITEMS.register("mazestone_slab", () -> new BlockItem(ModBlocks.MAZESTONE_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MAZESTONE_WALL = ITEMS.register("mazestone_wall", () -> new BlockItem(ModBlocks.MAZESTONE_WALL.get(), new Item.Properties()));
+	public static final Item MAZESTONE_STAIRS = new BlockItem(ModBlocks.MAZESTONE_STAIRS, new Item.Properties());
+	public static final Item MAZESTONE_SLAB = new BlockItem(ModBlocks.MAZESTONE_SLAB, new Item.Properties());
+	public static final Item MAZESTONE_WALL = new BlockItem(ModBlocks.MAZESTONE_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> CUT_MAZESTONE_STAIRS = ITEMS.register("cut_mazestone_stairs", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CUT_MAZESTONE_SLAB = ITEMS.register("cut_mazestone_slab", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CUT_MAZESTONE_WALL = ITEMS.register("cut_mazestone_wall", () -> new BlockItem(ModBlocks.CUT_MAZESTONE_WALL.get(), new Item.Properties()));
+	public static final Item CUT_MAZESTONE_STAIRS = new BlockItem(ModBlocks.CUT_MAZESTONE_STAIRS, new Item.Properties());
+	public static final Item CUT_MAZESTONE_SLAB = new BlockItem(ModBlocks.CUT_MAZESTONE_SLAB, new Item.Properties());
+	public static final Item CUT_MAZESTONE_WALL = new BlockItem(ModBlocks.CUT_MAZESTONE_WALL, new Item.Properties());
 	
-	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICKS = ITEMS.register("large_mazestone_bricks", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICKS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_STAIRS = ITEMS.register("large_mazestone_brick_stairs", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_SLAB = ITEMS.register("large_mazestone_brick_slab", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> LARGE_MAZESTONE_BRICK_WALL = ITEMS.register("large_mazestone_brick_wall", () -> new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item LARGE_MAZESTONE_BRICKS = new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICKS, new Item.Properties());
+	public static final Item LARGE_MAZESTONE_BRICK_STAIRS = new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_STAIRS, new Item.Properties());
+	public static final Item LARGE_MAZESTONE_BRICK_SLAB = new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_SLAB, new Item.Properties());
+	public static final Item LARGE_MAZESTONE_BRICK_WALL = new BlockItem(ModBlocks.LARGE_MAZESTONE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> MAZESTONE_BRICK_STAIRS = ITEMS.register("mazestone_brick_stairs", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MAZESTONE_BRICK_SLAB = ITEMS.register("mazestone_brick_slab", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MAZESTONE_BRICK_WALL = ITEMS.register("mazestone_brick_wall", () -> new BlockItem(ModBlocks.MAZESTONE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item MAZESTONE_BRICK_STAIRS = new BlockItem(ModBlocks.MAZESTONE_BRICK_STAIRS, new Item.Properties());
+	public static final Item MAZESTONE_BRICK_SLAB = new BlockItem(ModBlocks.MAZESTONE_BRICK_SLAB, new Item.Properties());
+	public static final Item MAZESTONE_BRICK_WALL = new BlockItem(ModBlocks.MAZESTONE_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> MOSSY_MAZESTONE_BRICK_STAIRS = ITEMS.register("mossy_mazestone_brick_stairs", () -> new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_MAZESTONE_BRICK_SLAB = ITEMS.register("mossy_mazestone_brick_slab", () -> new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_MAZESTONE_BRICK_WALL = ITEMS.register("mossy_mazestone_brick_wall", () -> new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item MOSSY_MAZESTONE_BRICK_STAIRS = new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_STAIRS, new Item.Properties());
+	public static final Item MOSSY_MAZESTONE_BRICK_SLAB = new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_SLAB, new Item.Properties());
+	public static final Item MOSSY_MAZESTONE_BRICK_WALL = new BlockItem(ModBlocks.MOSSY_MAZESTONE_BRICK_WALL, new Item.Properties());
 	
 	// Naga Courtyard
-	public static final RegistryObject<Item> NAGASTONE_SLAB_LEFT = ITEMS.register("nagastone_slab_left", () -> new BlockItem(ModBlocks.NAGASTONE_SLAB_LEFT.get(), new Item.Properties()));
-	public static final RegistryObject<Item> NAGASTONE_SLAB_RIGHT = ITEMS.register("nagastone_slab_right", () -> new BlockItem(ModBlocks.NAGASTONE_SLAB_RIGHT.get(), new Item.Properties()));
+	public static final Item NAGASTONE_SLAB_LEFT = new BlockItem(ModBlocks.NAGASTONE_SLAB_LEFT, new Item.Properties());
+	public static final Item NAGASTONE_SLAB_RIGHT = new BlockItem(ModBlocks.NAGASTONE_SLAB_RIGHT, new Item.Properties());
 
-	public static final RegistryObject<Item> CRACKED_NAGASTONE_SLAB_LEFT = ITEMS.register("cracked_nagastone_slab_left", () -> new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_LEFT.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CRACKED_NAGASTONE_SLAB_RIGHT = ITEMS.register("cracked_nagastone_slab_right", () -> new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_RIGHT.get(), new Item.Properties()));
+	public static final Item CRACKED_NAGASTONE_SLAB_LEFT = new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_LEFT, new Item.Properties());
+	public static final Item CRACKED_NAGASTONE_SLAB_RIGHT = new BlockItem(ModBlocks.CRACKED_NAGASTONE_SLAB_RIGHT, new Item.Properties());
 
-	public static final RegistryObject<Item> MOSSY_NAGASTONE_SLAB_LEFT = ITEMS.register("mossy_nagastone_slab_left", () -> new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_LEFT.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_NAGASTONE_SLAB_RIGHT = ITEMS.register("mossy_nagastone_slab_right", () -> new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_RIGHT.get(), new Item.Properties()));
+	public static final Item MOSSY_NAGASTONE_SLAB_LEFT = new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_LEFT, new Item.Properties());
+	public static final Item MOSSY_NAGASTONE_SLAB_RIGHT = new BlockItem(ModBlocks.MOSSY_NAGASTONE_SLAB_RIGHT, new Item.Properties());
 	
 	// Dark Tower
-	public static final RegistryObject<Item> TOWERWOOD_STAIRS = ITEMS.register("towerwood_stairs", () -> new BlockItem(ModBlocks.TOWERWOOD_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_SLAB = ITEMS.register("towerwood_slab", () -> new BlockItem(ModBlocks.TOWERWOOD_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_FENCE = ITEMS.register("towerwood_fence", () -> new BlockItem(ModBlocks.TOWERWOOD_FENCE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_FENCE_GATE = ITEMS.register("towerwood_fence_gate", () -> new BlockItem(ModBlocks.TOWERWOOD_FENCE_GATE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_DOOR = ITEMS.register("towerwood_door", () -> new BlockItem(ModBlocks.TOWERWOOD_DOOR.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_TRAPDOOR = ITEMS.register("towerwood_trapdoor", () -> new BlockItem(ModBlocks.TOWERWOOD_TRAPDOOR.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_BUTTON = ITEMS.register("towerwood_button", () -> new BlockItem(ModBlocks.TOWERWOOD_BUTTON.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_PRESSURE_PLATE = ITEMS.register("towerwood_pressure_plate", () -> new BlockItem(ModBlocks.TOWERWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_SIGN = ITEMS.register("towerwood_sign", () -> new SignItem(new Item.Properties(), ModBlocks.TOWERWOOD_SIGN.get(), ModBlocks.TOWERWOOD_WALL_SIGN.get()));
-	public static final RegistryObject<Item> TOWERWOOD_HANGING_SIGN = ITEMS.register("towerwood_hanging_sign", () -> new HangingSignItem(ModBlocks.TOWERWOOD_HANGING_SIGN.get(), ModBlocks.TOWERWOOD_WALL_HANGING_SIGN.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TOWERWOOD_BANISTER = ITEMS.register("towerwood_banister", () -> new BlockItem(ModBlocks.TOWERWOOD_BANISTER.get(), new Item.Properties()));
+	public static final Item TOWERWOOD_STAIRS = new BlockItem(ModBlocks.TOWERWOOD_STAIRS, new Item.Properties());
+	public static final Item TOWERWOOD_SLAB = new BlockItem(ModBlocks.TOWERWOOD_SLAB, new Item.Properties());
+	public static final Item TOWERWOOD_FENCE = new BlockItem(ModBlocks.TOWERWOOD_FENCE, new Item.Properties());
+	public static final Item TOWERWOOD_FENCE_GATE = new BlockItem(ModBlocks.TOWERWOOD_FENCE_GATE, new Item.Properties());
+	public static final Item TOWERWOOD_DOOR = new BlockItem(ModBlocks.TOWERWOOD_DOOR, new Item.Properties());
+	public static final Item TOWERWOOD_TRAPDOOR = new BlockItem(ModBlocks.TOWERWOOD_TRAPDOOR, new Item.Properties());
+	public static final Item TOWERWOOD_BUTTON = new BlockItem(ModBlocks.TOWERWOOD_BUTTON, new Item.Properties());
+	public static final Item TOWERWOOD_PRESSURE_PLATE = new BlockItem(ModBlocks.TOWERWOOD_PRESSURE_PLATE, new Item.Properties());
+	public static final Item TOWERWOOD_SIGN = new SignItem(new Item.Properties(), ModBlocks.TOWERWOOD_SIGN, ModBlocks.TOWERWOOD_WALL_SIGN);
+	public static final Item TOWERWOOD_HANGING_SIGN = new HangingSignItem(ModBlocks.TOWERWOOD_HANGING_SIGN, ModBlocks.TOWERWOOD_WALL_HANGING_SIGN, new Item.Properties());
+	public static final Item TOWERWOOD_BANISTER = new BlockItem(ModBlocks.TOWERWOOD_BANISTER, new Item.Properties());
 
-	public static final RegistryObject<Item> MOSSY_TOWERWOOD_SLAB = ITEMS.register("mossy_towerwood_slab", () -> new BlockItem(ModBlocks.MOSSY_TOWERWOOD_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_TOWERWOOD_STAIRS = ITEMS.register("mossy_towerwood_stairs", () -> new BlockItem(ModBlocks.MOSSY_TOWERWOOD_STAIRS.get(), new Item.Properties()));
+	public static final Item MOSSY_TOWERWOOD_SLAB = new BlockItem(ModBlocks.MOSSY_TOWERWOOD_SLAB, new Item.Properties());
+	public static final Item MOSSY_TOWERWOOD_STAIRS = new BlockItem(ModBlocks.MOSSY_TOWERWOOD_STAIRS, new Item.Properties());
 
 	// Thorn Wood
-	public static final RegistryObject<Item> STRIPPED_THORNS = ITEMS.register("stripped_thorns", () -> new BlockItem(ModBlocks.STRIPPED_THORNS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> STRIPPED_THORN_BLOCK = ITEMS.register("stripped_thorn_block", () -> new BlockItem(ModBlocks.STRIPPED_THORN_BLOCK.get(), new Item.Properties()));
+	public static final Item STRIPPED_THORNS = new BlockItem(ModBlocks.STRIPPED_THORNS, new Item.Properties());
+	public static final Item STRIPPED_THORN_BLOCK = new BlockItem(ModBlocks.STRIPPED_THORN_BLOCK, new Item.Properties());
 	
-	public static final RegistryObject<Item> THORN_PLANKS = ITEMS.register("thorn_planks", () -> new BlockItem(ModBlocks.THORN_PLANKS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_STAIRS = ITEMS.register("thorn_stairs", () -> new BlockItem(ModBlocks.THORN_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_SLAB = ITEMS.register("thorn_slab", () -> new BlockItem(ModBlocks.THORN_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_FENCE = ITEMS.register("thorn_fence", () -> new BlockItem(ModBlocks.THORN_FENCE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_FENCE_GATE = ITEMS.register("thorn_fence_gate", () -> new BlockItem(ModBlocks.THORN_FENCE_GATE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_DOOR = ITEMS.register("thorn_door", () -> new BlockItem(ModBlocks.THORN_DOOR.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_TRAPDOOR = ITEMS.register("thorn_trapdoor", () -> new BlockItem(ModBlocks.THORN_TRAPDOOR.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_BUTTON = ITEMS.register("thorn_button", () -> new BlockItem(ModBlocks.THORN_BUTTON.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_PRESSURE_PLATE = ITEMS.register("thorn_pressure_plate", () -> new BlockItem(ModBlocks.THORN_PRESSURE_PLATE.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_SIGN = ITEMS.register("thorn_sign", () -> new SignItem(new Item.Properties(), ModBlocks.THORN_SIGN.get(), ModBlocks.THORN_WALL_SIGN.get()));
-	public static final RegistryObject<Item> THORN_HANGING_SIGN = ITEMS.register("thorn_hanging_sign", () -> new HangingSignItem(ModBlocks.THORN_HANGING_SIGN.get(), ModBlocks.THORN_WALL_HANGING_SIGN.get(), new Item.Properties()));
-	public static final RegistryObject<Item> THORN_BANISTER = ITEMS.register("thorn_banister", () -> new BlockItem(ModBlocks.THORN_BANISTER.get(), new Item.Properties()));
+	public static final Item THORN_PLANKS = new BlockItem(ModBlocks.THORN_PLANKS, new Item.Properties());
+	public static final Item THORN_STAIRS = new BlockItem(ModBlocks.THORN_STAIRS, new Item.Properties());
+	public static final Item THORN_SLAB = new BlockItem(ModBlocks.THORN_SLAB, new Item.Properties());
+	public static final Item THORN_FENCE = new BlockItem(ModBlocks.THORN_FENCE, new Item.Properties());
+	public static final Item THORN_FENCE_GATE = new BlockItem(ModBlocks.THORN_FENCE_GATE, new Item.Properties());
+	public static final Item THORN_DOOR = new BlockItem(ModBlocks.THORN_DOOR, new Item.Properties());
+	public static final Item THORN_TRAPDOOR = new BlockItem(ModBlocks.THORN_TRAPDOOR, new Item.Properties());
+	public static final Item THORN_BUTTON = new BlockItem(ModBlocks.THORN_BUTTON, new Item.Properties());
+	public static final Item THORN_PRESSURE_PLATE = new BlockItem(ModBlocks.THORN_PRESSURE_PLATE, new Item.Properties());
+	public static final Item THORN_SIGN = new SignItem(new Item.Properties(), ModBlocks.THORN_SIGN, ModBlocks.THORN_WALL_SIGN);
+	public static final Item THORN_HANGING_SIGN = new HangingSignItem(ModBlocks.THORN_HANGING_SIGN, ModBlocks.THORN_WALL_HANGING_SIGN, new Item.Properties());
+	public static final Item THORN_BANISTER = new BlockItem(ModBlocks.THORN_BANISTER, new Item.Properties());
 	
 	// Goblin Knight Stronghold
-	public static final RegistryObject<Item> UNDERBRICK_STAIRS = ITEMS.register("underbrick_stairs", () -> new BlockItem(ModBlocks.UNDERBRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> UNDERBRICK_SLAB = ITEMS.register("underbrick_slab", () -> new BlockItem(ModBlocks.UNDERBRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> UNDERBRICK_WALL = ITEMS.register("underbrick_wall", () -> new BlockItem(ModBlocks.UNDERBRICK_WALL.get(), new Item.Properties()));
+	public static final Item UNDERBRICK_STAIRS = new BlockItem(ModBlocks.UNDERBRICK_STAIRS, new Item.Properties());
+	public static final Item UNDERBRICK_SLAB = new BlockItem(ModBlocks.UNDERBRICK_SLAB, new Item.Properties());
+	public static final Item UNDERBRICK_WALL = new BlockItem(ModBlocks.UNDERBRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> CRACKED_UNDERBRICK_STAIRS = ITEMS.register("cracked_underbrick_stairs", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CRACKED_UNDERBRICK_SLAB = ITEMS.register("cracked_underbrick_slab", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> CRACKED_UNDERBRICK_WALL = ITEMS.register("cracked_underbrick_wall", () -> new BlockItem(ModBlocks.CRACKED_UNDERBRICK_WALL.get(), new Item.Properties()));
+	public static final Item CRACKED_UNDERBRICK_STAIRS = new BlockItem(ModBlocks.CRACKED_UNDERBRICK_STAIRS, new Item.Properties());
+	public static final Item CRACKED_UNDERBRICK_SLAB = new BlockItem(ModBlocks.CRACKED_UNDERBRICK_SLAB, new Item.Properties());
+	public static final Item CRACKED_UNDERBRICK_WALL = new BlockItem(ModBlocks.CRACKED_UNDERBRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> MOSSY_UNDERBRICK_STAIRS = ITEMS.register("mossy_underbrick_stairs", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_UNDERBRICK_SLAB = ITEMS.register("mossy_underbrick_slab", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> MOSSY_UNDERBRICK_WALL = ITEMS.register("mossy_underbrick_wall", () -> new BlockItem(ModBlocks.MOSSY_UNDERBRICK_WALL.get(), new Item.Properties()));
+	public static final Item MOSSY_UNDERBRICK_STAIRS = new BlockItem(ModBlocks.MOSSY_UNDERBRICK_STAIRS, new Item.Properties());
+	public static final Item MOSSY_UNDERBRICK_SLAB = new BlockItem(ModBlocks.MOSSY_UNDERBRICK_SLAB, new Item.Properties());
+	public static final Item MOSSY_UNDERBRICK_WALL = new BlockItem(ModBlocks.MOSSY_UNDERBRICK_WALL, new Item.Properties());
 
 	// Trollsteinn
-	public static final RegistryObject<Item> TROLLSTEINN_STAIRS = ITEMS.register("trollsteinn_stairs", () -> new BlockItem(ModBlocks.TROLLSTEINN_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TROLLSTEINN_SLAB = ITEMS.register("trollsteinn_slab", () -> new BlockItem(ModBlocks.TROLLSTEINN_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TROLLSTEINN_WALL = ITEMS.register("trollsteinn_wall", () -> new BlockItem(ModBlocks.TROLLSTEINN_WALL.get(), new Item.Properties()));
+	public static final Item TROLLSTEINN_STAIRS = new BlockItem(ModBlocks.TROLLSTEINN_STAIRS, new Item.Properties());
+	public static final Item TROLLSTEINN_SLAB = new BlockItem(ModBlocks.TROLLSTEINN_SLAB, new Item.Properties());
+	public static final Item TROLLSTEINN_WALL = new BlockItem(ModBlocks.TROLLSTEINN_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> POLISHED_TROLLSTEINN = ITEMS.register("polished_trollsteinn", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN.get(), new Item.Properties()));
-	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_STAIRS = ITEMS.register("polished_trollsteinn_stairs", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_SLAB = ITEMS.register("polished_trollsteinn_slab", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> POLISHED_TROLLSTEINN_WALL = ITEMS.register("polished_trollsteinn_wall", () -> new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_WALL.get(), new Item.Properties()));
+	public static final Item POLISHED_TROLLSTEINN = new BlockItem(ModBlocks.POLISHED_TROLLSTEINN, new Item.Properties());
+	public static final Item POLISHED_TROLLSTEINN_STAIRS = new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_STAIRS, new Item.Properties());
+	public static final Item POLISHED_TROLLSTEINN_SLAB = new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_SLAB, new Item.Properties());
+	public static final Item POLISHED_TROLLSTEINN_WALL = new BlockItem(ModBlocks.POLISHED_TROLLSTEINN_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> TROLLSTEINN_BRICKS = ITEMS.register("trollsteinn_bricks", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICKS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TROLLSTEINN_BRICK_STAIRS = ITEMS.register("trollsteinn_brick_stairs", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICK_STAIRS.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TROLLSTEINN_BRICK_SLAB = ITEMS.register("trollsteinn_brick_slab", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICK_SLAB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> TROLLSTEINN_BRICK_WALL = ITEMS.register("trollsteinn_brick_wall", () -> new BlockItem(ModBlocks.TROLLSTEINN_BRICK_WALL.get(), new Item.Properties()));
+	public static final Item TROLLSTEINN_BRICKS = new BlockItem(ModBlocks.TROLLSTEINN_BRICKS, new Item.Properties());
+	public static final Item TROLLSTEINN_BRICK_STAIRS = new BlockItem(ModBlocks.TROLLSTEINN_BRICK_STAIRS, new Item.Properties());
+	public static final Item TROLLSTEINN_BRICK_SLAB = new BlockItem(ModBlocks.TROLLSTEINN_BRICK_SLAB, new Item.Properties());
+	public static final Item TROLLSTEINN_BRICK_WALL = new BlockItem(ModBlocks.TROLLSTEINN_BRICK_WALL, new Item.Properties());
 
-	public static final RegistryObject<Item> CHISELED_TROLLSTEINN = ITEMS.register("chiseled_trollsteinn", () -> new BlockItem(ModBlocks.CHISELED_TROLLSTEINN.get(), new Item.Properties()));
-	
-    private static CreativeModeTab getTabWithMatchingName(String tabName) {
-    	CreativeModeTab tab = null;
-    	if (FMLEnvironment.dist == Dist.DEDICATED_SERVER) { // Check to make sure the code doesn't advance on server to prevent crashes.
-    		return null;
-    	}
-    	for (CreativeModeTab tempTab : CreativeModeTabRegistry.getSortedCreativeModeTabs()) {
-    		if (!(tempTab.getDisplayName().getContents() instanceof TranslatableContents)) {
-    			continue;
-    		}
-    		if (((TranslatableContents)tempTab.getDisplayName().getContents()).getKey().equalsIgnoreCase("itemGroup." + tabName)) {
-    			tab = tempTab;
-    			break;
-    		}
-    	}
-    	return tab;
-    }
+	public static final Item CHISELED_TROLLSTEINN = new BlockItem(ModBlocks.CHISELED_TROLLSTEINN, new Item.Properties());
     
-    @SubscribeEvent
-    public static void assignItemsToTabs(BuildCreativeModeTabContentsEvent event) {
-    	MutableHashedLinkedMap<ItemStack, TabVisibility> map = event.getEntries();
-    	if (event.getTab() == getTabWithMatchingName("twilightforest.blocks")) {
-    		// Insert Stone Tile blocks.
-    		map.putAfter(TFBlocks.TWISTED_STONE_PILLAR.get().asItem().getDefaultInstance(), STONE_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(STONE_TILES.get().asItem().getDefaultInstance(), STONE_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(STONE_TILE_STAIRS.get().asItem().getDefaultInstance(), STONE_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(STONE_TILE_SLAB.get().asItem().getDefaultInstance(), STONE_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(STONE_TILE_WALL.get().asItem().getDefaultInstance(), MOSSY_STONE_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_STONE_TILES.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_STONE_TILE_STAIRS.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_STONE_TILE_SLAB.get().asItem().getDefaultInstance(), MOSSY_STONE_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Aurora blocks.
-    		map.putBefore(TFBlocks.AURORA_SLAB.get().asItem().getDefaultInstance(), AURORA_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.AURORA_SLAB.get().asItem().getDefaultInstance(), AURORA_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.AURORALIZED_GLASS.get().asItem().getDefaultInstance(), AURORALIZED_GLASS_PANE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Castle brick blocks.
-    		map.putAfter(TFBlocks.CASTLE_BRICK.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILES.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.CASTLE_BRICK_STAIRS.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.BOLD_CASTLE_BRICK_STAIRS.get().asItem().getDefaultInstance(), CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_TILE_SLAB.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(WORN_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CRACKED_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CRACKED_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), MOSSY_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), ENCASED_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(ENCASED_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), BOLD_CASTLE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		map.putAfter(BOLD_CASTLE_BRICK_SLAB.get().asItem().getDefaultInstance(), CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), CASTLE_BRICK_TILE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CASTLE_BRICK_TILE_WALL.get().asItem().getDefaultInstance(), WORN_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(WORN_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), CRACKED_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CRACKED_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), MOSSY_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), ENCASED_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(ENCASED_CASTLE_BRICK_WALL.get().asItem().getDefaultInstance(), BOLD_CASTLE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		// Insert Deadrock blocks.
-    		map.putAfter(TFBlocks.DEADROCK.get().asItem().getDefaultInstance(), DEADROCK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(DEADROCK_STAIRS.get().asItem().getDefaultInstance(), DEADROCK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		map.putAfter(TFBlocks.CRACKED_DEADROCK.get().asItem().getDefaultInstance(), CRACKED_DEADROCK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CRACKED_DEADROCK_STAIRS.get().asItem().getDefaultInstance(), CRACKED_DEADROCK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		map.putAfter(TFBlocks.WEATHERED_DEADROCK.get().asItem().getDefaultInstance(), WEATHERED_DEADROCK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(WEATHERED_DEADROCK_STAIRS.get().asItem().getDefaultInstance(), WEATHERED_DEADROCK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(WEATHERED_DEADROCK_SLAB.get().asItem().getDefaultInstance(), DEADROCK_BRICKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(DEADROCK_BRICKS.get().asItem().getDefaultInstance(), DEADROCK_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(DEADROCK_BRICK_STAIRS.get().asItem().getDefaultInstance(), DEADROCK_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(DEADROCK_BRICK_SLAB.get().asItem().getDefaultInstance(), DEADROCK_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		// Insert Mazestone blocks.
-    		map.putAfter(TFBlocks.MAZESTONE.get().asItem().getDefaultInstance(), MAZESTONE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MAZESTONE_STAIRS.get().asItem().getDefaultInstance(), MAZESTONE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MAZESTONE_SLAB.get().asItem().getDefaultInstance(), MAZESTONE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.CUT_MAZESTONE.get().asItem().getDefaultInstance(), CUT_MAZESTONE_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CUT_MAZESTONE_STAIRS.get().asItem().getDefaultInstance(), CUT_MAZESTONE_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CUT_MAZESTONE_SLAB.get().asItem().getDefaultInstance(), CUT_MAZESTONE_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putBefore(TFBlocks.MAZESTONE_BRICK.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(LARGE_MAZESTONE_BRICKS.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(LARGE_MAZESTONE_BRICK_STAIRS.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(LARGE_MAZESTONE_BRICK_SLAB.get().asItem().getDefaultInstance(), LARGE_MAZESTONE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.MAZESTONE_BRICK.get().asItem().getDefaultInstance(), MAZESTONE_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MAZESTONE_BRICK_STAIRS.get().asItem().getDefaultInstance(), MAZESTONE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MAZESTONE_BRICK_SLAB.get().asItem().getDefaultInstance(), MAZESTONE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.MOSSY_MAZESTONE.get().asItem().getDefaultInstance(), MOSSY_MAZESTONE_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_MAZESTONE_BRICK_STAIRS.get().asItem().getDefaultInstance(), MOSSY_MAZESTONE_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_MAZESTONE_BRICK_SLAB.get().asItem().getDefaultInstance(), MOSSY_MAZESTONE_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Nagastone blocks.
-    		map.putAfter(TFBlocks.NAGASTONE_STAIRS_LEFT.get().asItem().getDefaultInstance(), NAGASTONE_SLAB_LEFT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.NAGASTONE_STAIRS_RIGHT.get().asItem().getDefaultInstance(), NAGASTONE_SLAB_RIGHT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		map.putAfter(TFBlocks.CRACKED_NAGASTONE_STAIRS_LEFT.get().asItem().getDefaultInstance(), CRACKED_NAGASTONE_SLAB_LEFT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.CRACKED_NAGASTONE_STAIRS_RIGHT.get().asItem().getDefaultInstance(), CRACKED_NAGASTONE_SLAB_RIGHT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.MOSSY_NAGASTONE_STAIRS_LEFT.get().asItem().getDefaultInstance(), MOSSY_NAGASTONE_SLAB_LEFT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.MOSSY_NAGASTONE_STAIRS_RIGHT.get().asItem().getDefaultInstance(), MOSSY_NAGASTONE_SLAB_RIGHT.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Underbrick blocks.
-    		map.putAfter(TFBlocks.UNDERBRICK.get().asItem().getDefaultInstance(), UNDERBRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(UNDERBRICK_STAIRS.get().asItem().getDefaultInstance(), UNDERBRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(UNDERBRICK_SLAB.get().asItem().getDefaultInstance(), UNDERBRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.CRACKED_UNDERBRICK.get().asItem().getDefaultInstance(), CRACKED_UNDERBRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CRACKED_UNDERBRICK_STAIRS.get().asItem().getDefaultInstance(), CRACKED_UNDERBRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(CRACKED_UNDERBRICK_SLAB.get().asItem().getDefaultInstance(), CRACKED_UNDERBRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TFBlocks.MOSSY_UNDERBRICK.get().asItem().getDefaultInstance(), MOSSY_UNDERBRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_UNDERBRICK_STAIRS.get().asItem().getDefaultInstance(), MOSSY_UNDERBRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_UNDERBRICK_SLAB.get().asItem().getDefaultInstance(), MOSSY_UNDERBRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Trollsteinn blocks.
-    		map.putAfter(TFBlocks.TROLLSTEINN.get().asItem().getDefaultInstance(), TROLLSTEINN_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TROLLSTEINN_STAIRS.get().asItem().getDefaultInstance(), TROLLSTEINN_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TROLLSTEINN_SLAB.get().asItem().getDefaultInstance(), TROLLSTEINN_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TROLLSTEINN_WALL.get().asItem().getDefaultInstance(), POLISHED_TROLLSTEINN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(POLISHED_TROLLSTEINN.get().asItem().getDefaultInstance(), POLISHED_TROLLSTEINN_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(POLISHED_TROLLSTEINN_STAIRS.get().asItem().getDefaultInstance(), POLISHED_TROLLSTEINN_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(POLISHED_TROLLSTEINN_SLAB.get().asItem().getDefaultInstance(), POLISHED_TROLLSTEINN_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(POLISHED_TROLLSTEINN_WALL.get().asItem().getDefaultInstance(), TROLLSTEINN_BRICKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TROLLSTEINN_BRICKS.get().asItem().getDefaultInstance(), TROLLSTEINN_BRICK_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TROLLSTEINN_BRICK_STAIRS.get().asItem().getDefaultInstance(), TROLLSTEINN_BRICK_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TROLLSTEINN_BRICK_SLAB.get().asItem().getDefaultInstance(), TROLLSTEINN_BRICK_WALL.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		map.putAfter(TROLLSTEINN_BRICK_WALL.get().asItem().getDefaultInstance(), CHISELED_TROLLSTEINN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-
-    		// Insert Towerwood blocks.
-    		map.putAfter(TFBlocks.TOWERWOOD.get().asItem().getDefaultInstance(), TOWERWOOD_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_STAIRS.get().asItem().getDefaultInstance(), TOWERWOOD_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_SLAB.get().asItem().getDefaultInstance(), TOWERWOOD_FENCE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_FENCE.get().asItem().getDefaultInstance(), TOWERWOOD_FENCE_GATE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_FENCE_GATE.get().asItem().getDefaultInstance(), TOWERWOOD_DOOR.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_DOOR.get().asItem().getDefaultInstance(), TOWERWOOD_TRAPDOOR.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_TRAPDOOR.get().asItem().getDefaultInstance(), TOWERWOOD_PRESSURE_PLATE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_PRESSURE_PLATE.get().asItem().getDefaultInstance(), TOWERWOOD_BUTTON.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_BUTTON.get().asItem().getDefaultInstance(), TOWERWOOD_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_SIGN.get().asItem().getDefaultInstance(), TOWERWOOD_HANGING_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TOWERWOOD_HANGING_SIGN.get().asItem().getDefaultInstance(), TOWERWOOD_BANISTER.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(TFBlocks.MOSSY_TOWERWOOD.get().asItem().getDefaultInstance(), MOSSY_TOWERWOOD_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(MOSSY_TOWERWOOD_STAIRS.get().asItem().getDefaultInstance(), MOSSY_TOWERWOOD_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		
-    		// Insert Thorn blocks.
-    		map.putAfter(TFBlocks.BURNT_THORNS.get().asItem().getDefaultInstance(), STRIPPED_THORNS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(STRIPPED_THORNS.get().asItem().getDefaultInstance(), STRIPPED_THORN_BLOCK.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(STRIPPED_THORN_BLOCK.get().asItem().getDefaultInstance(), THORN_PLANKS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_PLANKS.get().asItem().getDefaultInstance(), THORN_STAIRS.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_STAIRS.get().asItem().getDefaultInstance(), THORN_SLAB.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_SLAB.get().asItem().getDefaultInstance(), THORN_FENCE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_FENCE.get().asItem().getDefaultInstance(), THORN_FENCE_GATE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_FENCE_GATE.get().asItem().getDefaultInstance(), THORN_DOOR.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_DOOR.get().asItem().getDefaultInstance(), THORN_TRAPDOOR.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_TRAPDOOR.get().asItem().getDefaultInstance(), THORN_PRESSURE_PLATE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_PRESSURE_PLATE.get().asItem().getDefaultInstance(), THORN_BUTTON.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_BUTTON.get().asItem().getDefaultInstance(), THORN_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_SIGN.get().asItem().getDefaultInstance(), THORN_HANGING_SIGN.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(THORN_HANGING_SIGN.get().asItem().getDefaultInstance(), THORN_BANISTER.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    	}
-    	if (event.getTab() == getTabWithMatchingName("twilightforest.equipment")) {
-    		map.putBefore(TFItems.GOLDEN_MINOTAUR_AXE.get().getDefaultInstance(), INCOMPLETE_THORNCUTTER_AXE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    		map.putAfter(INCOMPLETE_THORNCUTTER_AXE.get().getDefaultInstance(), THORNCUTTER_AXE.get().getDefaultInstance(), TabVisibility.PARENT_AND_SEARCH_TABS);
-    	}
-    }
 }

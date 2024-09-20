@@ -8,6 +8,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
@@ -22,8 +23,8 @@ import twilightforest.block.ThornsBlock;
 
 public class ThorncutterAxeItem extends AxeItem
 {
-	public ThorncutterAxeItem(Tier p_40521_, float dmgMod, float speedMod, Properties properties) {
-		super(Tiers.DIAMOND, dmgMod, speedMod, properties);
+	public ThorncutterAxeItem(Tier tier, Properties properties) {
+		super(Tiers.DIAMOND, properties);
 	}
 
 	@Override
@@ -35,7 +36,7 @@ public class ThorncutterAxeItem extends AxeItem
 		InteractionResult result = super.useOn(context);
 		if (level.getBlockState(pos).getBlock() instanceof ThornsBlock && !(level.getBlockState(pos).getBlock() instanceof StrippedThornsBlock) && !(level.getBlockState(pos).getBlock() instanceof BurntThornsBlock)) {
 			BlockState oldState = level.getBlockState(pos);
-			BlockState state = ModBlocks.STRIPPED_THORNS.get().defaultBlockState();
+			BlockState state = ModBlocks.STRIPPED_THORNS.defaultBlockState();
 			for (Direction direction : Direction.values()) {
 				state = state.setValue(ThornsBlock.AXIS, oldState.getValue(ThornsBlock.AXIS));
 				state = state.setValue(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), oldState.getValue(PipeBlock.PROPERTY_BY_DIRECTION.get(direction)));
@@ -43,7 +44,7 @@ public class ThorncutterAxeItem extends AxeItem
 			level.setBlock(pos, state, 11);
 			level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
 			if (player != null) {
-				itemstack.hurtAndBreak(1, player, (livingentity) -> { livingentity.broadcastBreakEvent(context.getHand()); });
+				itemstack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
 			}
 			result = InteractionResult.sidedSuccess(level.isClientSide());
 		}

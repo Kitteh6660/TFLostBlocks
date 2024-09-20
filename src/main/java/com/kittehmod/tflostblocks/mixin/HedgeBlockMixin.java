@@ -23,7 +23,6 @@ import twilightforest.block.HedgeBlock;
 @Mixin(HedgeBlock.class)
 public class HedgeBlockMixin extends Block
 {
-
 	public HedgeBlockMixin(Properties properties) {
 		super(properties); // Not used
 	}

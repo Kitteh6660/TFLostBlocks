@@ -7,9 +7,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.kittehmod.tflostblocks.TFLostBlocksMod;
 import com.kittehmod.tflostblocks.registry.ModItems;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
@@ -30,13 +32,13 @@ public class FinalCastleMixin
 		((StructurePiece)(Object)this).placeBlock(world, Blocks.CHEST.defaultBlockState(), 10, 0, 5, sbb);
 		ChestBlockEntity blockentity = (ChestBlockEntity)world.getBlockEntity(((StructurePiece)(Object)this).getWorldPos(10, 0, 5));
 		if (blockentity != null) {
-			if (!blockentity.hasAnyOf(Set.of(ModItems.INCOMPLETE_THORNCUTTER_AXE.get()))) {
-				blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE.get(), 1));
+			if (!blockentity.hasAnyOf(Set.of(ModItems.INCOMPLETE_THORNCUTTER_AXE))) {
+				blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE, 1));
 				if (randomIn.nextFloat() < 0.6F) {
-					blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE.get(), 1));
+					blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE, 1));
 				}
 				if (randomIn.nextFloat() < 0.3F) {
-					blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE.get(), 1));
+					blockentity.setItem(randomIn.nextInt(blockentity.getContainerSize()), new ItemStack(ModItems.INCOMPLETE_THORNCUTTER_AXE, 1));
 				}
 			}
 		}

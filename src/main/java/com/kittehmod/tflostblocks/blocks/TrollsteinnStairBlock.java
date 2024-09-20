@@ -16,8 +16,8 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class TrollsteinnStairBlock extends StairBlock
 {
@@ -25,7 +25,7 @@ public class TrollsteinnStairBlock extends StairBlock
 
 	private static final int LIGHT_THRESHOLD = 7;
 	
-	public TrollsteinnStairBlock(Supplier<BlockState> state, Properties properties) {
+	public TrollsteinnStairBlock(BlockState state, Properties properties) {
 		super(state, properties);
 		this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
 	}

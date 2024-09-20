@@ -2,6 +2,7 @@ package com.kittehmod.tflostblocks.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -16,13 +17,12 @@ public class MazestoneWallBlock extends WallBlock
 	}
 
 	@Override
-	public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
-		super.playerWillDestroy(world, pos, state, player);
+	public BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
 		ItemStack stack = player.getItemInHand(InteractionHand.MAIN_HAND);
-
 		// damage the player's pickaxe
-		if (!world.isClientSide && !stack.isEmpty() && stack.getItem().canBeDepleted() && !(stack.getItem() instanceof MazebreakerPickItem)) {
-			stack.hurtAndBreak(16, player, (user) -> user.broadcastBreakEvent(InteractionHand.MAIN_HAND));
+		if (!world.isClientSide && !stack.isEmpty() && stack.isDamageableItem() && !(stack.getItem() instanceof MazebreakerPickItem)) {
+			stack.hurtAndBreak(16, player, EquipmentSlot.MAINHAND);
 		}
+		return super.playerWillDestroy(world, pos, state, player);
 	}
 }

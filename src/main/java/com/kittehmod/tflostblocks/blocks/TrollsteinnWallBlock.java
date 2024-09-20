@@ -20,35 +20,35 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.fml.util.ObfuscationReflectionHelper;
 
 public class TrollsteinnWallBlock extends WallBlock
 {
-	private static final BooleanProperty LIT = TFLostBlocksProperties.LIT;
+	// private static final BooleanProperty LIT = TFLostBlocksProperties.LIT;
 
 	private static final int LIGHT_THRESHOLD = 7;
 
 	public TrollsteinnWallBlock(Properties properties) {
 		super(properties);
-		this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
+		// this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
 		// Fix crashes. WallBlock is janky as hell.
-		fixShapeMaps();
+		// fixShapeMaps();
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		builder.add(LIT);
+		// builder.add(LIT);
 	}
 	
-	@Override
+	/*@Override
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
 		BlockState newState = state;
 		newState = newState.setValue(LIT, level.getMaxLocalRawBrightness(pos) > LIGHT_THRESHOLD);
 		if (!newState.equals(state)) level.setBlockAndUpdate(pos, newState);
-	}
+	}*/
 
 	@Override
 	public boolean hasAnalogOutputSignal(BlockState state) {
@@ -63,23 +63,23 @@ public class TrollsteinnWallBlock extends WallBlock
 		return peak;
 	}
 
-	@Override
+	/*@Override
 	public BlockState getStateForPlacement(BlockPlaceContext ctx) {
 		BlockState ret = super.getStateForPlacement(ctx);
 		int light = ctx.getLevel().getMaxLocalRawBrightness(ctx.getClickedPos());
 		ret = ret.setValue(LIT, light > LIGHT_THRESHOLD);
 		return ret;
-	}
+	}*/
 	
     private void fixShapeMaps()
     {
-        Map<BlockState, VoxelShape> shapeByIndex = ObfuscationReflectionHelper.getPrivateValue(WallBlock.class, this, "f_57955_");
+        Map<BlockState, VoxelShape> shapeByIndex = ObfuscationReflectionHelper.getPrivateValue(WallBlock.class, this, "shapeByIndex");
         shapeByIndex = fixShapeMap(shapeByIndex);
-        ObfuscationReflectionHelper.setPrivateValue(WallBlock.class, this, shapeByIndex, "f_57955_");
+        ObfuscationReflectionHelper.setPrivateValue(WallBlock.class, this, shapeByIndex, "shapeByIndex");
 
-        Map<BlockState, VoxelShape> collisionShapeByIndex = ObfuscationReflectionHelper.getPrivateValue(WallBlock.class, this, "f_57956_");
+        Map<BlockState, VoxelShape> collisionShapeByIndex = ObfuscationReflectionHelper.getPrivateValue(WallBlock.class, this, "collisionShapeByIndex");
         collisionShapeByIndex = fixShapeMap(collisionShapeByIndex);
-        ObfuscationReflectionHelper.setPrivateValue(WallBlock.class, this, collisionShapeByIndex, "f_57956_");
+        ObfuscationReflectionHelper.setPrivateValue(WallBlock.class, this, collisionShapeByIndex, "collisionShapeByIndex");
     }
     
     private static Map<BlockState, VoxelShape> fixShapeMap(Map<BlockState, VoxelShape> map)
