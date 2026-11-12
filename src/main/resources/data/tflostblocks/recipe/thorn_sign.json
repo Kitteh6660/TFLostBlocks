@@ -12,7 +12,7 @@
       "item": "tflostblocks:thorn_planks"
     },
     "$": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
