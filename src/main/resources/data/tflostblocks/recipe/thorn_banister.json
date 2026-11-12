@@ -11,7 +11,7 @@
       "item": "tflostblocks:thorn_slab"
     },
     "$": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {

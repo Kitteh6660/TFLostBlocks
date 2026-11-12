@@ -11,7 +11,7 @@
       "item": "twilightforest:towerwood"
     },
     "#": {
-      "tag": "forge:rods/wooden"
+      "tag": "c:rods/wooden"
     }
   },
   "result": {
